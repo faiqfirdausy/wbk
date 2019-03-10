@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Model;
+
+use Illuminate\Database\Eloquent\Model;
+
+class AbcSoal extends Model
+{
+    protected $table = 'abcsoal';
+    protected $primaryKey = 'id';
+    // protected $fillable = ['nip_dosen', 'sidang_ta_id', 'slot_id', 'status', 'proposal_id', 'created_at', 'updated_at', 'deleted_at'];
+    
+    public function NomorSoal()
+    {
+        return $this->belongsTo('App\Model\NomorSoal', 'id', 'id_nomorsoal');
+    }
+    
+    public function Jawaban()
+    {
+        return $this->hasMany('App\Model\Jawaban', 'id_abcsoal', 'id');
+    }
+
+
+    public function DataDukung()
+    {
+        return $this->hasMany('App\Model\DataDukung', 'id_abcsoal', 'id');
+    }
+}
