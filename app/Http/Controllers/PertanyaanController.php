@@ -42,6 +42,28 @@ class PertanyaanController extends Controller
         // dd($data['soaljawaban']);
         return view('pertanyaan.buat');
     }
+    public function buatstore(request $request)
+    {
+        DB::beginTransaction();
+
+            try {
+                $fileLaporan = null;
+                $time = Carbon\Carbon::now()->format('d-m-Y_H-i-s');
+                $transaksi = AbcSoal::findOrFail($request->id);
+                $transaksi->petunjuk_teknis = $request->news_content;
+
+              
+
+                $transaksi->save();
+
+                DB::commit();
+                return redirect('kategori/buat');
+
+            } catch (Exception $e) {
+                return response()->json(['error' => 'silahkan coba lagi']);
+                DB::rollback();
+            }
+    }
 
     public function store(Request $request)
     {
@@ -177,35 +199,41 @@ class PertanyaanController extends Controller
                 //     }
                 // }
 
-                // dd(count($request->file('upload_files.*')));
+                //dd($request->file('upload_files.0'));
                 $numb = intval(intval($request->numb));
                 $arr = array();
 
+                $ptr=0;
                 for ($i=0; $i < $numb; $i++) {
-                    $uploadFile = $request->hasFile('upload_files.'.$i); 
+                    $uploadFile = is_null($request->file('upload_files.'.$i));
+                    // dd($uploadFile);
                     // dd($request->file('upload_files.0'));
-                    if ($uploadFile != false) {
-                        $arr[] = null;
+                    if ($uploadFile) {
+                        $temp = null;
                     } else {
-                        $arr[] = $request->input('file.'.$i);
+                        $temp = $request->input('file.'.$ptr);
+                        $ptr++;
                     }
+                    array_push($arr, $temp);
+                    
                 }
-                // dd($request->file('upload_files.*'));
+                // dd($arr);
                 if (count($request->file('upload_files.*')) > 0) {
                     $files = [];
                     for ($i=0; $i < $numb; $i++) {
                        // dd($i);
-                        if ($request->hasFile('upload_files.'.$i)) {
+                        if (!is_null($request->file('upload_files.'.$i))) {
+                            // dd($request->file('upload_files.'.$i), $i, $arr[$i]);
                             // dd($request->hasFile('upload_files.2'));
                             // dd($request->input('file.2'));
-                            if ($request->hasFile('upload_files.'.$i) && $arr[$i] != null) {
-                                dd("ok");
-                                $oldPath = DataFile::find($request->input('file.'.$i));
+                            if (!is_null($request->file('upload_files.'.$i)) && $arr[$i] != null) {
+                                // dd("ok");
+                                $oldPath = DataFile::find($arr[$i]);
                                 // dd($oldPath);
                                 Storage::disk('local')->delete($oldPath->path);
-                                DataFile::where('id', $request->input('file.'.$i))->delete();
+                                DataFile::where('id', $oldPath->id)->delete();
                             }
-                            dd('masuksini');
+                           // dd('masuksini');
 
                             $fileUpload = null;
                             $nama_datadukung = $request->input('nama_datadukung.'.$i);

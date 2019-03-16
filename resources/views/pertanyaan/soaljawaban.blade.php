@@ -40,7 +40,7 @@
             @endif
 
             <div>
-                <h5><strong>INDIKATOR</strong></h5></strong>
+                <h5><strong>INDIKATOR</strong></h5>
                 <p>{{$soaljawaban->nama}}</p>
             </div>
             <div class="mt-25">
@@ -53,42 +53,44 @@
                     <strong>Unggah File Pendukung</strong>
                 </span>
             </div>
-
+        </div>
             <div class="mt-25">
                 @php 
                     $numb=0;
                 @endphp
                 @foreach($soaljawaban->DataDukung as $data)
-                    @if (is_null($data->id_divisi) || ($data->id_divisi == Auth::user()->Upt->id_divisi))
-                        <div class="wrapperr">
+                    <div class="box-body">
+                        @if (is_null($data->id_divisi) || ($data->id_divisi == Auth::user()->Upt->id_divisi))
+                            <div class="wrapperr">
+                                <div class="form-group">
+                                    <label>{{ $data->nama }}</label>
+                                    <input type="file" class="form-control" name="upload_files[]">
+                                    <input type="hidden" name="id_datadukung[]" value="{{ $data->id }}">
+                                    <input type="hidden" name="nama_datadukung[]" value="{{ $data->nama }}">
+                                </div>
+                            </div>
                             @if (!is_null($files))
                                 @if (in_array($data->id, $files))
                                     <div class="box-body text-center">
-                                        <img width="130" src="{{ asset('img/pdf_icon.png') }}"/>
+                                        <img width="130" src="{{ asset('img/file_icon.png') }}"/>
                                         @foreach ($file_nama as $file)
                                             @if ($file->id_datadukung == $data->id)
                                                 <p class="mt-10">{{ $file->ori_nama }}</p>
-                                                <input type="text" name="file[]" value="{{ $file->ori_nama }}">
+                                                <input type="hidden" name="file[]" value="{{ $file->id }}">
                                             @endif
                                         @endforeach
                                     </div>
                                 @endif
                             @endif
-                            <div class="form-group">
-                                <label>{{ $data->nama }}</label>
-                                <input type="file" class="form-control" name="upload_files[]">
-                                <input type="hidden" name="id_datadukung[]" value="{{ $data->id }}">
-                                <input type="hidden" name="nama_datadukung[]" value="{{ $data->nama }}">
-                            </div>
-                        </div>
-                    @endif
+                        @endif
+                    </div>
                     @php 
                         $numb++;
                     @endphp
                 @endforeach
                 <input type="hidden" class="form-control" name="numb" value="{{ $numb }}">
             </div>
-        </div>
+        
         <div class="box-footer">
             <button type="submit" class="btn btn-flat btn-primary pull-right">Simpan Data</button>
         </div>

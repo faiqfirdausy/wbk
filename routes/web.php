@@ -25,5 +25,7 @@ Route::group(['prefix' => 'kategori', 'middleware' => 'auth'], function(){
 	Route::post('store', 'PertanyaanController@store');
 	Route::post('update', 'PertanyaanController@update');
 	Route::get('/buat', 'PertanyaanController@buat');
+	Route::post('/kirim', 'PertanyaanController@buatstore');
+
 
 });
