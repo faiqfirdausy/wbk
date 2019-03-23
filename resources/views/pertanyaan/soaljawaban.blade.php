@@ -8,14 +8,14 @@
             // $jawaban->id = id abcsoal
             ++$no;
             $url =  url('kategori/'.$id_kategori.'/'.$jawaban->id);
-            $dukung = App\Model\DataDukung::where('id_abcsoal', $jawaban->id)->get();
-            $files = array_column($transaksi->files->toArray(), 'id_datadukung');
+            // $dukung = App\Model\DataDukung::where('id_abcsoal', $jawaban->id)->get();
+            // $files = array_column($transaksi->files->toArray(), 'id_datadukung');
             
-            foreach ($dukung as $data) { 
-                if (in_array($data->id, $files)) {
-                    $selesai += 1;
-                }
-            }
+            // foreach ($dukung as $data) { 
+            //     if (in_array($data->id, $files)) {
+            //         $selesai += 1;
+            //     }
+            // }
         @endphp
         <div class="col-lg-3 col-xs-6">
             <a href="{{ url('kategori/'.$id_kategori.'/'.$jawaban->id) }}" class="small-box-footer">
@@ -28,7 +28,7 @@
                         @endif
                     </div>
                     <div class="finish">
-                      {{$selesai}} / {{ count($dukung) }}
+                      {{-- {{$selesai}} / {{ count($dukung) }} --}}
                     </div>
                 </div>
             </a>

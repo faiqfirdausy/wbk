@@ -16,6 +16,7 @@ use App\Model\AbcSoal;
 use App\Model\Jawaban;
 use App\Model\Upt;
 use App\Model\DataFile;
+use App\Model\DataDukung;
 use File;
 
 use Carbon;
@@ -32,8 +33,7 @@ class PertanyaanController extends Controller
         $data['transaksi'] = Transaksi::where('created_by', Auth::user()->id)->with('files')->first();
         $data['files'] = !is_null($data['transaksi']) ? array_column($data['transaksi']->files->toArray(), 'id_datadukung') : null;
         $data['file_nama'] = !is_null($data['transaksi']) ? $data['transaksi']->files : null;
-
-        // dd($data['getkategori_id']);
+        
         return view('pertanyaan.index', $data);
     }
 
@@ -186,55 +186,32 @@ class PertanyaanController extends Controller
                 $transaksi->updated_by = $userId;
                 $transaksi->save();
 
-                // $files = Transaksi::where('id_transaksi', $request->id_transaksi)->with('files')->first();
-                // dd($files);
-                // if (isset($request->deleted_file)) {
-                //     for ($i=0; $i < count($request->deleted_file); $i++) {
-                //         if (in_array($request->input('deleted_file.' .$i), $files)) {
-                //             Storage::disk('local')->delete($files[$i]);
-                //             ProposalFiles::
-                //                 where('id_proposal', $proposalId)
-                //                 ->where('path_proposal_file', $files[$i])
-                //                 ->delete();
-                //         }
-                //     }
-                // }
-
-                //dd($request->file('upload_files.0'));
                 $numb = intval(intval($request->numb));
-                $arr = array();
 
-                $ptr=0;
-                for ($i=0; $i < $numb; $i++) {
-                    $uploadFile = is_null($request->file('upload_files.'.$i));
-                    // dd($uploadFile);
-                    // dd($request->file('upload_files.0'));
-                    if ($uploadFile) {
-                        $temp = null;
-                    } else {
-                        $temp = $request->input('file.'.$ptr);
-                        $ptr++;
+                $data['transaksi'] = Transaksi::where('created_by', Auth::user()->id)->with('files')->first();
+                $transaksi = $data['transaksi'];
+                $dakung = DataDukung::where('id_abcsoal',$transaksi->id_abcsoal)->get();
+                $getFiles = array();
+
+                foreach ($dakung as $datadukung) {
+                    $files = DataFile::where('id_datadukung', $datadukung->id)->get();
+                    foreach ($files as $file) {
+                        if ($datadukung->id == $file->id_datadukung) {
+                            $getFiles[] = $file->id_datadukung;
+                        }
                     }
-                    array_push($arr, $temp);
-                    
                 }
-                // dd($arr);
+
                 if (count($request->file('upload_files.*')) > 0) {
                     $files = [];
                     for ($i=0; $i < $numb; $i++) {
-                       // dd($i);
                         if (!is_null($request->file('upload_files.'.$i))) {
-                            // dd($request->file('upload_files.'.$i), $i, $arr[$i]);
-                            // dd($request->hasFile('upload_files.2'));
-                            // dd($request->input('file.2'));
-                            if (!is_null($request->file('upload_files.'.$i)) && $arr[$i] != null) {
-                                // dd("ok");
-                                $oldPath = DataFile::find($arr[$i]);
-                                // dd($oldPath);
+                            $getIdDakung = $request->input('id_datadukung.'.$i);
+                            if (!is_null($getFiles) && in_array($getIdDakung, $getFiles)) {
+                                $oldPath = DataFile::where('id_datadukung', $getIdDakung)->first();
                                 Storage::disk('local')->delete($oldPath->path);
                                 DataFile::where('id', $oldPath->id)->delete();
                             }
-                           // dd('masuksini');
 
                             $fileUpload = null;
                             $nama_datadukung = $request->input('nama_datadukung.'.$i);
@@ -254,7 +231,6 @@ class PertanyaanController extends Controller
                                 'id_datadukung' => $id_datadukung,
                             );
                         }
-                        // dd('masuksini');
                     }
 
                     DB::table('files')->insert($files);
