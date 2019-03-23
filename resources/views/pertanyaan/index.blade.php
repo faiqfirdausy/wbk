@@ -64,6 +64,12 @@
             margin-top: -1px; 
             border-top: 1px solid #fff;
         }
+        .finish {
+            position: absolute; 
+            top: 0; 
+            right: 0; 
+            padding: 10px;
+        }
     </style>
 @endsection
 

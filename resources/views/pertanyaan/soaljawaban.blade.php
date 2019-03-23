@@ -1,9 +1,21 @@
 <div class="row">
-    @php $no =0; @endphp
+    @php 
+        $no = 0;
+        $selesai = 0;
+    @endphp
     @foreach($getkategori_id->AbcSoal as $jawaban) 
         @php 
+            // $jawaban->id = id abcsoal
             ++$no;
             $url =  url('kategori/'.$id_kategori.'/'.$jawaban->id);
+            $dukung = App\Model\DataDukung::where('id_abcsoal', $jawaban->id)->get();
+            $files = array_column($transaksi->files->toArray(), 'id_datadukung');
+            
+            foreach ($dukung as $data) { 
+                if (in_array($data->id, $files)) {
+                    $selesai += 1;
+                }
+            }
         @endphp
         <div class="col-lg-3 col-xs-6">
             <a href="{{ url('kategori/'.$id_kategori.'/'.$jawaban->id) }}" class="small-box-footer">
@@ -14,6 +26,9 @@
                         @if ($url == url()->full())
                             <div class="separator"></div>
                         @endif
+                    </div>
+                    <div class="finish">
+                      {{$selesai}} / {{ count($dukung) }}
                     </div>
                 </div>
             </a>

@@ -33,15 +33,16 @@ class PertanyaanController extends Controller
         $data['files'] = !is_null($data['transaksi']) ? array_column($data['transaksi']->files->toArray(), 'id_datadukung') : null;
         $data['file_nama'] = !is_null($data['transaksi']) ? $data['transaksi']->files : null;
 
-        // dd($data['files']);
+        // dd($data['getkategori_id']);
         return view('pertanyaan.index', $data);
     }
-     public function buat()
-    {
 
+    public function buat()
+    {
         // dd($data['soaljawaban']);
         return view('pertanyaan.buat');
     }
+
     public function buatstore(request $request)
     {
         DB::beginTransaction();
