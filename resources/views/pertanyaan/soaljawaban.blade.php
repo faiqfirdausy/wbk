@@ -5,17 +5,16 @@
     @endphp
     @foreach($getkategori_id->AbcSoal as $jawaban) 
         @php 
-            // $jawaban->id = id abcsoal
             ++$no;
             $url =  url('kategori/'.$id_kategori.'/'.$jawaban->id);
-            // $dukung = App\Model\DataDukung::where('id_abcsoal', $jawaban->id)->get();
-            // $files = array_column($transaksi->files->toArray(), 'id_datadukung');
+            $dukung = App\Model\DataDukung::where('id_abcsoal', $jawaban->id)->get();
+            $files = array_column($transaksi->files->toArray(), 'id_datadukung');
             
-            // foreach ($dukung as $data) { 
-            //     if (in_array($data->id, $files)) {
-            //         $selesai += 1;
-            //     }
-            // }
+            foreach ($dukung as $data) { 
+                 if (in_array($data->id, $files)) {
+                     $selesai += 1;
+                 }
+             }
         @endphp
         <div class="col-lg-3 col-xs-6">
             <a href="{{ url('kategori/'.$id_kategori.'/'.$jawaban->id) }}" class="small-box-footer">
@@ -28,7 +27,7 @@
                         @endif
                     </div>
                     <div class="finish">
-                      {{-- {{$selesai}} / {{ count($dukung) }} --}}
+                      {{$selesai}} / {{ count($dukung) }}
                     </div>
                 </div>
             </a>
@@ -78,7 +77,15 @@
                         @if (is_null($data->id_divisi) || ($data->id_divisi == Auth::user()->Upt->id_divisi))
                             <div class="wrapperr">
                                 <div class="form-group">
-                                    <label>{{ $data->nama }}</label>
+                                    @php 
+                                        $check = '';
+                                        if (!is_null($files)) {
+                                            if (in_array($data->id, $files)) {
+                                                $check = '<a href="#" class="text-muted" data-toggle="tooltip" data-placement="auto bottom" title="" data-original-title="Belum dikonfirmasi"><i class="fa fa-check text-black"></i></a>';
+                                            }
+                                        }
+                                    @endphp
+                                    <label>{{ $data->nama }} &nbsp;&nbsp;{!! $check !!}</label>
                                     <input type="file" class="form-control" name="upload_files[]">
                                     <input type="hidden" name="id_datadukung[]" value="{{ $data->id }}">
                                     <input type="hidden" name="nama_datadukung[]" value="{{ $data->nama }}">
@@ -90,7 +97,9 @@
                                         <img width="130" src="{{ asset('img/file_icon.png') }}"/>
                                         @foreach ($file_nama as $file)
                                             @if ($file->id_datadukung == $data->id)
+                                            <a href="{{url('/kategori/download-file/'.$id_kategori.'/'.$file->id)}}">
                                                 <p class="mt-10">{{ $file->ori_nama }}</p>
+                                            </a>
                                                 <input type="hidden" name="file[]" value="{{ $file->id }}">
                                             @endif
                                         @endforeach

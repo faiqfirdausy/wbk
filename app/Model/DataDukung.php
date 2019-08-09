@@ -19,4 +19,9 @@ class DataDukung extends Model
         return $this->belongsTo('App\Model\AbcSoal', 'id', 'id_abcsoal');
     }
 
+    public function File2()
+    {
+        return $this->hasMany('App\Model\File2', 'id_data_dukung', 'id');
+    }
+
 }

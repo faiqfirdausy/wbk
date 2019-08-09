@@ -7,13 +7,20 @@
         </div>
     </div>
     <div class="box-body">
-        @foreach($data->NomorSoal as $nomor)
-        @if(isset($nomor->AbcSoal[0]))
-        <a href="{{url('kategori/'.$nomor->id.'/'.$nomor->AbcSoal[0]->id)}}" class="text-black">
-            <p>{{$nomor->nama}}</p>
-        </a>
-        @endif
-        @endforeach
+            @foreach($data->NomorSoal as $nomor)
+                @if(isset($nomor->AbcSoal[0]))
+                    <div class="row"> 
+                        <div class="col-md-10">
+                            <a href="{{url('kategori/'.$nomor->id.'/'.$nomor->AbcSoal[0]->id)}}" class="text-black">
+                                <p>{{$nomor->nama}}</p>
+                            </a>
+                        </div>
+                        <div class="col-md-2 text-green">
+                            <i class="fa fa-fw fa-check-square"></i>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
     </div>
 </div>
 @endforeach

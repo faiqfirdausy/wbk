@@ -25,6 +25,8 @@ class PertanyaanController extends Controller
 {
     public function index($id, $idsoal)
     {
+                $data['session'] = Auth::user();
+
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         $data['getkategori_id'] =  NomorSoal::with('AbcSoal', 'RomawiSoal')->findOrFail($id);
         $data['soaljawaban'] = AbcSoal::with('Jawaban', 'DataDukung')->findOrFail($idsoal);
@@ -123,7 +125,7 @@ class PertanyaanController extends Controller
                             $filename = $nama_datadukung.'.'.$ext;
                             $oriName = $file->getClientOriginalName();
                             Storage::disk('local')->putFileAs('file_upload/'.$nama_upt, $file, $filename);
-                            $fileUpload = 'file_upload/'.$filename;
+                            $fileUpload = 'file_upload/'.$nama_upt.'/'.$filename;
 
                             $files[] = array(
                                 'path' => $fileUpload,
@@ -244,5 +246,18 @@ class PertanyaanController extends Controller
                 return response()->json(['error' => 'silahkan coba lagi']);
                 DB::rollback();
             }
+    }
+
+
+    public function downloadFile($id_kategori, $id_file)
+    {
+        $file = DataFile::find($id_file);
+        // dd($file);
+        $path = public_path().'/'.$file->path;
+        $filename = $file->ori_nama;
+        $tempImage = tempnam(sys_get_temp_dir(), $filename);
+        copy($path, $tempImage);
+
+        return response()->download($tempImage, $filename);
     }
 }
