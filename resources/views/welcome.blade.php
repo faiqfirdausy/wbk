@@ -11,15 +11,15 @@
 					<div class="flex ">
 
 						<div>
-							<a href="#" class="button icon fa-download">NEWS ZI</a>
+							<a href="#" class="button icon fa-newspaper-o">NEWS ZI</a>
 						</div>
 
 						<div>
-							<a href="#" class="button icon fa-download">CAPAIAN ZI</a>
+							<a href="#" class="button icon fa-line-chart">CAPAIAN ZI</a>
 						</div>
 
 						<div>
-							<a href="#" class="button icon fa-download">IPK/IKM</a>
+							<a href="#" class="button icon fa-star-half-o">IPK/IKM</a>
 						</div>
 
 					</div>
