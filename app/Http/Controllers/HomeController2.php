@@ -41,7 +41,7 @@ class HomeController2 extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-	    public function perubahan()
+	    public function indexfront()
     {
         return view('welcome');
     }
