@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layouts.appfront', ['title' => 'Home'])
 
 @section('content')
