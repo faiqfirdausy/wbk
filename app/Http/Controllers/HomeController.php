@@ -61,6 +61,7 @@ class HomeController extends Controller
     {
         
         $data['session'] = Auth::user();
+        $min =
         $data['transaksi'] = Transaksi::where('created_by', Auth::user()->id)->with('files')->first();
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         $data['romawi'] = RomawiSoal::with('NomorSoal')->findorFail($id);
@@ -109,7 +110,7 @@ class HomeController extends Controller
                 // dd($request->file('upload_files.2'));
 
                 $transaksi = new Transaksi;
-                $transaksi->id_abcsoal = $request->abcsoal;
+                $transaksi->id_abcsoal = $request->id_abcsoal;
                 $transaksi->status = 0;
                 $transaksi->created_by = $userId;
                 $transaksi->created_at = $time;
@@ -118,11 +119,6 @@ class HomeController extends Controller
                 $file->id_transaksi = $transaksi->id_transaksi;
                 $file->id_datadukung = $id_datadukung;
 
-                $file2 = new File2; 
-                $file2->id_data_dukung = $request->id_datadukung;
-                $file2->created_by = $userId;
-                //dd($time);
-                $file2->created_at = $time;
 
                 $uploaded = $request->file('upload_files');
                 $ext = $uploaded->getClientOriginalExtension();
@@ -130,13 +126,11 @@ class HomeController extends Controller
                 $filename = $id_datadukung.'.'.$ext;
                 Storage::disk('local')->putFileAs('file_upload/'.$nama_upt, $uploaded, $filename);
                 $fileUpload = 'file_upload/'.$nama_upt.'/'.$filename;
-                $file2->path = $fileUpload;
                 $file->path = $fileUpload;
-                
-                File::makeDirectory($nama_upt, $mode = 0777, true, true);
+
                 $kategori = $request->kategori;
 
-                $file2->save();
+                $file->save();
 
                 
                 DB::commit();

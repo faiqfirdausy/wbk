@@ -13,6 +13,7 @@
     </section>
 	    <!-- Main content -->
     <section class="content">
+       {{ dd($getkategori_id)}}
 
       <!-- /.row -->
 	   <!-- Application buttons -->
@@ -92,14 +93,10 @@
                     {{$dakung->nama}}
 
                     </li>
-                    @if (!is_null($transaksi))
 
 
                     <a href="#" class="btn btn-info " role="button" data-toggle="modal" data-target="#myModal{{$dakung->id}}">Upload</a>
-                    @else
-                    <a href="#" class="btn btn-danger " role="button" data-toggle="modal" data-target="#myModal">Delete</a>
 
-                    @endif
 
                     <hr>
                       <form role="form" method="POST" action="{{ url('perubahan/upload') }}" enctype="multipart/form-data">
@@ -119,6 +116,8 @@
                                       <label>File</label>
                                         <input type="file" class="form-control" name="upload_files">
                                         <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
+                                        <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
+
                                         <input type="hidden" name="kategori" value="{{ $romawi->id }}">
 
 
