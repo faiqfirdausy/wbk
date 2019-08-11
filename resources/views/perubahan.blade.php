@@ -129,6 +129,13 @@
                                         <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
                                       @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
                                         <input type="text" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
+                                        @if(!empty($dakung->filesx) &&  $dakung->filesx->Transaksi->created_by == $user_id)
+                                          <input type="text" name="id_file" value="{{$dakung->filesx->id}}">
+                                        @else
+                                          <input type="text" name="id_file" value="">
+
+                                        @endif
+
 
                                       @else
                                         <input type="text" name="id_transaksi" value="">

@@ -85,6 +85,74 @@ class HomeController extends Controller
 
         return response()->download($tempImage, $filename);
     }
+    public function deleteFile($id_file)
+    {
+         DB::beginTransaction();
+
+            try {
+                $time = Carbon\Carbon::now()->format('Y-m-d H:i:s');
+                $userId = Auth::user()->id;
+                $upt = User::with('Upt')->find($userId);
+                $nama_upt = $upt->Upt->nama_upt;
+                $id_datadukung = $request->id_datadukung;
+                if(!empty($request->id_transaksi) )
+                {
+                $transaksi = Transaksi::findOrFail($request->id_transaksi);
+                    if(!empty($request->id_file) ){
+                    $file = DataFile::findorFail($request->id_file);
+                    Storage::disk('local')->delete($file->path);
+                    }
+                    else
+                    {
+                    $file = new DataFile;
+
+                    }
+
+                }
+                else
+                {
+                $transaksi = new Transaksi;
+                $file = new DataFile;
+                }   
+
+                // dd($request->file('upload_files.2'));
+
+
+  
+
+                $transaksi->id_abcsoal = $request->id_abcsoal;
+                $transaksi->status = 0;
+                $transaksi->created_by = $userId;
+                $transaksi->created_at = $time;
+                $transaksi->save();
+                $file->id_transaksi = $transaksi->id;
+                $file->id_datadukung = $id_datadukung;
+
+
+                $uploaded = $request->file('upload_files');
+                $ext = $uploaded->getClientOriginalExtension();
+                $oriname = $uploaded->getClientOriginalName();
+                $filename = $id_datadukung.'.'.$ext;
+                Storage::disk('local')->putFileAs('file_upload/'.$nama_upt, $uploaded, $filename);
+                $fileUpload = 'file_upload/'.$nama_upt.'/'.$filename;
+                $file->path = $fileUpload;
+                $file->namafile = $filename;
+                $kategori = $request->kategori;
+
+                $file->save();
+
+                
+                DB::commit();
+                // \Session::flash('success_flash_message','Data Mahasiswa Berhasil Ditambah.');
+                return redirect('pertanyaan2/kategori/'.$kategori);
+
+            } catch (Exception $e) {
+                return response()->json(['error' => 'silahkan coba lagi']);
+                DB::rollback();
+            }
+    }
+
+
       public function store(Request $request)
     {
         // dd($request->file('upload_files'));
@@ -118,15 +186,36 @@ class HomeController extends Controller
                 $upt = User::with('Upt')->find($userId);
                 $nama_upt = $upt->Upt->nama_upt;
                 $id_datadukung = $request->id_datadukung;
+                if(!empty($request->id_transaksi) )
+                {
+                $transaksi = Transaksi::findOrFail($request->id_transaksi);
+                    if(!empty($request->id_file) ){
+                    $file = DataFile::findorFail($request->id_file);
+                    Storage::disk('local')->delete($file->path);
+                    }
+                    else
+                    {
+                    $file = new DataFile;
+
+                    }
+
+                }
+                else
+                {
+                $transaksi = new Transaksi;
+                $file = new DataFile;
+                }   
+
                 // dd($request->file('upload_files.2'));
 
-                $transaksi = new Transaksi;
+
+  
+
                 $transaksi->id_abcsoal = $request->id_abcsoal;
                 $transaksi->status = 0;
                 $transaksi->created_by = $userId;
                 $transaksi->created_at = $time;
                 $transaksi->save();
-                $file = new DataFile;
                 $file->id_transaksi = $transaksi->id;
                 $file->id_datadukung = $id_datadukung;
 
