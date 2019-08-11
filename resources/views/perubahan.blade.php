@@ -93,19 +93,26 @@
 
 
                     </li>
+                    <hr>
+                    @if(!empty($dakung->filesx) &&   $dakung->filesx->Transaksi->created_by == $user_id)
+                    <a href="{{url('pertanyaan2/download-file/'.$dakung->filesx->id)}}">{{$dakung->filesx->namafile}}</a>
+                    <br>
+                    <a href="#" class="btn btn-warning " role="button" data-toggle="modal" data-target="#myModal{{$dakung->id}}">Ubah</a>
 
-                    @if(!empty($dakung->filesx) && $dakung->filesx->Transaksi->created_by == $user_id)
-                    {{$dakung->filesx->path}}
+                    <a href="#" class="btn btn-danger " role="button" data-toggle="modal" data-target="#myDeleteModal{{$dakung->id}}">Hapus</a>
+                    @else
+                    <a href="#" class="btn btn-info " role="button" data-toggle="modal" data-target="#myModal{{$dakung->id}}">Upload</a>
+
+
                     @endif
 
-                    <a href="#" class="btn btn-info " role="button" data-toggle="modal" data-target="#myModal{{$dakung->id}}">Upload</a>
 
 
                     <hr>
                       <form role="form" method="POST" action="{{ url('perubahan/upload') }}" enctype="multipart/form-data">
                       {!! csrf_field() !!}
 
-
+  <!-- Modal Upload-->
                           <div class="modal fade" id="myModal{{$dakung->id}}" role="dialog">
                             <div class="modal-dialog">
         
@@ -120,6 +127,13 @@
                                         <input type="file" class="form-control" name="upload_files">
                                         <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
                                         <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
+                                      @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
+                                        <input type="text" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
+
+                                      @else
+                                        <input type="text" name="id_transaksi" value="">
+
+                                      @endif
 
                                         <input type="hidden" name="kategori" value="{{ $romawi->id }}">
 

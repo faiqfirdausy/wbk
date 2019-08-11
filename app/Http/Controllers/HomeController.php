@@ -75,6 +75,16 @@ class HomeController extends Controller
         
         return view('perubahan', $data);
     }
+        public function downloadFile($id_file)
+    {
+        $file = DataFile::find($id_file);
+        $path = public_path().'/'.$file->path;
+        $filename = $file->namafile;
+        $tempImage = tempnam(sys_get_temp_dir(), $filename);
+        copy($path, $tempImage);
+
+        return response()->download($tempImage, $filename);
+    }
       public function store(Request $request)
     {
         // dd($request->file('upload_files'));
@@ -128,7 +138,7 @@ class HomeController extends Controller
                 Storage::disk('local')->putFileAs('file_upload/'.$nama_upt, $uploaded, $filename);
                 $fileUpload = 'file_upload/'.$nama_upt.'/'.$filename;
                 $file->path = $fileUpload;
-
+                $file->namafile = $filename;
                 $kategori = $request->kategori;
 
                 $file->save();
