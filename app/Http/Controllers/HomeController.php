@@ -61,16 +61,17 @@ class HomeController extends Controller
     {
         
         $data['session'] = Auth::user();
-        $min =
-        $data['transaksi'] = Transaksi::where('created_by', Auth::user()->id)->with('files')->first();
+        
+        // $data['transaksi'] = Transaksi::where('created_by', Auth::user()->id)->with('files')->first();
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         $data['romawi'] = RomawiSoal::with('NomorSoal')->findorFail($id);
-        $data['getkategori_id'] =  NomorSoal::with('AbcSoal', 'RomawiSoal')->findOrFail($id);
+        $data['getkategori_id'] =  NomorSoal::with('AbcSoal', 'RomawiSoal', 'AbcSoal.myTransaksi')->findOrFail($id);
+        $data['user_id'] =  Auth::user()->id;
         $data['id_kategori'] = $id;
 
-        $data['transaksi'] = Transaksi::where('created_by', Auth::user()->id)->with('files')->first();
-        $data['files'] = !is_null($data['transaksi']) ? array_column($data['transaksi']->files->toArray(), 'id_datadukung') : null;
-        $data['file_nama'] = !is_null($data['transaksi']) ? $data['transaksi']->files : null;
+        // $data['transaksi'] = Transaksi::where('created_by', Auth::user()->id)->with('filesx')->first();
+        // $data['files'] = !is_null($data['transaksi']) ? array_column($data['transaksi']->files->toArray(), 'id_datadukung') : null;
+        // $data['file_nama'] = !is_null($data['transaksi']) ? $data['transaksi']->files : null;
         
         return view('perubahan', $data);
     }
@@ -116,7 +117,7 @@ class HomeController extends Controller
                 $transaksi->created_at = $time;
                 $transaksi->save();
                 $file = new DataFile;
-                $file->id_transaksi = $transaksi->id_transaksi;
+                $file->id_transaksi = $transaksi->id;
                 $file->id_datadukung = $id_datadukung;
 
 

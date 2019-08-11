@@ -13,7 +13,6 @@
     </section>
 	    <!-- Main content -->
     <section class="content">
-       {{ dd($getkategori_id)}}
 
       <!-- /.row -->
 	   <!-- Application buttons -->
@@ -92,8 +91,12 @@
                     
                     {{$dakung->nama}}
 
+
                     </li>
 
+                    @if(!empty($dakung->filesx) && $dakung->filesx->Transaksi->created_by == $user_id)
+                    {{$dakung->filesx->path}}
+                    @endif
 
                     <a href="#" class="btn btn-info " role="button" data-toggle="modal" data-target="#myModal{{$dakung->id}}">Upload</a>
 
