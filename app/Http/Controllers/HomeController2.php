@@ -45,6 +45,10 @@ class HomeController2 extends Controller
     {
         return view('welcome');
     }
-           
+
+	    public function capaian()
+    {
+        return view('capaian');
+    }	
 
 }

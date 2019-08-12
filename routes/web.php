@@ -11,6 +11,7 @@
 |
 */
 Route::get('/', 'HomeController2@indexfront');
+Route::get('/capaian', 'HomeController2@capaian')->name('home');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

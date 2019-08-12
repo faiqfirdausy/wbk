@@ -1,0 +1,65 @@
+@extends('layouts.appfront2', ['title' => 'Home'])
+
+@section('content')
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="{{ url('/') }}" class="logo">SIAP<strong>ZI</strong></a>
+			<nav id="nav">
+				<a href="{{ url('/') }}">Beranda</a>
+				<a href="">Berita ZI</a>
+				<a href="">IPK/IKM</a>
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
+	<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>IPK/IKM</h2>
+					</header>
+
+					<hr class="major" />
+
+
+								<!-- Form -->
+									<h3>Pilih Bulan dan Tahun </h3>
+
+									<form method="post" action="#">
+										<div class="row uniform">
+											
+											<!-- Break -->
+											<div class="6u 12u$(xsmall)">
+												<div class="select-wrapper">
+													<select name="demo-category" id="demo-category">
+														<option value="">- Category -</option>
+														<option value="1">LAPAS/BAPAS</option>
+														<option value="1">RUTAN/RUPBASAN</option>
+														<option value="1">KANIM/RUDENIM</option>
+													</select>
+												</div>
+											</div>
+										
+											<!-- Break -->
+											<div class="12u$">
+												<ul class="actions">
+													<li><input type="submit" value="Lihat" /></li>
+													<li><input type="reset" value="Reset" class="alt" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+
+									<hr />
+
+
+
+
+						</div>
+					</div>
+
+				</div>
+
+			</section>
+@endsection

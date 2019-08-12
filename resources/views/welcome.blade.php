@@ -11,11 +11,11 @@
 					<div class="flex ">
 
 						<div>
-							<a href="#" class="button icon fa-newspaper-o">NEWS ZI</a>
+							<a href="#" class="button icon fa-newspaper-o">BERITA ZI</a>
 						</div>
 
 						<div>
-							<a href="#" class="button icon fa-line-chart">CAPAIAN ZI</a>
+							<a href="{{ url('/capaian') }}" class="button icon fa-line-chart">CAPAIAN ZI</a>
 						</div>
 
 						<div>
@@ -42,7 +42,7 @@
 							</header>
 							<p>Morbi in sem quis dui placerat ornare. Pellentesquenisi<br />euismod in, pharetra a, ultricies in diam sed arcu. Cras<br />consequat  egestas augue vulputate.</p>
 							<footer>
-								<a href="#" class="button">Learn More</a>
+								<a href="#" class="button">Baca Selengkapnya</a>
 							</footer>
 						</article>
 						<article>
@@ -54,7 +54,7 @@
 							</header>
 							<p>Pellentesque fermentum dolor. Aliquam quam lectus<br />facilisis auctor, ultrices ut, elementum vulputate, nunc<br /> blandit ellenste egestagus commodo.</p>
 							<footer>
-								<a href="#" class="button">Learn More</a>
+								<a href="#" class="button">Baca Selengkapnya</a>
 							</footer>
 						</article>
 					</div>

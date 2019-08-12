@@ -16,37 +16,16 @@
 	@yield('css')
 	@stack('css')
 </head>
-    <body>
-		<!-- Header -->
-		<header id="header">
-			<div class="inner">
-					<nav id="nav">
-						 @if (Route::has('login'))
-							<div class="top-right links">
-								@auth
-									<a href="{{ url('/home') }}">Home</a>
-								@else
-									<a href="{{ route('login') }}">Login</a>
-
-									@if (Route::has('register'))
-										<a href="{{ route('register') }}">Register</a>
-									@endif
-								@endauth
-							</div>
-						@endif
-					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-			</div>
-		</header>
-
-
+    <body class="subpage">
 		
-				@yield('content')
+		@yield('content')
 
 		
 		<footer id="footer">
-			<div class="copyright">
-				<p>Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa timur</p>
+			<div class="inner">
+				<div class="copyright">
+					<p>Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa timur</p>
+				</div>
 			</div>
 		</footer>
 	
