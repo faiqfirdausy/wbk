@@ -15,6 +15,7 @@ Route::get('/', 'HomeController2@indexfront');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/verifikasi', 'HomeController@verifikasi')->name('home');
 Route::get('/perubahan', 'HomeController@perubahan')->name('home');
 Route::group(['prefix' => 'perubahan', 'middleware' => 'auth'], function(){
 	Route::post('upload', 'HomeController@store');

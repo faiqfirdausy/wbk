@@ -48,7 +48,11 @@ class HomeController extends Controller
     }
 	    public function perubahan()
     {
-        return view('perubaha3');
+        return view('perubahan');
+    }
+		    public function verifikasi()
+    {
+        return view('verifikasi');
     }
             public function pertanyaan2()
     {
