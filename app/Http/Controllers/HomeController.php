@@ -50,9 +50,13 @@ class HomeController extends Controller
     {
         return view('perubahan');
     }
-		    public function verifikasi()
+		public function verifikasi()
     {
         return view('verifikasi');
+    }
+		public function verifikasi2()
+    {
+        return view('verifikasi2');
     }
             public function pertanyaan2()
     {
