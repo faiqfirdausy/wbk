@@ -18,6 +18,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/perubahan', 'HomeController@perubahan')->name('home');
 Route::group(['prefix' => 'perubahan', 'middleware' => 'auth'], function(){
 	Route::post('upload', 'HomeController@store');
+	Route::post('delete', 'HomeController@hapus');
 
 });
 

@@ -85,7 +85,7 @@ class HomeController extends Controller
 
         return response()->download($tempImage, $filename);
     }
-    public function deleteFile($id_file)
+    public function hapus(Request $request)
     {
          DB::beginTransaction();
 
@@ -95,51 +95,23 @@ class HomeController extends Controller
                 $upt = User::with('Upt')->find($userId);
                 $nama_upt = $upt->Upt->nama_upt;
                 $id_datadukung = $request->id_datadukung;
-                if(!empty($request->id_transaksi) )
-                {
-                $transaksi = Transaksi::findOrFail($request->id_transaksi);
-                    if(!empty($request->id_file) ){
-                    $file = DataFile::findorFail($request->id_file);
-                    Storage::disk('local')->delete($file->path);
-                    }
-                    else
-                    {
-                    $file = new DataFile;
-
-                    }
-
-                }
-                else
-                {
-                $transaksi = new Transaksi;
-                $file = new DataFile;
-                }   
-
-                // dd($request->file('upload_files.2'));
-
-
-  
-
-                $transaksi->id_abcsoal = $request->id_abcsoal;
-                $transaksi->status = 0;
-                $transaksi->created_by = $userId;
-                $transaksi->created_at = $time;
-                $transaksi->save();
-                $file->id_transaksi = $transaksi->id;
-                $file->id_datadukung = $id_datadukung;
-
-
-                $uploaded = $request->file('upload_files');
-                $ext = $uploaded->getClientOriginalExtension();
-                $oriname = $uploaded->getClientOriginalName();
-                $filename = $id_datadukung.'.'.$ext;
-                Storage::disk('local')->putFileAs('file_upload/'.$nama_upt, $uploaded, $filename);
-                $fileUpload = 'file_upload/'.$nama_upt.'/'.$filename;
-                $file->path = $fileUpload;
-                $file->namafile = $filename;
                 $kategori = $request->kategori;
 
-                $file->save();
+                $file = DataFile::findOrFail($request->id_file);
+                Storage::disk('local')->delete($file->path);
+                DataFile::where('id', $request->id_file)->delete();
+
+
+                $listfile = DataFile::where('id_transaksi',$request->id_transaksi)->get();
+                if(!empty($listfile[0]) )
+                {
+
+                }
+                else{
+
+                    Transaksi::where('id', $request->id_transaksi)->delete();
+                }
+
 
                 
                 DB::commit();

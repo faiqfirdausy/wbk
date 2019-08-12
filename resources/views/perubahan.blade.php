@@ -100,6 +100,54 @@
                     <a href="#" class="btn btn-warning " role="button" data-toggle="modal" data-target="#myModal{{$dakung->id}}">Ubah</a>
 
                     <a href="#" class="btn btn-danger " role="button" data-toggle="modal" data-target="#myDeleteModal{{$dakung->id}}">Hapus</a>
+  <!-- Modal Delete-->
+
+                      <form role="form" method="POST" action="{{ url('perubahan/delete') }}" enctype="multipart/form-data">
+                      {!! csrf_field() !!}
+
+
+                          <div class="modal fade" id="myDeleteModal{{$dakung->id}}" role="dialog">
+                            <div class="modal-dialog">
+        
+          <!-- Modal content-->
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Anda yakin akan menghapus {{$dakung->nama}} ?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
+                                        <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
+                                      @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
+                                        <input type="hidden" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
+                                        @if(!empty($dakung->filesx) &&  $dakung->filesx->Transaksi->created_by == $user_id)
+                                          <input type="hidden" name="id_file" value="{{$dakung->filesx->id}}">
+                                        @else
+                                          <input type="hidden" name="id_file" value="">
+
+                                        @endif
+
+
+                                      @else
+                                        <input type="hidden" name="id_transaksi" value="">
+
+                                      @endif
+
+                                        <input type="hidden" name="kategori" value="{{ $romawi->id }}">
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+                                        <button type="submit" class="btn btn-danger">Hapus</button>
+
+                                      </form>
+                                    </div>
+                                   </div>
+          
+                              </div>
+                          </div>
+  <!--End of Modal Delete-->
                     @else
                     <a href="#" class="btn btn-info " role="button" data-toggle="modal" data-target="#myModal{{$dakung->id}}">Upload</a>
 
@@ -128,17 +176,17 @@
                                         <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
                                         <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
                                       @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
-                                        <input type="text" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
+                                        <input type="hidden" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
                                         @if(!empty($dakung->filesx) &&  $dakung->filesx->Transaksi->created_by == $user_id)
-                                          <input type="text" name="id_file" value="{{$dakung->filesx->id}}">
+                                          <input type="hidden" name="id_file" value="{{$dakung->filesx->id}}">
                                         @else
-                                          <input type="text" name="id_file" value="">
+                                          <input type="hidden" name="id_file" value="">
 
                                         @endif
 
 
                                       @else
-                                        <input type="text" name="id_transaksi" value="">
+                                        <input type="hidden" name="id_transaksi" value="">
 
                                       @endif
 
