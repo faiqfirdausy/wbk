@@ -52,11 +52,17 @@ class HomeController extends Controller
     }
 		public function verifikasi()
     {
-        return view('verifikasi');
+
+      $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        $data['session'] = Auth::user();
+        return view('verifikasi',$data);
     }
 		public function verifikasi2()
     {
-        return view('verifikasi2');
+
+      $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        $data['session'] = Auth::user();
+        return view('verifikasi2',$data);
     }
             public function pertanyaan2()
     {
