@@ -78,8 +78,6 @@
 	<script src="{{ asset('js/morris.min.js')}}"></script>
 	<!-- jQuery Knob Chart -->
 	<script src="{{ asset('js/jquery-knob/dist/jquery.knob.min.js')}}"></script>
-	<!-- Sparkline -->
-	<script src="{{ asset('js/jquery.sparkline.min.js')}}"></script>
 	<!-- datepicker -->
 	<script src="{{ asset('js/bootstrap-datepicker.min.js')}}"></script>
 	<!-- Bootstrap WYSIHTML5 -->

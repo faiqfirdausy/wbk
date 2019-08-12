@@ -24,7 +24,7 @@
 
 
 								<!-- Form -->
-									<h3>Pilih Bulan dan Tahun </h3>
+									<h3>Pilih Kategori UPT </h3>
 
 									<form method="post" action="#">
 										<div class="row uniform">
@@ -33,14 +33,16 @@
 											<div class="6u 12u$(xsmall)">
 												<div class="select-wrapper">
 													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
+														<option value="">- Kategori -</option>
 														<option value="1">LAPAS/BAPAS</option>
 														<option value="1">RUTAN/RUPBASAN</option>
 														<option value="1">KANIM/RUDENIM</option>
 													</select>
 												</div>
 											</div>
-										
+											<div class="6u 12u$(xsmall)">
+												<input type="date" name="demo-name" id="demo-name" value="" placeholder="Name" />
+											</div>
 											<!-- Break -->
 											<div class="12u$">
 												<ul class="actions">
@@ -52,7 +54,13 @@
 									</form>
 
 									<hr />
+									 <!-- BAR CHART -->
+									  <div class="box box-success">
+										  <h3 class="box-title">Bar Chart</h3>
+										  <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
 
+										<!-- /.box-body -->
+									  </div>
 
 
 
@@ -62,4 +70,5 @@
 				</div>
 
 			</section>
+			
 @endsection
