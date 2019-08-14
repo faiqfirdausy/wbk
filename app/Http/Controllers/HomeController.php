@@ -44,7 +44,7 @@ class HomeController extends Controller
     {        
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         $data['session'] = Auth::user();
-        return view('home',$data);
+        return view('home2',$data);
     }
 	    public function perubahan()
     {
