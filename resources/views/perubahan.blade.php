@@ -68,6 +68,7 @@
                   <th>JUKNIS</th>
                   <th>DAKUNG</th>
                   <th>STATUS</th>
+                  <th>KETERANGAN</th>
 				          <th>CAPAIAN</th>
                 </tr>
                 </thead>
@@ -93,7 +94,10 @@
 
 
                     </li>
+                    <a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#">Contoh File</a>
+
                     <hr>
+
                     @if(!empty($dakung->filesx) &&   $dakung->filesx->Transaksi->created_by == $user_id)
                     <a href="{{url('pertanyaan2/download-file/'.$dakung->filesx->id)}}">{{$dakung->filesx->namafile}}</a>
                     <br>
@@ -208,6 +212,7 @@
                      @endforeach
                   </td>
                   <td> <span class="badge bg-success">Terverifikasi</span></td>
+                  <td>  </td>
                   <td>X</td>
                 </tr>
                @endforeach
