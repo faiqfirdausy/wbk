@@ -17,7 +17,7 @@
 			<section id="main" class="wrapper">
 				<div class="inner">
 					<header class="align-center">
-						<h2>IPK/IKM</h2>
+						<h2>CAPAIAN ZONA INTEGRITAS</h2>
 					</header>
 
 					<hr class="major" />
@@ -57,7 +57,7 @@
 									 <!-- BAR CHART -->
 									  <div class="box box-success">
 										  <h3 class="box-title">Bar Chart</h3>
-										  <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+										  <canvas id="myChart" width="1000" height="400"></canvas>
 
 										<!-- /.box-body -->
 									  </div>
