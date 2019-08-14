@@ -2211,7 +2211,10 @@
 		}
 
 /* Image */
-
+	.logo img{
+		width: 600px;
+		height: auto;
+	}
 	.image {
 		border-radius: 0;
 		border: 0;
@@ -2941,7 +2944,7 @@
 
 			position: relative;
 			z-index: 10005;
-			padding-top: 13em;
+			padding-top: 3em;
 		}
 		.caption {
 		  border-bottom: #6cc091 5px solid;
@@ -3002,7 +3005,7 @@
 			-ms-justify-content: center;
 			justify-content: center;
 			text-align: center;
-			margin: 10em auto 4em auto;
+			margin: 5em auto 3em auto;
 		}
 
 			#banner .flex div {

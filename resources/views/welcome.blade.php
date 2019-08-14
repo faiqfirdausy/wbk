@@ -2,14 +2,14 @@
 
 @section('content')
 			<section id="banner">
-				
-					<header>
-					<div class="caption">
-						<h1>Selamat Datang di SIAP<strong>ZI</strong></h1>
-						<small>Sistem Monitoring & Evaluasi Pembangunan Zona Integritas</small>
-					</div>
-					</header>
 				<div class="inner">
+					<header>
+					<div class="logo">
+						<img src="{{ asset('img/siapzi.png') }}"  alt="IMG">
+					</div>
+					
+					</header>
+				
 					<div class="flex">
 
 						<div>
