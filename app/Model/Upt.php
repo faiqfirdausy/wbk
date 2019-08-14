@@ -13,4 +13,9 @@ class Upt extends Model
     {
         return $this->belongsTo('App\User', 'id_upt', 'id_upt');
     }
+    public function Divisi()
+    {
+    	return $this->belongsTo('App\Model\Divisi', 'id_divisi', 'id');
+
+    }
 }
