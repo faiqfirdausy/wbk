@@ -2,24 +2,26 @@
 
 @section('content')
 			<section id="banner">
-				<div class="inner">
+				
 					<header>
+					<div class="caption">
 						<h1>Selamat Datang di SIAP<strong>ZI</strong></h1>
 						<small>Sistem Monitoring & Evaluasi Pembangunan Zona Integritas</small>
+					</div>
 					</header>
-
-					<div class="flex ">
+				<div class="inner">
+					<div class="flex">
 
 						<div>
-							<a href="#" class="button icon fa-newspaper-o">BERITA ZI</a>
+							<a href="#" class="button special icon fa-newspaper-o">BERITA ZI</a>
 						</div>
 
 						<div>
-							<a href="{{ url('/capaian') }}" class="button icon fa-line-chart">CAPAIAN ZI</a>
+							<a href="{{ url('/capaian') }}" class="button special icon fa-line-chart">CAPAIAN ZI</a>
 						</div>
 
 						<div>
-							<a href="#" class="button icon fa-star-half-o">IPK/IKM</a>
+							<a href="#" class="button special icon fa-star-half-o">IPK/IKM</a>
 						</div>
 
 					</div>
