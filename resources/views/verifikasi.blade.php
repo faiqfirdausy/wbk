@@ -26,7 +26,7 @@
           <!-- Custom Tabs -->
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              @foreach($dataupt as $data)
+              @foreach($datadivisi as $data)
               @if($data->id == 1)
               <li class="active"><a href="#tab_{{$data->id}}" data-toggle="tab">{{$data->nama}}</a></li>
               @else
@@ -39,11 +39,11 @@
 
 
             <div class="tab-content">
-              @foreach($dataupt as $data2)
+              @foreach($datadivisi as $data2)
               @if($data2->id == 1)
-              <div class="tab-pane active" id="tab_{{$data->id}}">
+              <div class="tab-pane active" id="tab_{{$data2->id}}">
               @else
-              <div class="tab-pane" id="tab_{{$data->id}}">
+              <div class="tab-pane" id="tab_{{$data2->id}}">
               @endif
 
               <!-- /.tab-pane -->
@@ -51,7 +51,8 @@
 				 <!-- /.box-header -->
 					<div class="box-body table-responsive no-padding">
 					  <table class="table table-hover">
-            @foreach($data2->Upt as $listupt)
+            @foreach($dataupt as $listupt)
+            @if($listupt->id_divisi == $data2->id)
 
 						<tr>
 						  <td>
@@ -61,11 +62,12 @@
 						  </td>
 
 						</tr>
+            @endif
+
+           @endforeach
 
 					  </table>
 					</div>
-					  </div>
-					 @endforeach
               <!-- /.tab-pane -->
              
             </div>
