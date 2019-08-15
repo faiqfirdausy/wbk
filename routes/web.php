@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'HomeController2@indexfront');
 Route::get('/capaian', 'HomeController2@capaian')->name('home');
+Route::get('/ipkikm', 'HomeController2@ipkikm')->name('home');
 
 Auth::routes();
 

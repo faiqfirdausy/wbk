@@ -49,6 +49,10 @@ class HomeController2 extends Controller
 	    public function capaian()
     {
         return view('capaian');
+    }
+		public function ipkikm()
+    {
+        return view('ipkikm');
     }	
 
 }
