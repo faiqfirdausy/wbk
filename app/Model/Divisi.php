@@ -11,6 +11,6 @@ class Divisi extends Model
 
     public function Upt()
     {
-        return $this->hasMany('App\Model\Upt', 'id_divisi', 'id');
+        return $this->hasMany('App\Model\Upt', 'id_upt', 'id');
     }
 }

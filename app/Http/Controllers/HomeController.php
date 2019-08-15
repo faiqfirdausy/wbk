@@ -18,6 +18,8 @@ use App\Model\Upt;
 use App\Model\DataFile;
 use App\Model\DataDukung;
 use App\Model\File2;
+use App\Model\Divisi;
+
 
 
 use File;
@@ -42,7 +44,12 @@ class HomeController extends Controller
      */
     public function index()
     {        
+        $data['dataupt'] = Divisi::with('Upt')->get();
+        $datatok = Divisi::all();
+
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        $romawi =RomawiSoal::with('NomorSoal')->get();
+
         $data['session'] = Auth::user();
         return view('home2',$data);
     }
