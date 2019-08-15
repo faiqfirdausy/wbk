@@ -44,8 +44,9 @@ class HomeController extends Controller
      */
     public function index()
     {        
-        $data['dataupt'] = Divisi::with('Upt')->get();
+        $data['datadivisi'] = Divisi::with('Upt')->get();
         $datatok = Divisi::all();
+        $data['dataupt'] = Upt::all();
 
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         $romawi =RomawiSoal::with('NomorSoal')->get();
