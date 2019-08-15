@@ -51,17 +51,41 @@
 				 <!-- /.box-header -->
 					<div class="box-body table-responsive no-padding">
 					  <table class="table table-hover">
+               @php
+              $i = 0;
+              @endphp
             @foreach($dataupt as $listupt)
-            @if($listupt->id_divisi == $data2->id)
 
-						<tr>
-						  <td>
+            @if($listupt->id_divisi == $data2->id)
+              @php
+              $i++;
+              @endphp
+              @if($i == 1)
+              <tr>
+                <td>
 							<button class="login100-form-btn">
                 {{$listupt->nama_upt}}
 							</button>
-						  </td>
+		        </td>
+            @elseif($i==2)
+            <td>
+              <button class="login100-form-btn">
+                {{$listupt->nama_upt}}
+              </button>
+            </td>
+            @elseif($i==3)
+            <td>
+              <button class="login100-form-btn">
+                {{$listupt->nama_upt}}
+              </button>
+            </td>
+          </tr>
+             @php
+              $i=0;
+              @endphp
+              @endif
 
-						</tr>
+
             @endif
 
            @endforeach
