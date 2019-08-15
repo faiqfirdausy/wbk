@@ -21,7 +21,7 @@
 						</div>
 
 						<div>
-							<a href="#" class="button icon fa-star-half-o">IPK/IKM</a>
+							<a href="{{ url('/ipkikm') }}" class="button icon fa-star-half-o">IPK/IKM</a>
 						</div>
 
 					</div>
