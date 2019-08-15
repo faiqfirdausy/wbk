@@ -29,40 +29,78 @@
 			</div>
 		</footer>
 		<!-- ChartJS -->
-		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
+		
 		<script>
-			window.onload = function () {
-
-			var chart = new CanvasJS.Chart("chartContainer", {
-				animationEnabled: true,
-				theme: "light2", // "light1", "light2", "dark1", "dark2"
-				title:{
-					text: "Top Oil Reserves"
-				},
-				axisY: {
-					title: "Reserves(MMbbl)"
-				},
-				data: [{        
-					type: "column",  
-					showInLegend: true, 
-					legendMarkerColor: "grey",
-					legendText: "MMbbl = one million barrels",
-					dataPoints: [      
-						{ y: 300878, label: "Venezuela" },
-						{ y: 266455,  label: "Saudi" },
-						{ y: 169709,  label: "Canada" },
-						{ y: 158400,  label: "Iran" },
-						{ y: 142503,  label: "Iraq" },
-						{ y: 101500, label: "Kuwait" },
-						{ y: 97800,  label: "UAE" },
-						{ y: 80000,  label: "Russia" }
-					]
-				}]
-			});
-			chart.render();
-
-			}
-			</script>
+				var ctx = document.getElementById("myChart");
+				var myChart = new Chart(ctx, {
+				  type: 'bar',
+				  data: {
+					labels: ["Lapas Kelas I Surabaya", "2015-02", "2015-03", "2015-04", "2015-05", 
+					"2015-06", "2015-07", "2015-08", "2015-09", "2015-10", "2015-11", "2015-07", 
+					"2015-08", "2015-09", "2015-10", "2015-11", "2015-12"],
+					datasets: [{
+					  label: '# of Tomatoes',
+					  data: [18,30,12,8,9,18,23,12, 19, 3, 5, 2, 3, 20, 3, 5, 6, 2, 1],
+					  backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+						'rgba(255, 159, 64, 0.2)',
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+						'rgba(255, 159, 64, 0.2)',
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)'
+					  ],
+					  borderColor: [
+						'rgba(255,99,132,1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255,99,132,1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255,99,132,1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)'
+					  ],
+					  borderWidth: 1
+					}]
+				  },
+				  options: {
+					responsive: false,
+					scales: {
+					  xAxes: [{
+						ticks: {
+						  maxRotation: 90,
+						  minRotation: 80
+						}
+					  }],
+					  yAxes: [{
+						ticks: {
+						  beginAtZero: true
+						}
+					  }]
+					}
+				  }
+				});
+		</script>
 	@yield('scripts')
 	@stack('scripts')
     </body>
