@@ -2,7 +2,7 @@
 @include('home')
 
 @elseif ($session->id_role ==0)
-@include('verifikasi')
+@include('verifikasifix')
 
 @endif
  

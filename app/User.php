@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Model\Upt', 'id_upt', 'id_upt');
     }
+
+    public function Transaksi()
+    {
+        return $this->hasMany('App\Model\Transaksi', 'created_by', 'id');
+    }
 }
