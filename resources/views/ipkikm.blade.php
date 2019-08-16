@@ -41,7 +41,16 @@
 												</div>
 											</div>
 											<div class="6u 12u$(xsmall)">
-												<input type="date" name="demo-name" id="demo-name" value="" placeholder="Name" />
+												<div id="sla-data-range" class="mrp-container nav navbar-nav">
+													  <span class="mrp-icon"><i class="fa fa-calendar"></i></span>
+													  <div class="mrp-monthdisplay">
+														<span class="mrp-lowerMonth">Jul 2014</span>
+														<span class="mrp-to"> to </span>
+														<span class="mrp-upperMonth">Aug 2014</span>
+													  </div>
+													<input type="hidden" value="201407" id="mrp-lowerDate" />
+													<input type="hidden" value="201408" id="mrp-upperDate" />
+												  </div>
 											</div>
 											<!-- Break -->
 											<div class="12u$">

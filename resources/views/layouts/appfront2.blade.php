@@ -12,6 +12,10 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!--month picker-->
+	<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ asset('css/monthpicker.css') }}">
 	
 	@yield('css')
 	@stack('css')
@@ -26,11 +30,29 @@
 				<div class="copyright">
 					<p>Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa timur</p>
 				</div>
+				<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
 			</div>
 		</footer>
 		<!-- ChartJS -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
-		
+		<!--month picker-->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="{{ asset('js/monthpicker.js')}}"></script>
+		<script>
+			$(function() {
+			  $('.dropdown-menu a').click(function() {
+				console.log($(this).attr('data-value'));
+				$(this).closest('.dropdown').find('input.upt')
+				  .val($(this).attr('data-value'));
+			  });
+			});
+		</script>
 		<script>
 				var ctx = document.getElementById("myChart");
 				var myChart = new Chart(ctx, {

@@ -8,7 +8,7 @@
 			<nav id="nav">
 				<a href="{{ url('/') }}">Beranda</a>
 				<a href="">Berita ZI</a>
-				<a href="">IPK/IKM</a>
+				<a href="{{ url('/ipkikm') }}">IPK/IKM</a>
 			</nav>
 			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 		</div>
@@ -21,33 +21,42 @@
 					</header>
 
 					<hr class="major" />
-
-
+						<header class="align-center">
+						<h3>Pilih Kategori UPT dan Jangka Waktu Penilaian</h3>
+						</header>
 								<!-- Form -->
-									<h3>Pilih Kategori UPT </h3>
-
 									<form method="post" action="#">
 										<div class="row uniform">
 											
 											<!-- Break -->
 											<div class="6u 12u$(xsmall)">
-												<div class="select-wrapper">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Kategori -</option>
-														<option value="1">LAPAS/BAPAS</option>
-														<option value="1">RUTAN/RUPBASAN</option>
-														<option value="1">KANIM/RUDENIM</option>
-													</select>
+												<div class="input-group dropdown">
+												  <input type="text" class="form-control upt dropdown-toggle" value="Pilih Kategori">
+												  <ul class="dropdown-menu">
+													<li><a href="#" data-value="Lapas Kelas I Surabaya">Lapas Kelas I Surabaya</a></li>
+													<li><a href="#" data-value="+1">USA (+1)</a></li>
+													<li><a href="#" data-value="+55">Japan (+55)</a></li>
+												  </ul>
+												  <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
 												</div>
 											</div>
 											<div class="6u 12u$(xsmall)">
-												<input type="date" name="demo-name" id="demo-name" value="" placeholder="Name" />
+												<div id="sla-data-range" class="mrp-container nav navbar-nav">
+													  <span class="mrp-icon"><i class="fa fa-calendar"></i></span>
+													  <div class="mrp-monthdisplay">
+														<span class="mrp-lowerMonth">Jul 2014</span>
+														<span class="mrp-to"> to </span>
+														<span class="mrp-upperMonth">Aug 2014</span>
+													  </div>
+													<input type="hidden" value="201407" id="mrp-lowerDate" />
+													<input type="hidden" value="201408" id="mrp-upperDate" />
+												  </div>
 											</div>
 											<!-- Break -->
-											<div class="12u$">
+											<div class="6u 12u$(xsmall)">
 												<ul class="actions">
 													<li><input type="submit" value="Lihat" /></li>
-													<li><input type="reset" value="Reset" class="alt" /></li>
+													<li><input type="reset" value="Reset" /></li>
 												</ul>
 											</div>
 										</div>

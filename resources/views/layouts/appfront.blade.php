@@ -48,6 +48,11 @@
 			<div class="copyright">
 				<p>Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa timur</p>
 			</div>
+			<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
 		</footer>
 	
     </body>

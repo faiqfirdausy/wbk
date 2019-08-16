@@ -1976,10 +1976,10 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: #6cc091;
+		background: #540101;
 		border-radius: 10px;
 		border: none;
-		border: solid 2px #8dcca9;
+		border: solid 2px #540101;
 		color: #fff;
 		display: block;
 		outline: 0;
@@ -2003,8 +2003,8 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #4bae77;
-			box-shadow: 0 0 0 1px #4bae77;
+			border-color: #540101;
+			box-shadow: 0 0 0 1px #951414;
 		}
 
 	.select-wrapper {
@@ -2531,8 +2531,8 @@
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		background-color: transparent;
-		box-shadow: inset 0 0 0 3px #fff;
-		color: #fff !important;
+		box-shadow: inset 0 0 0 3px #40667A;
+		color: #40667A !important;
 		border-radius: 30px;
 		border: 0;
 		cursor: pointer;
@@ -2645,8 +2645,9 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #56A97C;
-			color: #ffffff !important;
+			background-color: transparent;
+			box-shadow: inset 0 0 0 3px #FFF;
+			color: #fff !important;
 		}
 
 			input[type="submit"].special:hover,
@@ -2654,7 +2655,8 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #7ec89e;
+				background-color: #620909;
+				color: #fff !important;
 			}
 
 			input[type="submit"].special:active,
@@ -2701,7 +2703,7 @@
 	}
 
 		.subpage #header {
-			background: #6cc091;
+			background: #600505;
 			top: 0;
 			height: 44px;
 			line-height: 44px;
@@ -3138,7 +3140,7 @@
 
 	#footer {
 		padding: 3em 0;
-		background: #6cc091;
+		background: #600505;
 		color: #fff;
 		text-align: center;
 	}
