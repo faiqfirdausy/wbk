@@ -61,12 +61,13 @@
 
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script> -->
 	<!-- DataTables -->
-	<script src="{{ asset('js/jquery.dataTables.min.js')}}"></script>
-	<script src="{{ asset('js/dataTables.bootstrap.min.js')}}"></script>
-	<!-- jQuery 3 -->
 	<script src="{{ asset('js/jquery.min.js')}}"></script>
 	<!-- jQuery UI 1.11.4 -->
 	<script src="{{ asset('js/jquery-ui.min.js')}}"></script>
+	<script src="{{ asset('js/jquery.dataTables.min.js')}}"></script>
+	<script src="{{ asset('js/dataTables.bootstrap.min.js')}}"></script>
+	<!-- jQuery 3 -->
+	
 	<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 	<script>
 	  $.widget.bridge('uibutton', $.ui.button);
@@ -128,9 +129,11 @@
 
 	<script>
 	$(document).ready( function () {
-    $('#example1').DataTable();
+    	$('#example1').DataTable();
 } );
+
 	</script>
+
 
     @yield('scripts')
 	@stack('scripts')

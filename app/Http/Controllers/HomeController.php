@@ -61,12 +61,12 @@ class HomeController extends Controller
     {
         return view('perubahan');
     }
-		public function verifikasi()
+		public function verifikasi($id)
     {
 
-      $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+      $data['transaksi'] = Transaksi::where('id',$id)->first();
         $data['session'] = Auth::user();
-        return view('verifikasi',$data);
+        return view('verifikasifix2',$data);
     }
 		public function verifikasi2()
     {

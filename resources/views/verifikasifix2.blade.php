@@ -24,14 +24,7 @@
 			 <div class="col-md-12">
           <!-- Custom Tabs -->
           <div class="nav-tabs-custom">
-            <ul class="nav nav-tabs">
-
-              <li class="active"><a href="#tab_1" data-toggle="tab">Belum Terverifikasi</a></li>
-              <li><a href="#tab_2" data-toggle="tab">Seluruh Data</a></li>
-
- 
-  
-            </ul>
+            
 
 
             <div class="tab-content">
@@ -46,38 +39,53 @@
 					  <table class="table table-hover">
 
              
-            <thead>
                 <tr>
-                  <th>NO</th>
-                  <th>UPT</th>
+                  <th>Upt</th>
+                  <td>{{$transaksi->CreatedUser->Upt->nama_upt}}</td>
+                </tr>
+                <tr>
                   <th>Indikator</th>
-                  <th>Status</th>
-                  <th>Keterangan</th>
-                  <th>Capaian</th>
-                  <th>Aksi</th>
+                  <td>{{$transaksi->AbcSoal->nama}}</td>
+                </tr>
+                <tr>
+                  <th>Petunjuk Teknis</th>
+                  <td>{!! $transaksi->AbcSoal->petunjuk_teknis !!}</td>
 
                 </tr>
-                </thead>
-                <tbody>
-                @php
-                $j = 0;
-                @endphp
-                @foreach($tnonverif as $data)
-                @php
-                $j++;
-                @endphp
-                  <tr>
-                  <td>{{$j}}</td>
-                  <td>{{$data->CreatedUser->Upt->nama_upt}}</td>
-                  <td>{{$data->AbcSoal->nama}}
+                <tr>
+                  <th>Data Dukung</th>
+                  <td>
+                    @foreach($transaksi->AbcSoal->DataDukung as $dakung)
+                    <p>{{$dakung->nama}}</p>
+                     @php
+                      $j = 0;
+                      @endphp
+                    @foreach($transaksi->filesx as $varfile)
+                    @if($dakung->id == $varfile->id_datadukung)
+                    <p>{{$varfile->namafile}}</p>
+                    <hr>
+                    @php
+                    $j = 1;
+                    @endphp
+                    @endif
+
+
+                    @endforeach
+                    @if($j ==0)
+                    <p>file kosong</p>
+                    <hr>
+                    @endif
+                    @endforeach
+                    
+                    
                   </td>
-                  <td><span class="badge bg-success">Belum Terverifikasi</span></td>
-                  <td>Belum ada Keterangan</td>
-                  <td>0</td>
-                  <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
+
+
                 </tr>
-                @endforeach
-                </tbody>
+                  
+
+                <tbody>
+           
             
 					  </table>
 

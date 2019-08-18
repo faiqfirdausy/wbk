@@ -4,5 +4,8 @@
 @elseif ($session->id_role ==0)
 @include('verifikasifix')
 
+@elseif($session->id_role ==2)
+@include('pimti')
+
 @endif
  
