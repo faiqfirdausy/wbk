@@ -489,7 +489,8 @@
 		}
 
 		.row.uniform {
-			margin: -2em 0 -1px -2em;
+			 display: flex;
+			justify-content: center;
 		}
 
 		.row.\32 00\25 > * {
@@ -1794,6 +1795,8 @@
 
 	section.wrapper, article.wrapper {
 		padding: 6em 0;
+		background-color: #f4f7f9;
+		text-align: center;
 	}
 
 		section.wrapper header, article.wrapper header {

@@ -28,7 +28,7 @@
 									<form method="post" action="#">
 										<div class="row uniform">
 											<!-- Break -->
-											<div class="6u 12u$(xsmall)">
+											<div class="8u 12u$(xsmall)">
 												<div class="input-group dropdown">
 												  <input type="text" class="form-control upt dropdown-toggle" value="Pilih Kategori">
 												  <ul class="dropdown-menu">

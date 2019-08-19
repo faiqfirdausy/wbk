@@ -17,8 +17,8 @@
 									<div class="work-filter fadeInRight animated" data-wow-duration="500ms">
 										<ul class="text-center">
 											<li><a href="#features" data-wow-duration="1000ms" class="wow slideInLeft animated">BERITA ZI</a></li>
-											<li><a href="javascript:;" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
-											<li><a href="javascript:;" data-wow-duration="1000ms" class="wow slideInRight animated">IPK/IKM</a></li>
+											<li><a href="{{ url('/capaian') }}" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
+											<li><a href="{{ url('/ipkikm') }}" data-wow-duration="1000ms" class="wow slideInRight animated">IPK/IKM</a></li>
 										</ul>
 									</div>
 							<ul class="social-links text-center">
