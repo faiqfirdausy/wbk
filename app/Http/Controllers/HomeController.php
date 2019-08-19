@@ -64,8 +64,11 @@ class HomeController extends Controller
 		public function verifikasi($id)
     {
 
-      $data['transaksi'] = Transaksi::where('id',$id)->first();
+        $data['transaksi'] = Transaksi::where('id',$id)->first();
         $data['session'] = Auth::user();
+        $data['idtransaksi'] = $id;
+
+
         return view('verifikasifix2',$data);
     }
 		public function verifikasi2()

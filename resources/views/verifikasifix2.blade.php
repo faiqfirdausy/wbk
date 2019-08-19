@@ -62,7 +62,7 @@
                       @endphp
                     @foreach($transaksi->filesx as $varfile)
                     @if($dakung->id == $varfile->id_datadukung)
-                    <p>{{$varfile->namafile}}</p>
+                    <p><a href="{{url('pertanyaan2/download-file/'.$varfile->id)}}" class="btn btn-warning " role="button" >Download</a></p>
                     <hr>
                     @php
                     $j = 1;
@@ -72,14 +72,16 @@
 
                     @endforeach
                     @if($j ==0)
-                    <p>file kosong</p>
+                    <p><i class="fa fa-close" style="font-size:18px;color:red"></i>
+                    Belum Ada File<i class="fa fa-close" style="font-size:18px;color:red"></i>
+                    </p>
                     <hr>
                     @endif
                     @endforeach
                     
                     
                   </td>
-
+ 
 
                 </tr>
                   
@@ -96,9 +98,70 @@
                      
 
             <!-- /.tab-content -->
+
           </div>
+
           <!-- nav-tabs-custom -->
         </div>
+            <div align="right">
+                    <a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal">Verifikasi</a>
+            </div>
+
+
+
+
+             <form role="form" method="POST" action="{{ url('verifikasi/update') }}" enctype="multipart/form-data">
+                      {!! csrf_field() !!}
+
+  <!-- Modal Upload-->
+                          <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+        
+          <!-- Modal content-->
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Verifikasi </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <label>Capaian</label>
+                                      <select class="form-control">
+                                        <option>--</option>
+                                        <option>20%</option>
+                                        <option>40%</option>
+                                        <option>60%</option>
+                                        <option>80%</option>
+                                        <option>100%</option>
+                                     </select>
+                                      <br>
+                                      <label>Status</label>
+                                      <select class="form-control">
+                                        <option>--</option>
+                                        <option>Terverifikasi</option>
+                                        <option>Perlu Revisi</option>
+
+                                     </select>
+                                      <br>
+                                      <label>Keterangan</label>
+
+                                      <textarea class="form-control" rows="3" placeholder="Keterangan"></textarea>
+                                        <input type="hidden" name="idtransaksi" value="{{ $idtransaksi }}">
+                                        <input type="hidden" name="id_abcsoal" value="as">
+
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
+
+                                      </form>
+                                    </div>
+                                   </div>
+          
+                              </div>
+                          </div>
+
         <!-- /.col -->
 			
 
