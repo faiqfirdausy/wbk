@@ -61,15 +61,12 @@ class HomeController extends Controller
     {
         return view('perubahan');
     }
-<<<<<<< HEAD
+
 		public function pimti()
     {
         return view('pimti');
     }
-		public function verifikasi()
-=======
 		public function verifikasi($id)
->>>>>>> 3aae27eea29ba5a73a3ae6881128a6ea0dd5817b
     {
 
       $data['transaksi'] = Transaksi::where('id',$id)->first();
