@@ -13,4 +13,12 @@ class Transaksi extends Model
     {
         return $this->hasMany('App\Model\DataFile', 'id_transaksi', 'id');
     }
+    public function CreatedUser()
+    {
+        return $this->belongsTo('App\User', 'created_by', 'id');
+    }
+        public function AbcSoal()
+    {
+        return $this->belongsTo('App\Model\AbcSoal', 'id_abcsoal', 'id');
+    }
 }

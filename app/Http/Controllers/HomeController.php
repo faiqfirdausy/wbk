@@ -45,6 +45,9 @@ class HomeController extends Controller
     public function index()
     {        
         $data['datadivisi'] = Divisi::with('Upt')->get();
+        $data['tnonverif'] = Transaksi::where('status',0)->get();
+        $data['tverif'] = Transaksi::where('status',1)->get();
+
         $datatok = Divisi::all();
         $data['dataupt'] = Upt::all();
 
@@ -58,16 +61,20 @@ class HomeController extends Controller
     {
         return view('perubahan');
     }
+<<<<<<< HEAD
 		public function pimti()
     {
         return view('pimti');
     }
 		public function verifikasi()
+=======
+		public function verifikasi($id)
+>>>>>>> 3aae27eea29ba5a73a3ae6881128a6ea0dd5817b
     {
 
-      $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+      $data['transaksi'] = Transaksi::where('id',$id)->first();
         $data['session'] = Auth::user();
-        return view('verifikasi',$data);
+        return view('verifikasifix2',$data);
     }
 		public function verifikasi2()
     {
