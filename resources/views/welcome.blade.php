@@ -13,7 +13,9 @@
 					<!-- single slide -->
 					<div class="item active" style="background-image: url({{ asset('frontend/img/banner2.gif') }});">
 						<div class="carousel-caption">
+						<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
 							<img src="{{ asset('frontend/img/logo2.png') }}" width="60%">
+						</div>
 									<div class="work-filter fadeInRight animated" data-wow-duration="500ms">
 										<ul class="text-center">
 											<li><a href="#features" data-wow-duration="1000ms" class="wow slideInLeft animated">BERITA ZI</a></li>

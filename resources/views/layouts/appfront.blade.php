@@ -67,7 +67,11 @@
 						</div>
 
 						<!-- main nav -->
-						
+						<nav class="collapse navbar-collapse navbar-right" role="navigation">
+							<ul id="nav" class="nav navbar-nav">
+								<li class="current"><a href="#body"></a></li>
+							</ul>
+						</nav>
 						<nav class="collapse navbar-collapse navbar-right" role="navigation">
 						@if (Route::has('login'))
 							<ul id="nav" class="nav navbar-nav">
@@ -83,6 +87,8 @@
 							</ul>
 						@endif
 						</nav>
+						
+						
 						
 						<!-- /main nav -->
 						
