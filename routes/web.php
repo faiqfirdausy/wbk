@@ -21,12 +21,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-<<<<<<< HEAD
+
 Route::get('/pimti', 'HomeController@pimti')->name('home');
 Route::get('/verifikasi2', 'HomeController@verifikasi2')->name('home');
-=======
+
 Route::get('/verifikasi/{id_transaksi}', 'HomeController@verifikasi')->name('home');
->>>>>>> 3aae27eea29ba5a73a3ae6881128a6ea0dd5817b
 Route::get('/perubahan', 'HomeController@perubahan')->name('home');
 Route::group(['prefix' => 'perubahan', 'middleware' => 'auth'], function(){
 	Route::post('upload', 'HomeController@store');
