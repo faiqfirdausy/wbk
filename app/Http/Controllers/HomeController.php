@@ -61,6 +61,11 @@ class HomeController extends Controller
     {
         return view('perubahan');
     }
+
+		public function pimti()
+    {
+        return view('pimti');
+    }
 		public function verifikasi($id)
     {
 

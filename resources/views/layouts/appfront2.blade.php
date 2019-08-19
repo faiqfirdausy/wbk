@@ -8,6 +8,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
+	<link rel="stylesheet" href="{{ asset('css/default.css') }}">
+	
 	<link rel="stylesheet" href="{{ asset('front/css/main.css') }}">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
@@ -37,6 +39,8 @@
 					</ul>
 			</div>
 		</footer>
+		<!--Animation-->
+			<script src="{{ asset('js/animate.js')}}"></script>
 		<!-- ChartJS -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
 		<!--month picker-->

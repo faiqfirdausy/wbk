@@ -27,15 +27,14 @@
 								<!-- Form -->
 									<form method="post" action="#">
 										<div class="row uniform">
-											
 											<!-- Break -->
-											<div class="6u 12u$(xsmall)">
+											<div class="8u 12u$(xsmall)">
 												<div class="input-group dropdown">
 												  <input type="text" class="form-control upt dropdown-toggle" value="Pilih Kategori">
 												  <ul class="dropdown-menu">
-													<li><a href="#" data-value="Lapas Kelas I Surabaya">Lapas Kelas I Surabaya</a></li>
-													<li><a href="#" data-value="+1">USA (+1)</a></li>
-													<li><a href="#" data-value="+55">Japan (+55)</a></li>
+													<li><a href="#" data-value="Lapas & Bapas">Lapas & Bapas</a></li>
+													<li><a href="#" data-value="Rutan & Rupbasan">Rutan & Rupbasan</a></li>
+													<li><a href="#" data-value="Kanim & Rudenim">Kanim & Rudenim</a></li>
 												  </ul>
 												  <span role="button" class="input-group-addon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></span>
 												</div>

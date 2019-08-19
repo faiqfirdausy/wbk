@@ -21,6 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+Route::get('/pimti', 'HomeController@pimti')->name('home');
+Route::get('/verifikasi2', 'HomeController@verifikasi2')->name('home');
+
 Route::get('/verifikasi/{id_transaksi}', 'HomeController@verifikasi')->name('home');
 Route::get('/perubahan', 'HomeController@perubahan')->name('home');
 Route::group(['prefix' => 'perubahan', 'middleware' => 'auth'], function(){
