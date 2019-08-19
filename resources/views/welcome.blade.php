@@ -13,11 +13,11 @@
 					<!-- single slide -->
 					<div class="item active" style="background-image: url({{ asset('frontend/img/banner2.gif') }});">
 						<div class="carousel-caption">
-						<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
-							<img src="{{ asset('frontend/img/logo2.png') }}" width="60%">
-						</div>
+							<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
+								<img src="{{ asset('frontend/img/logo2.png') }}" width="60%">
+							</div>
 									<div class="work-filter fadeInRight animated" data-wow-duration="500ms">
-										<ul class="text-center">
+										<ul>
 											<li><a href="#features" data-wow-duration="1000ms" class="wow slideInLeft animated">BERITA ZI</a></li>
 											<li><a href="{{ url('/capaian') }}" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
 											<li><a href="{{ url('/ipkikm') }}" data-wow-duration="1000ms" class="wow slideInRight animated">IPK/IKM</a></li>
@@ -104,7 +104,7 @@
 				</div>
 				<div class="row">
 					<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
-						<div class="devider"><i class="fa fa-newspaper-o fa-lg"></i></div>
+						<div class="devider"></i></div>
 					</div>
 
 			

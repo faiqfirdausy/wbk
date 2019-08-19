@@ -57,7 +57,7 @@
 							</button>
 							<!-- /responsive nav button -->
 							
-							<!-- logo -->
+							<!-- logo 
 							<a class="navbar-brand" href="#body">
 								<h1 id="logo">
 									<img src="{{ asset('frontend/img/logo.png') }}" alt="Brandi">
@@ -112,7 +112,14 @@
 							Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa timur. All rights reserved. Designed & developed by <a href="http://themefisher.com/">Kanwil Jatim</a>
 						</p>
 					</div>
+					
 				</div>
+				<ul class="social-links text-center ">
+					<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+					<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+					<li><a href=""><i class="fa fa-instagram fa-lg"></i></a></li>
+					<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
+				</ul>
 			</div>
 		</footer>
 	<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
