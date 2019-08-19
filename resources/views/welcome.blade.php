@@ -14,10 +14,14 @@
 					<!-- single slide -->
 					<div class="item active" style="background-image: url({{ asset('frontend/img/banner2.gif') }});">
 						<div class="carousel-caption">
-							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Brandi</span>!</h2>
-							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">/creative</span> one page template.</h3>
-							<p data-wow-duration="1000ms" class="wow slideInRight animated">We are a team of professionals</p>
-							
+							<img src="{{ asset('frontend/img/logo2.png') }}" width="60%">
+									<div class="work-filter fadeInRight animated" data-wow-duration="500ms">
+										<ul class="text-center">
+											<li><a href="javascript:;" data-wow-duration="1000ms" class="wow slideInLeft animated">BERITA ZI</a></li>
+											<li><a href="javascript:;" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
+											<li><a href="javascript:;" data-wow-duration="1000ms" class="wow slideInRight animated">IPK/IKM</a></li>
+										</ul>
+									</div>
 							<ul class="social-links text-center">
 								<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
 								<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
