@@ -26,7 +26,7 @@ class DataDukung extends Model
 
     public function filesx()
     {
-        return $this->hasOne('App\Model\DataFile', 'id_datadukung', 'id');
+        return $this->hasMany('App\Model\DataFile', 'id_datadukung', 'id');
     }
 
 }

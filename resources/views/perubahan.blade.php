@@ -97,9 +97,28 @@
                     <a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#">Contoh File</a>
 
                     <hr>
+                    @php
+                    $z = 0;
+                    $y = 0;
+                    $temp =0;
+                    @endphp
+                    @foreach($dakung->filesx as $filesx)
+                    @php
+                    @endphp
+                    @if($filesx->Transaksi->created_by == $user_id)
+                    @php
+                    $temp = $y;
+                    $z = 1;
+                    @endphp
+                    @endif
+                    @php
+                    $y++;
+                    @endphp
 
-                    @if(!empty($dakung->filesx) &&   $dakung->filesx->Transaksi->created_by == $user_id)
-                    <a href="{{url('pertanyaan2/download-file/'.$dakung->filesx->id)}}">{{$dakung->filesx->namafile}}</a>
+                    @endforeach
+                    @if($z == 1 )
+
+                    <a href="{{url('pertanyaan2/download-file/'.$dakung->filesx[$temp]->id)}}">{{$dakung->filesx[$temp]->namafile}}</a>
                     <br>
                     <a href="#" class="btn btn-warning " role="button" data-toggle="modal" data-target="#myModal{{$dakung->id}}">Ubah</a>
 
@@ -125,7 +144,7 @@
                                       @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
                                         <input type="hidden" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
                                         @if(!empty($dakung->filesx) &&  $dakung->filesx->Transaksi->created_by == $user_id)
-                                          <input type="hidden" name="id_file" value="{{$dakung->filesx->id}}">
+                                          <input type="hidden" name="id_file" value="{{$dakung->filesx[$temp]->id}}">
                                         @else
                                           <input type="hidden" name="id_file" value="">
 
@@ -157,7 +176,6 @@
 
 
                     @endif
-
 
 
                     <hr>

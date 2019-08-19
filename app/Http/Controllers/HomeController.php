@@ -64,7 +64,9 @@ class HomeController extends Controller
 
 		public function pimti()
     {
-        return view('pimti');
+        $data['session'] = Auth::user();
+
+        return view('pimti',$data);
     }
 		public function verifikasi($id)
     {
