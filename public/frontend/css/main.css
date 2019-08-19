@@ -374,7 +374,7 @@ top: -8px;
 }
 
 .overlay {
-	background-color: rgba(14,180,147,.9);
+	background-color: rgba(96,5,5,.9);
 	text-align: center;
 	position: absolute;
 	left: 0;
@@ -648,7 +648,7 @@ label.error {
 
 
 .footer {
-  background-color: #1ea78d;
+  background-color: #600505;
   border-top: 5px solid #062033;
   color: #fff;
 }

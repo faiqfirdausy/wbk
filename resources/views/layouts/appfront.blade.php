@@ -47,7 +47,7 @@
 				<!-- 
 				Fixed Navigation
 				==================================== -->
-				<header id="navigation" class="navbar-fixed-top navbar">
+				<header id="navigation" class="navbar-fixed-top navbar" >
 					<div class="container">
 						<div class="navbar-header">
 							<!-- responsive nav button -->
