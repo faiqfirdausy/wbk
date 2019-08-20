@@ -202,6 +202,7 @@ class HomeController extends Controller
                     }
                     else
                     {
+
                     $file = new DataFile;
 
                     }
@@ -209,6 +210,7 @@ class HomeController extends Controller
                 }
                 else
                 {
+
                 $transaksi = new Transaksi;
                 $file = new DataFile;
                 }   
