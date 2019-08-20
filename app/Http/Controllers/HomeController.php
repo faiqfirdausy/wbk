@@ -131,8 +131,10 @@ class HomeController extends Controller
                 $nama_upt = $upt->Upt->nama_upt;
                 $id_datadukung = $request->id_datadukung;
                 $kategori = $request->kategori;
+                dd($request->id_transaksi);
 
                 $file = DataFile::findOrFail($request->id_file);
+
                 Storage::disk('local')->delete($file->path);
                 DataFile::where('id', $request->id_file)->delete();
 
@@ -151,6 +153,7 @@ class HomeController extends Controller
                 
                 DB::commit();
                 // \Session::flash('success_flash_message','Data Mahasiswa Berhasil Ditambah.');
+
                 return redirect('pertanyaan2/kategori/'.$kategori);
 
             } catch (Exception $e) {

@@ -123,9 +123,12 @@
                                     <div class="modal-body">
                                         <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
                                         <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
+
                                       @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
+                                      
                                         <input type="hidden" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
                                         @if(!empty($dakung->filesxuser))
+
                                           <input type="hidden" name="id_file" value="{{$dakung->filesxuser->id}}">
                                         @else
                                           <input type="hidden" name="id_file" value="">
