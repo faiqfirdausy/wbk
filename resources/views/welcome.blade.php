@@ -216,7 +216,7 @@
 						</div>
 					</div>
 					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
-						<canvas id="bar-chart" width="700"></canvas>
+						<canvas id="bar-chart" width="400" height="150"></canvas>
 					</div>
 			
 				</div>
