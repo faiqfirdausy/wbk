@@ -30,6 +30,9 @@
 		<link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
 		<!-- media-queries -->
 		<link rel="stylesheet" href="{{ asset('frontend/css/media-queries.css') }}">
+		<!--month picker-->
+		<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
+		<link rel="stylesheet" href="{{ asset('css/monthpicker.css') }}">
 
 		<!-- Modernizer Script for old Browsers -->
 		<script src="{{ asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
@@ -125,7 +128,40 @@
 	<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
 	<!-- Essential jQuery Plugins
 		================================================== -->
-				
+		<!--chart.js-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+		
+		<script>
+			// Bar chart
+			new Chart(document.getElementById("bar-chart"), {
+				type: 'bar',
+				data: {
+				  labels: ["Lapas Kelas I Surabaya", "Rutan Kelas IIB Nganjuk", "Lapas Perempuan Malang", "Latin America", "North America"
+				  , "North America", "North America", "North America", "North America", "North America", "North America", "North America"
+				  , "North America", "North America", "North America"],
+				  datasets: [
+					{
+					  label: "Population (millions)",
+					  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"
+					  ,"#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+					  data: [2478,5267,734,784,433,2478,5267,734,784,433,2478,5267,734,784,433]
+					}
+				  ]
+				},
+				options: {
+				  legend: { display: false },
+				  title: {
+					display: true,
+					text: 'Predicted world population (millions) in 2050'
+				  }
+				}
+			});
+		</script>
+		<!--month picker-->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="{{ asset('js/monthpicker.js')}}"></script>
 		<!--Video-->
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 		<script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>

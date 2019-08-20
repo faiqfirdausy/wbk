@@ -71,6 +71,7 @@ span.color {
 body > section,
 .footer {
 	padding: 70px 0;
+	background-color: #f4f7f9;
 }
 
 .sec-title {}
@@ -576,6 +577,7 @@ background-color: rgba(108, 192, 145, 0.15);
 
 .contact {
 	padding-bottom: 0;
+	background-color: #edf2f5;
 }
 
 .contact-address h3 {
@@ -589,7 +591,8 @@ background-color: rgba(108, 192, 145, 0.15);
   line-height: 24px;
 }
 
-.contact-form {}
+.contact-form {
+}
 
 .contact-form h3 {
   color: #062033;
@@ -613,9 +616,10 @@ background-color: rgba(108, 192, 145, 0.15);
 }
 
 .contact-form .input-field {
-  width: 48%;
+  width: 42%;
   float: left;
-  margin-right: 4%;
+  margin-right: 2%;
+  margin-left: 6%;
 }
 
 .contact-form .input-field:last-child {

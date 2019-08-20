@@ -19,7 +19,7 @@
 									<div class="work-filter fadeInRight animated" data-wow-duration="500ms">
 										<ul>
 											<li><a href="#features" data-wow-duration="1000ms" class="wow slideInLeft animated">VIDEO</a></li>
-											<li><a href="{{ url('/capaian') }}" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
+											<li><a href="#capaian" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
 											<li><a href="{{ url('/ipkikm') }}" data-wow-duration="1000ms" class="wow slideInRight animated">IPK/IKM</a></li>
 										</ul>
 									</div>
@@ -53,7 +53,7 @@
 				
 					<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
 						<h2>VIDEO</h2>
-						<div class="devider"><i class="fa fa-newspaper-o fa-lg"></i></div>
+						<div class="devider"><i class="fa fa-spinner fa-spin fa-lg"></i></div>
 					</div>
 	
 				</div>
@@ -165,6 +165,68 @@
 	</div>
   </div>
 </div> 
+
+		<!--
+        Contact Us
+        ==================================== -->		
+		
+		<section id="capaian" class="contact">
+			<div class="container">
+				<div class="row mb50">
+				
+					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
+						<h2>CAPAIAN Zona Integritas</h2>
+						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
+					</div>
+					
+					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+						<p>Pilih Kategori UPT dan Jangka Waktu Penilaian</p>
+					</div>
+					
+					
+					<!-- contact form -->
+					<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
+						<div class="contact-form">
+							<form action="#" id="contact-form">
+								<div class="input-group name-email">
+									<div class="input-field">
+										<select class="form-control" id="sel1">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+										</select>
+									</div>
+									<div class="input-field">
+										<div id="sla-data-range" class="mrp-container nav navbar-nav">
+											  <span class="mrp-icon"><i class="fa fa-calendar"></i></span>
+											  <div class="mrp-monthdisplay">
+												<span class="mrp-lowerMonth">Jul 2014</span>
+												<span class="mrp-to"> to </span>
+												<span class="mrp-upperMonth">Aug 2014</span>
+											  </div>
+											<input type="hidden" value="201407" id="mrp-lowerDate" />
+											<input type="hidden" value="201408" id="mrp-upperDate" />
+										  </div>
+										   <input type="submit" class="btn btn-success" value="Submit">
+									 <input class="btn btn-default" type="reset" value="Reset">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+						<canvas id="bar-chart" width="700"></canvas>
+					</div>
+			
+				</div>
+			</div>
+			
+		</section>
+		
+        <!--
+        End Contact Us
+        ==================================== -->
 
 
 @endsection
