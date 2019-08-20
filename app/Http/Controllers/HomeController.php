@@ -225,7 +225,7 @@ class HomeController extends Controller
                 $transaksi->save();
                 $file->id_transaksi = $transaksi->id;
                 $file->id_datadukung = $id_datadukung;
-
+                $file->id_user = $userId;
 
                 $uploaded = $request->file('upload_files');
                 $ext = $uploaded->getClientOriginalExtension();

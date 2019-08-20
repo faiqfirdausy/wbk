@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class DataDukung extends Model
 {
@@ -28,5 +29,12 @@ class DataDukung extends Model
     {
         return $this->hasMany('App\Model\DataFile', 'id_datadukung', 'id');
     }
+    public function filesxuser()
+    {
+        $session = Auth::user();
+
+        return $this->hasOne('App\Model\DataFile', 'id_datadukung', 'id')->where('id_user',$session->id);
+    }
+
 
 }
