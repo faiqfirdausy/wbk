@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+
 use Auth;
 
 class AbcSoal extends Model
@@ -29,6 +30,8 @@ class AbcSoal extends Model
 
     public function myTransaksi()
     {
-        return $this->hasOne('App\Model\Transaksi', 'id_abcsoal', 'id');
+        $session = Auth::user();
+
+        return $this->hasOne('App\Model\Transaksi', 'id_abcsoal', 'id')->where('created_by',$session->id);
     }
 }

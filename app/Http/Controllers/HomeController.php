@@ -131,7 +131,6 @@ class HomeController extends Controller
                 $nama_upt = $upt->Upt->nama_upt;
                 $id_datadukung = $request->id_datadukung;
                 $kategori = $request->kategori;
-                dd($request->id_transaksi);
 
                 $file = DataFile::findOrFail($request->id_file);
 
