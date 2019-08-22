@@ -69,10 +69,10 @@
 							<!-- /logo -->
 						</div>
 
-						<!-- main nav -->
+						<!-- main navbar-->
 						<nav class="collapse navbar-collapse navbar-right" role="navigation">
 							<ul id="nav" class="nav navbar-nav">
-								<li class="current"><a href="#body"></a></li>
+								<li class="current"><a href=""></a></li>
 							</ul>
 						</nav>
 						<nav class="collapse navbar-collapse navbar-right" role="navigation">
@@ -136,15 +136,15 @@
 			new Chart(document.getElementById("bar-chart"), {
 				type: 'bar',
 				data: {
-				  labels: ["Lapas Kelas I Surabaya", "Rutan Kelas IIB Nganjuk", "Lapas Perempuan Malang", "Latin America", "North America"
-				  , "North America", "North America", "North America", "North America", "North America", "North America", "North America"
-				  , "North America", "North America", "North America"],
-				  datasets: [
+				  labels: ["Lapas Kelas I Surabaya", "Lapas Kelas IIB Blitar", "Lapas Perempuan Malang", "Lapas Kelas I Malang", "Lapas Kelas IIA Kediri"
+				  , "Lapas Kelas I Madiun", "Lapas Kelas IIB Ngawi", "Bapas Kelas II Pamekasan", "Bapas Kelas II Madiun", "Bapas Kelas II Kediri", "Bapas Kelas II Jember", "Bapas Kelas II Malang"
+				  , "Bapas Kelas I Surabaya", "Bapas Kelas II Bojonegoro", "LPKA Kelas I Blitar"],
+				 datasets: [
 					{
-					  label: "Population (millions)",
+					  label: "Nilai Capaian",
 					  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"
 					  ,"#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-					  data: [2478,5267,734,784,433,2478,5267,734,784,433,2478,5267,734,784,433]
+					  data: [27,57,34,74,33,78,67,73,74,43,78,57,74,78,93]
 					}
 				  ]
 				},
@@ -152,7 +152,7 @@
 				  legend: { display: false },
 				  title: {
 					display: true,
-					text: 'Predicted world population (millions) in 2050'
+					text: 'Nilai Capaian Pada Tahun 2020'
 				  }
 				}
 			});
@@ -162,15 +162,15 @@
 			new Chart(document.getElementById("bar-chart2"), {
 				type: 'bar',
 				data: {
-				  labels: ["Lapas Kelas I Surabaya", "Rutan Kelas IIB Nganjuk", "Lapas Perempuan Malang", "Latin America", "North America"
-				  , "North America", "North America", "North America", "North America", "North America", "North America", "North America"
-				  , "North America", "North America", "North America"],
+				  labels: ["Lapas Kelas I Surabaya", "Lapas Kelas IIB Blitar", "Lapas Perempuan Malang", "Lapas Kelas I Malang", "Lapas Kelas IIA Kediri"
+				  , "Lapas Kelas I Madiun", "Lapas Kelas IIB Ngawi", "Bapas Kelas II Pamekasan", "Bapas Kelas II Madiun", "Bapas Kelas II Kediri", "Bapas Kelas II Jember", "Bapas Kelas II Malang"
+				  , "Bapas Kelas I Surabaya", "Bapas Kelas II Bojonegoro", "LPKA Kelas I Blitar"],
 				  datasets: [
 					{
-					  label: "Population (millions)",
+					  label: "Nilai Capaian",
 					  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"
 					  ,"#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-					  data: [2478,5267,734,784,433,2478,5267,734,784,433,2478,5267,734,784,433]
+					  data: [78,67,74,84,93,88,22,40,84,33,78,57,74,84,49]
 					}
 				  ]
 				},
@@ -178,7 +178,7 @@
 				  legend: { display: false },
 				  title: {
 					display: true,
-					text: 'Predicted world population (millions) in 2050'
+					text: 'Nilai Capaian Pada Tahun 2020'
 				  }
 				}
 			});
