@@ -97,7 +97,9 @@ class HomeController extends Controller
 		public function pimti()
     {
         $data['session'] = Auth::user();
-
+        $data['listnilai'] = Transaksi::groupBy('created_by')
+   ->selectRaw('*, sum(nilai) as sum')
+   ->get();
         return view('pimti',$data);
     }
 		public function verifikasi($id)

@@ -24,7 +24,6 @@
 			 <div class="col-md-12">
 
             <div class="tab-content">
-                <b>How to use:</b>				
 			<div class="box-body table-responsive no-padding">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -36,42 +35,36 @@
                 </tr>
                 </thead>
                 <tbody>
+                  @foreach($listnilai as $list)
+                  @php
+                  $i = 1;
+                  @endphp
                 <tr>
 					<td>
-						1
+						{{$i}}
 					</td>
                   <td>
-						Lapas Kelas I Surabaya
+						{{$list->CreatedUser->Upt->nama_upt}}
 				  </td>
                   <td>
-						25%
+                    @if(!empty($list->sum))
+						{{$list->sum}}%
+                    @else
+                    0%
+                    @endif
                   </td>
                   <td>
 						Tingkatkan Pengawasan
 				  </td>
                 </tr>
-                <tr>
-					<td>
-						1
-					</td>
-                  <td>
-						Rutan Kelas IIB Nganjuk
-				  </td>
-                  <td>
-						98%
-                  </td>
-                  <td>
-						Maju Kontestasi WBK Tahun Depan
-				  </td>
-                </tr>
+               
 				</tbody>
                 <tfoot>
-                <tr>
-                  <th>NO</th>
-                  <th>NAMA UPT</th>
-                  <th>PROGRES PEMBANGUNAN</th>
-                  <th>REKOMENDASI</th>
-                </tr>
+                
+                  @php
+                  $i++;
+                  @endphp
+                @endforeach
                 </tfoot>
               </table>
             </div>

@@ -216,9 +216,28 @@
 
                      @endforeach
                   </td>
-                  <td> <span class="badge bg-success">Terverifikasi</span></td>
-                  <td>  </td>
-                  <td>X</td>
+                  <td> @if($abc->myTransaksi['status'] ==1 )
+                    <span class="badge bg-success">Terverifikasi</span>
+                    @elseif( $abc->myTransaksi['status'] ==0 )
+                    <span class="badge bg-success">Belum Terverifikasi</span>
+                     @elseif( $abc->myTransaksi['status'] ==2 )
+                    <span class="badge bg-success">Revisi</span>
+                    @endif
+                  </td>
+                  <td> 
+                    @if(!empty($abc->myTransaksi['keterangan']))
+                    {{$abc->myTransaksi['keterangan']}}
+                    @else
+                    belum ada keterangan
+                    @endif
+
+                    </td>
+                  <td>
+                    @if(!empty($abc->myTransaksi['capaian']))
+                    @php $capaian = $abc->myTransaksi->capaian* 100;@endphp
+                    {{$capaian}}%
+                    @endif
+                  </td>
                 </tr>
                @endforeach
 				</tbody>
