@@ -23,7 +23,7 @@
             <div class="box-body">
 			
         @foreach($kategori as $data)
-			<div class="col-lg-3">
+			<div class="col-lg-4">
 			<a href="{{url('pertanyaan2/kategori/'.$data->id)}}" class="text-black">
                             <button type="button" >
                 <div class="login100-pic js-tilt" data-tilt>
@@ -36,7 +36,7 @@
 							{{$data->nama}}
 						</button>
 					</div>
-			</div>
+				</div>
 			</div>
 		@endforeach
 	

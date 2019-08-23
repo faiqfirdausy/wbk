@@ -2,15 +2,15 @@
 
 @section('content')
 			        <!--
-        Home Slider
+        content section
         ==================================== -->
 		
 		<section id="slider">
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">			
-				<!-- Wrapper for slides -->
+				<!-- Wrapper banner -->
 				<div class="carousel-inner" role="listbox">
 					
-					<!-- single slide -->
+					<!-- banner -->
 					<div class="item active" style="background-image: url({{ asset('frontend/img/banner2.gif') }});">
 						<div class="carousel-caption">
 							<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
@@ -31,16 +31,16 @@
 							</ul>
 						</div>
 					</div>
-					<!-- end single slide -->
+					<!-- end banner -->
 					
 				</div>
-				<!-- End Wrapper for slides -->
+				<!-- end of content -->
 				
 			</div>
 		</section>
 		
         <!--
-        End Home SliderEnd
+        Banner
         ==================================== -->
 		
 		 <!--
@@ -112,7 +112,7 @@
 				<figure class="mix work-item logo-design">
 					<img src="{{ asset('frontend/img/works/item-3.jpg') }}" alt="">
 					<figcaption class="overlay">
-						<h4>Labore et dolore magnam</h4>
+						<h4>Tips Lolos Tes Kesamaptaan CASN Kemenkumham 2018</h4>
 						<p>Kanwil Kemenkumham Jatim</p>
 						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
 						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/iqh3NnoWgxY" data-target="#myModal">
@@ -124,7 +124,7 @@
 				<figure class="mix work-item photography">
 					<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
 					<figcaption class="overlay">
-						<h4>Labore et dolore magnam</h4>
+						<h4>Hari Ulang Tahun RI ke 74</h4>
 						<p>Kanwil Kemenkumham Jatim</p>
 						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
 						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
@@ -161,30 +161,30 @@
 			</div>
 </section>
 <!-- Modal video-->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-	<div class="modal-content">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
 
-	  
-	  <div class="modal-body">
+		  
+		  <div class="modal-body">
 
-	   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>        
-		<!-- 16:9 aspect ratio -->
-	<div class="embed-responsive embed-responsive-16by9">
-	  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-	</div>
-		
-		
+		   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>        
+			<!-- 16:9 aspect ratio -->
+		<div class="embed-responsive embed-responsive-16by9">
+		  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+		</div>
+			
+			
+		  </div>
+
+		</div>
 	  </div>
-
-	</div>
-  </div>
-</div> 
+	</div> 
 
 		<!--
-        Contact Us
+       Capaian ZI
         ==================================== -->		
 		
 		<section id="capaian" class="contact">
@@ -201,7 +201,7 @@
 					</div>
 					
 					
-					<!-- contact form -->
+					<!-- form -->
 					<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<div class="contact-form">
 							<form action="#" id="contact-form">
@@ -241,7 +241,7 @@
 			
 		</section>
 		
-        <!--==================================== -->
+        <!--================IPK / IPM==================== -->
 		<section id="ipk/ikm" class="contact">
 			<div class="container">
 				<div class="row mb50">
@@ -256,7 +256,7 @@
 					</div>
 					
 					
-					<!-- contact form -->
+					<!-- form -->
 					<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<div class="contact-form">
 							<form action="#" id="contact-form">
