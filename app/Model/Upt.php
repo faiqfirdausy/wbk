@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Upt extends Model
 {
     protected $table = 'upt';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_upt';
 
     public function userUpt()
     {

@@ -125,28 +125,28 @@
                                     </div>
                                     <div class="modal-body">
                                       <label>Capaian</label>
-                                      <select class="form-control">
+                                      <select name="capaian" class="form-control">
                                         <option>--</option>
-                                        <option>20%</option>
-                                        <option>40%</option>
-                                        <option>60%</option>
-                                        <option>80%</option>
-                                        <option>100%</option>
+                                        <option value="2">20%</option>
+                                        <option value="4">40%</option>
+                                        <option value="6">60%</option>
+                                        <option value="8">80%</option>
+                                        <option value="10">100%</option>
                                      </select>
                                       <br>
                                       <label>Status</label>
-                                      <select class="form-control">
+                                      <select name="statustransaksi" class="form-control">
                                         <option>--</option>
-                                        <option>Terverifikasi</option>
-                                        <option>Perlu Revisi</option>
+                                        <option value="1">Terverifikasi</option>
+                                        <option value="2">Perlu Revisi</option>
 
                                      </select>
                                       <br>
                                       <label>Keterangan</label>
 
-                                      <textarea class="form-control" rows="3" placeholder="Keterangan"></textarea>
+                                      <textarea name="keterangan" class="form-control" rows="3" placeholder="Keterangan"></textarea>
                                         <input type="hidden" name="idtransaksi" value="{{ $idtransaksi }}">
-                                        <input type="hidden" name="id_abcsoal" value="as">
+                                        <input type="hidden" name="id_abcsoal" value="{{$transaksi->AbcSoal->id}}">
 
 
 

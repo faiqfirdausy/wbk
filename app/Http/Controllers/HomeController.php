@@ -61,6 +61,38 @@ class HomeController extends Controller
     {
         return view('perubahan');
     }
+     public function updateverif(Request $request)
+    {
+        DB::beginTransaction();
+
+            try {
+                $capaian = $request->capaian;
+                $capaian = $capaian / 10;
+                $abc = AbcSoal::findorFail($request->id_abcsoal);
+                $Transaksi = Transaksi::findorFail($request->idtransaksi);
+                $time = Carbon\Carbon::now()->format('Y-m-d H:i:s');
+
+
+                $totalnilai = $abc->nilai * $capaian;
+                $Transaksi->nilai = $totalnilai;
+                $Transaksi->keterangan = $request->keterangan;
+                $Transaksi->status = $request->statustransaksi;
+                $Transaksi->capaian = $capaian;
+                $Transaksi->updated_by =  Auth::user()->id;
+                $Transaksi->updated_at = $time;
+                $Transaksi->save();
+
+                
+                DB::commit();
+                // \Session::flash('success_flash_message','Data Mahasiswa Berhasil Ditambah.');
+
+                return redirect('/home');
+
+            } catch (Exception $e) {
+                return response()->json(['error' => 'silahkan coba lagi']);
+                DB::rollback();
+            }
+    }
 
 		public function pimti()
     {
