@@ -72,8 +72,22 @@
                   <td>{{$data->CreatedUser->Upt->nama_upt}}</td>
                   <td>{{$data->AbcSoal->nama}}
                   </td>
-                  <td><span class="badge bg-success">Belum Terverifikasi</span></td>
-                  <td>Belum ada Keterangan</td>
+                  <td>
+                    @if($data->status== 0)
+                    <span class="badge bg-success">Belum Terverifikasi</span>
+                    @elseif($data->status==1)
+                    <span class="badge bg-success">Terverifikasi</span>
+                    @else
+                    <span class="badge bg-success">Revisi</span>
+                    @endif
+                  </td>
+                  <td>
+                    @if(!empty($data->keterangan))
+                    {{$data->keterangan}}
+                    @else
+                     Belum ada Keterangan
+                    @endif
+                  </td>
                   <td>0</td>
                   <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
                 </tr>
@@ -87,7 +101,136 @@
              
             </div>
                      
+<div class="tab-pane " id="tab_2">
 
+
+              <!-- /.tab-pane -->
+                
+         <!-- /.box-header -->
+          <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+
+             
+            <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>UPT</th>
+                  <th>Indikator</th>
+                  <th>Status</th>
+                  <th>Keterangan</th>
+                  <th>Capaian</th>
+                  <th>Aksi</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                @php
+                $j = 0;
+                @endphp
+                @foreach($trevisi as $data)
+                @php
+                $j++;
+                @endphp
+                  <tr>
+                  <td>{{$j}}</td>
+                  <td>{{$data->CreatedUser->Upt->nama_upt}}</td>
+                  <td>{{$data->AbcSoal->nama}}
+                  </td>
+                  <td>
+                     @if($data->status== 0)
+                    <span class="badge bg-success">Belum Terverifikasi</span>
+                    @elseif($data->status==1)
+                    <span class="badge bg-success">Terverifikasi</span>
+                    @else
+                    <span class="badge bg-success">Revisi</span>
+                    @endif
+
+                  </td>
+                  <td>
+                    @if(!empty($data->keterangan))
+                    {{$data->keterangan}}
+                    @else
+                     Belum ada Keterangan
+                    @endif
+                  </td>
+                  <td>0</td>
+                  <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
+                </tr>
+                @endforeach
+                </tbody>
+            
+            </table>
+
+          </div>
+              <!-- /.tab-pane -->
+             
+            </div>
+
+
+            <div class="tab-pane" id="tab_3">
+
+
+              <!-- /.tab-pane -->
+                
+         <!-- /.box-header -->
+          <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+
+             
+            <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>UPT</th>
+                  <th>Indikator</th>
+                  <th>Status</th>
+                  <th>Keterangan</th>
+                  <th>Capaian</th>
+                  <th>Aksi</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                @php
+                $j = 0;
+                @endphp
+                @foreach($tverif as $data)
+                @php
+                $j++;
+                @endphp
+                  <tr>
+                  <td>{{$j}}</td>
+                  <td>{{$data->CreatedUser->Upt->nama_upt}}</td>
+                  <td>{{$data->AbcSoal->nama}}
+                  </td>
+                  <td>
+                    @if($data->status== 0)
+                    <span class="badge bg-success">Belum Terverifikasi</span>
+                    @elseif($data->status==1)
+                    <span class="badge bg-success">Terverifikasi</span>
+                    @else
+                    <span class="badge bg-success">Revisi</span>
+                    @endif
+
+                  </td>
+                  <td>
+                    @if(!empty($data->keterangan))
+                    {{$data->keterangan}}
+                    @else
+                     Belum ada Keterangan
+                    @endif
+                  </td>
+                  <td>0</td>
+                  <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
+                </tr>
+                @endforeach
+                </tbody>
+            
+            </table>
+
+          </div>
+              <!-- /.tab-pane -->
+             
+            </div>
   
                      
 
@@ -95,7 +238,7 @@
             <!-- /.tab-content -->
             <!-- /.tab-content -->
           </div>
-          
+
           <!-- nav-tabs-custom -->
         </div>
         <!-- /.col -->
