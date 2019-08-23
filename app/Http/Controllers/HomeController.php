@@ -46,7 +46,8 @@ class HomeController extends Controller
     {        
         $data['datadivisi'] = Divisi::with('Upt')->get();
         $data['tnonverif'] = Transaksi::where('status',0)->get();
-        $data['tverif'] = Transaksi::where('status',1)->get();
+        $data['tverif'] = Transaksi::all();
+        $data['trevisi'] = Transaksi::where('status',2)->get();
 
         $datatok = Divisi::all();
         $data['dataupt'] = Upt::all();

@@ -27,7 +27,8 @@
             <ul class="nav nav-tabs">
 
               <li class="active"><a href="#tab_1" data-toggle="tab">Belum Terverifikasi</a></li>
-              <li><a href="#tab_2" data-toggle="tab">Seluruh Data</a></li>
+              <li><a href="#tab_2" data-toggle="tab">Revisi</a></li>
+              <li><a href="#tab_3" data-toggle="tab">Seluruh</a></li>
 
  
   
@@ -87,8 +88,14 @@
             </div>
                      
 
+  
+                     
+
+            <!-- /.tab-content -->
+            <!-- /.tab-content -->
             <!-- /.tab-content -->
           </div>
+          
           <!-- nav-tabs-custom -->
         </div>
         <!-- /.col -->
