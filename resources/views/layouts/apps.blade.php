@@ -61,7 +61,7 @@
 
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script> -->
 	<!-- DataTables -->
-	<script src="{{ asset('js/jquery.min.js')}}"></script>
+	<script src="{{ asset('js/button/jquery-3.2.1.min.js')}}"></script>
 	<!-- jQuery UI 1.11.4 -->
 	<script src="{{ asset('js/jquery-ui.min.js')}}"></script>
 	<script src="{{ asset('js/jquery.dataTables.min.js')}}"></script>
@@ -93,7 +93,6 @@
 
 	
 	<!--===============================================================================================-->	
-	<script src="{{ asset('js/button/jquery-3.2.1.min.js')}}"></script>
 	<script src="{{ asset('js/button/popper.js')}}"></script>
 	<script src="{{ asset('js/button/select2.min.js')}}"></script>
 	<script src="{{ asset('js/button/tilt.jquery.min.js')}}"></script>
