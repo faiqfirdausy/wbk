@@ -24,10 +24,10 @@
 										</ul>
 									</div>
 							<ul class="social-links text-center">
-								<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+								<li><a href="https://twitter.com/Kemenkumham_Jtm"><i class="fa fa-twitter fa-lg"></i></a></li>
 								<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
 								<li><a href=""><i class="fa fa-instagram fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
+								<li><a href="https://jatim.kemenkumham.go.id/"><i class="fa fa-dribbble fa-lg"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -40,9 +40,63 @@
 		</section>
 		
         <!--
-        Banner
+        End of Banner
         ==================================== -->
+				<!--
+       PIMTI
+        ==================================== -->		
 		
+		<section id="pimti" class="contact">
+			<div class="container">
+				<div class="row mb50">
+				
+					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
+						<h2>Progress Monitoring</h2>
+						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
+					</div>
+					
+					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+						<p>Progres Pembangunan Zona Integritas di UPT</p>
+					</div>
+					
+			
+					<div class="sec-sub-title wow rubberBand animated" data-wow-duration="1000ms">
+						 <table class="table table-bordered">
+							<thead>
+							  <tr>
+								<th>NO</th>
+								<th>NAMA UPT</th>
+								<th>PROGRES PEMBANGUNAN</th>
+								<th>REKOMENDASI</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>1</td>
+								<td>Lapas Kelas I Surabaya</td>
+								<td>20%</td>
+								<td>Harus meningkatkan pengawasan terhadap UPT</td>
+							  </tr>
+							  <tr>
+								<td>2</td>
+								<td>Kanim Khusus Kelas I Surabaya</td>
+								<td>80%</td>
+								<td>Maju kontestasi tahun depan</td>
+							  </tr>
+							  <tr>
+								<td>3</td>
+								<td>Rutan Kelas IIB Blitar</td>
+								<td>56%</td>
+								<td>Maju kontestasi tahun depan</td>
+							  </tr>
+							</tbody>
+						  </table>
+					</div>
+			
+				</div>
+			</div>
+			
+		</section>
 		 <!--
         Video
         ==================================== -->
@@ -222,8 +276,8 @@
 												<span class="mrp-to"> to </span>
 												<span class="mrp-upperMonth">Aug 2014</span>
 											  </div>
-											<input type="hidden" value="201407" id="mrp-lowerDate" />
-											<input type="hidden" value="201408" id="mrp-upperDate" />
+											<input type="hidden" value="" id="mrp-lowerDate" />
+											<input type="hidden" value="" id="mrp-upperDate" />
 										  </div>
 										   <input type="submit" class="btn btn-success" value="Submit">
 									 <input class="btn btn-default" type="reset" value="Reset">
