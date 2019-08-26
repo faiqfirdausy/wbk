@@ -60,7 +60,7 @@
 				
 			<div class="box-body">
         <p>{{$data->keterangan}}</p>
-              <table id="example1" class="table table-bordered table-striped">
+              <table id="example" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>NO</th>
@@ -88,16 +88,18 @@
 
 
                   <td>@foreach($abc->DataDukung as $dakung)
+                    @if(!empty($dakung->id_divisi))
+
+                    @if($dakung->id_divisi == $session->Upt->id_divisi)
                     <li>
                     
-                    {{$dakung->nama}}
+                    {!! $dakung->nama !!}
 
 
                     </li>
                     <a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#">Contoh File</a>
 
                     <hr>
-
                     @if(!empty($dakung->filesxuser))
 
                     <a href="{{url('pertanyaan2/download-file/'.$dakung->filesxuser->id)}}">{{$dakung->filesxuser->namafile}}</a>
@@ -213,6 +215,139 @@
           
                               </div>
                           </div>
+
+                    @else
+                    @endif
+
+                    @else
+                    <li>
+                    
+                    {!! $dakung->nama !!}
+
+
+                    </li>
+                    <a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#">Contoh File</a>
+
+                    <hr>
+                    @if(!empty($dakung->filesxuser))
+
+                    <a href="{{url('pertanyaan2/download-file/'.$dakung->filesxuser->id)}}">{{$dakung->filesxuser->namafile}}</a>
+                    <br>
+                    <a href="#" class="btn btn-warning " role="button" data-toggle="modal" data-target="#myModal{{$dakung->id}}">Ubah</a>
+
+                    <a href="#" class="btn btn-danger " role="button" data-toggle="modal" data-target="#myDeleteModal{{$dakung->id}}">Hapus</a>
+  <!-- Modal Delete-->
+
+                      <form role="form" method="POST" action="{{ url('perubahan/delete') }}" enctype="multipart/form-data">
+                      {!! csrf_field() !!}
+
+
+                          <div class="modal fade" id="myDeleteModal{{$dakung->id}}" role="dialog">
+                            <div class="modal-dialog">
+        
+          <!-- Modal content-->
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Anda yakin akan menghapus {{$dakung->nama}} ?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
+                                        <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
+                                      @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
+                                      
+                                        <input type="hidden" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
+                                        @if(!empty($dakung->filesxuser))
+
+                                          <input type="hidden" name="id_file" value="{{$dakung->filesxuser->id}}">
+                                        @else
+                                          <input type="hidden" name="id_file" value="">
+
+                                        @endif
+
+
+                                      @else
+
+                                        <input type="hidden" name="id_transaksi" value="">
+
+                                      @endif
+
+                                        <input type="hidden" name="kategori" value="{{ $romawi->id }}">
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+                                        <button type="submit" class="btn btn-danger">Hapus</button>
+
+                                      </form>
+                                    </div>
+                                   </div>
+          
+                              </div>
+                          </div>
+  <!--End of Modal Delete-->
+                    @else
+                    <a href="#" class="btn btn-info " role="button" data-toggle="modal" data-target="#myModal{{$dakung->id}}">Upload</a>
+
+
+                    @endif
+                    @php
+                    $temp =0
+                    @endphp
+
+                    <hr>
+                      <form role="form" method="POST" action="{{ url('perubahan/upload') }}" enctype="multipart/form-data">
+                      {!! csrf_field() !!}
+
+  <!-- Modal Upload-->
+                          <div class="modal fade" id="myModal{{$dakung->id}}" role="dialog">
+                            <div class="modal-dialog">
+        
+          <!-- Modal content-->
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">{{$dakung->nama}}</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <label>File</label>
+                                        <input type="file" class="form-control" name="upload_files">
+                                        <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
+                                        <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
+                                      @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
+                                        <input type="hidden" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
+                                        @if(!empty($dakung->filesxuser))
+                                          <input type="hidden" name="id_file" value="{{$dakung->filesxuser->id}}">
+                                        @else
+                                          <input type="hidden" name="id_file" value="">
+
+                                        @endif
+
+
+                                      @else
+                                        <input type="hidden" name="id_transaksi" value="">
+
+                                      @endif
+
+                                        <input type="hidden" name="kategori" value="{{ $romawi->id }}">
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
+
+                                      </form>
+                                    </div>
+                                   </div>
+          
+                              </div>
+                          </div>
+
+                    @endif
+
+
 
                      @endforeach
                   </td>
