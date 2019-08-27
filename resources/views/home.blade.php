@@ -25,18 +25,13 @@
         @foreach($kategori as $data)
 			<div class="col-lg-4">
 			<a href="{{url('pertanyaan2/kategori/'.$data->id)}}" class="text-black">
-                            <button type="button" >
-                <div class="login100-pic js-tilt" data-tilt>
-					<img src="{{ asset('img/button.png') }}"  alt="IMG">
-				</div>
-				</button></a>
-				<div class="col-lg-12">
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							{{$data->nama}}
-						</button>
-					</div>
-				</div>
+			   <div class="container-login100-form-btn">
+					<button class="login100-form-btn">
+						{{$data->nama}}
+					</button>
+				</div>        
+			</a>
+		
 			</div>
 		@endforeach
 	
