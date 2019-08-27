@@ -26,7 +26,6 @@
 	<!-- DataTables -->
 	<link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap.min.css') }}">
 
-
 <!--===============================================================================================-->
 	<link rel="stylesheet" href="{{ asset('css/button/animate.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/button/hamburgers.min.css') }}">

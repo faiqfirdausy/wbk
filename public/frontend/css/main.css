@@ -769,3 +769,17 @@ label.error {
   color:#fff;
   opacity:1;
 }
+
+/*bar chart*/
+
+.container-bar {
+  width: 100%;
+  background-color: #edf2f5;
+}
+
+.skills-bar {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}

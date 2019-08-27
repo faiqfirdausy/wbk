@@ -59,7 +59,20 @@
 						<p>Progres Pembangunan Zona Integritas di UPT</p>
 					</div>
 					
-			
+					<style>
+						div.hijau{
+							width: 90%; 
+							background-color: #4CAF50;
+						}
+						div.merah{
+							width: 20%; 
+							background-color: #f44336;
+						}
+						div.kuning{
+							width: 56%; 
+							background-color: #EBAF24;
+						}
+					</style>
 					<div class="sec-sub-title wow rubberBand animated" data-wow-duration="1000ms">
 						 <table class="table table-bordered">
 							<thead>
@@ -74,19 +87,31 @@
 							  <tr>
 								<td>1</td>
 								<td>Lapas Kelas I Surabaya</td>
-								<td>20%</td>
+								<td>
+									<div class="container-bar">
+									  <div class="skills-bar merah">20%</div>
+									</div>
+								</td>
 								<td>Harus meningkatkan pengawasan terhadap UPT</td>
 							  </tr>
 							  <tr>
 								<td>2</td>
 								<td>Kanim Khusus Kelas I Surabaya</td>
-								<td>80%</td>
+								<td>
+									<div class="container-bar">
+									  <div class="skills-bar hijau">90%</div>
+									</div>
+								</td>
 								<td>Maju kontestasi tahun depan</td>
 							  </tr>
 							  <tr>
 								<td>3</td>
 								<td>Rutan Kelas IIB Blitar</td>
-								<td>56%</td>
+								<td>
+									<div class="container-bar">
+									  <div class="skills-bar kuning">56%</div>
+									</div>
+								</td>
 								<td>Maju kontestasi tahun depan</td>
 							  </tr>
 							</tbody>
