@@ -19,7 +19,7 @@
 									<div class="work-filter fadeInRight animated" data-wow-duration="500ms">
 										<ul>
 											<li><a href="#features" data-wow-duration="1000ms" class="wow slideInLeft animated">VIDEO</a></li>
-											<li><a href="#capaian" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
+											<li><a href="#pimti" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
 											<li><a href="#ipk/ikm" data-wow-duration="1000ms" class="wow slideInRight animated">IPK/IKM</a></li>
 										</ul>
 									</div>
