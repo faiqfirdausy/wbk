@@ -125,9 +125,33 @@
 				</ul>
 			</div>
 		</footer>
-	<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
+	<a href="javascript:void(0);" id="back-top"><i class="fa fa-arrow-circle-up fa-5x"></i></a>
 	<!-- Essential jQuery Plugins
 		================================================== -->
+		<!--search table-->
+		<script>
+		function myFunction() {
+		  // Declare variables 
+		  var input, filter, table, tr, td, i, txtValue;
+		  input = document.getElementById("myInput");
+		  filter = input.value.toUpperCase();
+		  table = document.getElementById("myTable");
+		  tr = table.getElementsByTagName("tr");
+
+		  // Loop through all table rows, and hide those who don't match the search query
+		  for (i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[1];
+			if (td) {
+			  txtValue = td.textContent || td.innerText;
+			  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";
+			  } else {
+				tr[i].style.display = "none";
+			  }
+			} 
+		  }
+		}
+		</script>
 		<!--chart.js-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 		

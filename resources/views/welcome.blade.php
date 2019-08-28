@@ -51,7 +51,7 @@
 				<div class="row mb50">
 				
 					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-						<h2>Progress Monitoring</h2>
+						<h2>Progres Capaian</h2>
 						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
 					</div>
 					
@@ -74,9 +74,10 @@
 						}
 					</style>
 					<div class="sec-sub-title wow rubberBand animated" data-wow-duration="1000ms">
-						 <table class="table table-bordered">
+						<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari UPT ...">
+						 <table id="myTable" class="table table-bordered">
 							<thead>
-							  <tr>
+							 <tr class="header">
 								<th>NO</th>
 								<th>NAMA UPT</th>
 								<th>PROGRES PEMBANGUNAN</th>
@@ -112,7 +113,7 @@
 									  <div class="skills-bar kuning">56%</div>
 									</div>
 								</td>
-								<td>Maju kontestasi tahun depan</td>
+								<td>Terus tingkatkan pengawasan</td>
 							  </tr>
 							</tbody>
 						  </table>
