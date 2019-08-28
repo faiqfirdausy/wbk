@@ -19,7 +19,7 @@
 									<div class="work-filter fadeInRight animated" data-wow-duration="500ms">
 										<ul>
 											<li><a href="#features" data-wow-duration="1000ms" class="wow slideInLeft animated">VIDEO</a></li>
-											<li><a href="#capaian" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
+											<li><a href="#pimti" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
 											<li><a href="#ipk/ikm" data-wow-duration="1000ms" class="wow slideInRight animated">IPK/IKM</a></li>
 										</ul>
 									</div>
@@ -51,7 +51,7 @@
 				<div class="row mb50">
 				
 					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-						<h2>Progress Monitoring</h2>
+						<h2>Progres Capaian</h2>
 						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
 					</div>
 					
@@ -74,9 +74,10 @@
 						}
 					</style>
 					<div class="sec-sub-title wow rubberBand animated" data-wow-duration="1000ms">
-						 <table class="table table-bordered">
+						<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari UPT ...">
+						 <table id="myTable" class="table table-bordered">
 							<thead>
-							  <tr>
+							 <tr class="header">
 								<th>NO</th>
 								<th>NAMA UPT</th>
 								<th>PROGRES PEMBANGUNAN</th>
@@ -112,7 +113,7 @@
 									  <div class="skills-bar kuning">56%</div>
 									</div>
 								</td>
-								<td>Maju kontestasi tahun depan</td>
+								<td>Terus tingkatkan pengawasan</td>
 							  </tr>
 							</tbody>
 						  </table>
