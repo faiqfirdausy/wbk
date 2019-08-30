@@ -424,7 +424,7 @@
         Swal.fire(
         'Sukses!',
         'Anda Berhasil Mengupload File',
-        'success'
+        'success',
         )
         });
     @elseif(session('pesan') == 'hapus')
@@ -433,11 +433,12 @@
         Swal.fire(
         'Sukses!',
         'Anda Berhasil Menghapus File',
-        'success'
+        'success',
         )
         });
 
     @endif
+
 
   @endif
 </script>
