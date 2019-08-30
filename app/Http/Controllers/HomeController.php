@@ -201,6 +201,16 @@ class HomeController extends Controller
 
       public function store(Request $request)
     {
+        $rules = array(
+                    'upload_files'  => 'required|max:548'
+                );
+        $error = Validator::make($request->all(), $rules);
+        if($error->fails())
+        {
+        $kategori = $request->kategori;
+
+        return redirect('pertanyaan2/kategori/'.$kategori)->with('id_romawi', $request->id_romawi)->with('pesan', 'erorvalid');
+        }
         // dd($request->file('upload_files'));
         // $rules = array(
         //     'student_nrp_number' => 'required',
@@ -227,6 +237,8 @@ class HomeController extends Controller
             DB::beginTransaction();
 
             try {
+                
+
                 $time = Carbon\Carbon::now()->format('Y-m-d H:i:s');
                 $userId = Auth::user()->id;
                 $upt = User::with('Upt')->find($userId);

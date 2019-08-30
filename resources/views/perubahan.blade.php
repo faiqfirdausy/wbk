@@ -436,6 +436,15 @@
         'success',
         )
         });
+    @elseif(session('pesan') == 'erorvalid')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Terlalu Besar',
+        'error',
+        )
+        });
 
     @endif
 
