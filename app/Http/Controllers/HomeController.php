@@ -129,8 +129,10 @@ class HomeController extends Controller
     }
         public function subindikator($id)
     {
-        
+
         $data['session'] = Auth::user();
+        $data['tab'] = session('id_romawi') ?? 1;
+
         
         // $data['transaksi'] = Transaksi::where('created_by', Auth::user()->id)->with('files')->first();
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
@@ -188,7 +190,7 @@ class HomeController extends Controller
                 DB::commit();
                 // \Session::flash('success_flash_message','Data Mahasiswa Berhasil Ditambah.');
 
-                return redirect('pertanyaan2/kategori/'.$kategori);
+                return redirect('pertanyaan2/kategori/'.$kategori)->with('id_romawi', $request->id_romawi);
 
             } catch (Exception $e) {
                 return response()->json(['error' => 'silahkan coba lagi']);
@@ -280,8 +282,9 @@ class HomeController extends Controller
 
                 
                 DB::commit();
+
                 // \Session::flash('success_flash_message','Data Mahasiswa Berhasil Ditambah.');
-                return redirect('pertanyaan2/kategori/'.$kategori);
+                return redirect('pertanyaan2/kategori/'.$kategori)->with('id_romawi', $request->id_romawi)->with(['success' => 'Upload Berhasil']);
 
             } catch (Exception $e) {
                 return response()->json(['error' => 'silahkan coba lagi']);

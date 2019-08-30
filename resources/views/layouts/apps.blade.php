@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="{{ asset('css/ionicons.min.css') }}">
 	<!-- Theme style -->
 	<link rel="stylesheet" href="{{ asset('css/AdminLTE.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('sweet/sweetalert2.min.css') }}">
+
 	
 	<!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
 	<link rel="stylesheet" href="{{ asset('css/skin-blue.min.css') }}">
@@ -67,7 +69,8 @@
 	<script src="{{ asset('js/jquery.dataTables.min.js')}}"></script>
 	<script src="{{ asset('js/dataTables.bootstrap.min.js')}}"></script>
 	<!-- jQuery 3 -->
-	
+	<script src="{{ asset('sweet/sweetalert2.min.js')}}"></script>
+
 	<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 	<script>
 	  $.widget.bridge('uibutton', $.ui.button);
@@ -111,17 +114,17 @@
 
 
     //DONUT CHART
-    var donut = new Morris.Donut({
-      element: 'sales-chart',
-      resize: true,
-      colors: ["#3c8dbc", "#f56954", "#00a65a"],
-      data: [
-        {label: "Download Sales", value: 12},
-        {label: "In-Store Sales", value: 30},
-        {label: "Mail-Order Sales", value: 20}
-      ],
-      hideHover: 'auto'
-    });
+    // var donut = new Morris.Donut({
+    //   element: 'sales-chart',
+    //   resize: true,
+    //   colors: ["#3c8dbc", "#f56954", "#00a65a"],
+    //   data: [
+    //     {label: "Download Sales", value: 12},
+    //     {label: "In-Store Sales", value: 30},
+    //     {label: "Mail-Order Sales", value: 20}
+    //   ],
+    //   hideHover: 'auto'
+    // });
 
   });
 </script>

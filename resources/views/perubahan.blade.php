@@ -33,7 +33,7 @@
               @php
               $i++;
               @endphp
-              @if($i==1)
+              @if($i==$tab)
               
               <li class="active"><a href="#tab_{{$data->id}}" data-toggle="tab">{{$data->nama}}</a></li>
               @else
@@ -50,7 +50,7 @@
               @php
               $i++;
               @endphp
-              @if($i==1)
+              @if($i==$tab)
               <div class="tab-pane active" id="tab_{{$data->id}}">
               @else  
               <div class="tab-pane " id="tab_{{$data->id}}">
@@ -125,6 +125,7 @@
                                     <div class="modal-body">
                                         <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
                                         <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
+
                                       @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
                                       
                                         <input type="hidden" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
@@ -179,13 +180,15 @@
                                   <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">{{$dakung->nama}}</h4>
+                                        <h4 class="modal-title">{!! $dakung->nama !!}</h4>
                                     </div>
                                     <div class="modal-body">
                                       <label>File</label>
                                         <input type="file" class="form-control" name="upload_files">
                                         <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
                                         <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
+                                        <input type="hidden" name="id_romawi" value="{{ $data->id }}">
+
                                       @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
                                         <input type="hidden" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
                                         @if(!empty($dakung->filesxuser))
@@ -249,11 +252,13 @@
                                   <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Anda yakin akan menghapus {{$dakung->nama}} ?</h4>
+                                        <h4 class="modal-title">Anda yakin akan menghapus {!! $dakung->nama !!} </h4>
                                     </div>
                                     <div class="modal-body">
                                         <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
                                         <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
+                                        <input type="hidden" name="id_romawi" value="{{ $data->id }}">
+
                                       @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
                                       
                                         <input type="hidden" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
@@ -308,13 +313,15 @@
                                   <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">{{$dakung->nama}}</h4>
+                                        <h4 class="modal-title">{!! $dakung->nama !!}</h4>
                                     </div>
                                     <div class="modal-body">
                                       <label>File</label>
                                         <input type="file" class="form-control" name="upload_files">
                                         <input type="hidden" name="id_datadukung" value="{{ $dakung->id }}">
                                         <input type="hidden" name="id_abcsoal" value="{{ $abc->id }}">
+                                        <input type="hidden" name="id_romawi" value="{{ $data->id }}">
+
                                       @if(!empty($abc->myTransaksi) &&   $abc->myTransaksi->created_by == $user_id)
                                         <input type="hidden" name="id_transaksi" value="{{$abc->myTransaksi->id}}">
                                         @if(!empty($dakung->filesxuser))
@@ -405,5 +412,20 @@
 
         </section>
 
+
     <!-- /.content -->
+@endsection
+@section('scripts')
+<script type="text/javascript">
+  @if(!empty(session('id_romawi')))
+  $( document ).ready(function() {
+
+  Swal.fire(
+  'Sukses!',
+  'Anda Berhasil Mengupload File',
+  'success'
+)
+  });
+  @endif
+</script>
 @endsection
