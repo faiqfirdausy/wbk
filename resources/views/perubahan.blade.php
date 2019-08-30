@@ -417,15 +417,28 @@
 @endsection
 @section('scripts')
 <script type="text/javascript">
-  @if(!empty(session('id_romawi')))
-  $( document ).ready(function() {
+  @if(!empty(session('pesan')))
+    @if(session('pesan') == 'upload')
+      $( document ).ready(function() {
 
-  Swal.fire(
-  'Sukses!',
-  'Anda Berhasil Mengupload File',
-  'success'
-)
-  });
+        Swal.fire(
+        'Sukses!',
+        'Anda Berhasil Mengupload File',
+        'success'
+        )
+        });
+    @elseif(session('pesan') == 'hapus')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Sukses!',
+        'Anda Berhasil Menghapus File',
+        'success'
+        )
+        });
+
+    @endif
+
   @endif
 </script>
 @endsection

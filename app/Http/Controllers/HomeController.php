@@ -190,7 +190,7 @@ class HomeController extends Controller
                 DB::commit();
                 // \Session::flash('success_flash_message','Data Mahasiswa Berhasil Ditambah.');
 
-                return redirect('pertanyaan2/kategori/'.$kategori)->with('id_romawi', $request->id_romawi);
+                return redirect('pertanyaan2/kategori/'.$kategori)->with('id_romawi', $request->id_romawi)->with('pesan', 'hapus');
 
             } catch (Exception $e) {
                 return response()->json(['error' => 'silahkan coba lagi']);
@@ -284,7 +284,7 @@ class HomeController extends Controller
                 DB::commit();
 
                 // \Session::flash('success_flash_message','Data Mahasiswa Berhasil Ditambah.');
-                return redirect('pertanyaan2/kategori/'.$kategori)->with('id_romawi', $request->id_romawi)->with(['success' => 'Upload Berhasil']);
+                return redirect('pertanyaan2/kategori/'.$kategori)->with('id_romawi', $request->id_romawi)->with('pesan', 'upload');
 
             } catch (Exception $e) {
                 return response()->json(['error' => 'silahkan coba lagi']);
