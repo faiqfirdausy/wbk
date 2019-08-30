@@ -33,11 +33,21 @@
               @php
               $i++;
               @endphp
-              @if($i==$tab)
-              
-              <li class="active"><a href="#tab_{{$data->id}}" data-toggle="tab">{{$data->nama}}</a></li>
+              @if($tab==1)
+                @if($i==1)
+                <li class="active"><a href="#tab_{{$data->id}}" data-toggle="tab">{{$data->nama}}</a></li>
+
+                @else
+                <li ><a href="#tab_{{$data->id}}" data-toggle="tab">{{$data->nama}}</a></li>
+
+                @endif
               @else
-              <li ><a href="#tab_{{$data->id}}" data-toggle="tab">{{$data->nama}}</a></li>
+                @if($data->id==$tab)
+              
+                <li class="active"><a href="#tab_{{$data->id}}" data-toggle="tab">{{$data->nama}}</a></li>
+                @else
+                <li ><a href="#tab_{{$data->id}}" data-toggle="tab">{{$data->nama}}</a></li>
+                @endif
               @endif
               @endforeach
 
@@ -50,11 +60,24 @@
               @php
               $i++;
               @endphp
-              @if($i==$tab)
-              <div class="tab-pane active" id="tab_{{$data->id}}">
-              @else  
-              <div class="tab-pane " id="tab_{{$data->id}}">
+
+              @if($tab==1)
+                @if($i==1)
+                <div class="tab-pane active" id="tab_{{$data->id}}">
+
+                @else
+               <div class="tab-pane " id="tab_{{$data->id}}">
+
+                @endif
+              @else
+                @if($data->id==$tab)
+              
+                <div class="tab-pane active" id="tab_{{$data->id}}">
+                @else
+               <div class="tab-pane " id="tab_{{$data->id}}">
+                @endif
               @endif
+
                 <p></p>
 
 				
@@ -441,7 +464,7 @@
 
         Swal.fire(
         'Gagal!',
-        'File Terlalu Besar',
+        'File Kosong atau Terlalu Besar',
         'error',
         )
         });

@@ -131,6 +131,7 @@ class HomeController extends Controller
     {
 
         $data['session'] = Auth::user();
+        $c = session('id_romawi');
         $data['tab'] = session('id_romawi') ?? 1;
 
         
