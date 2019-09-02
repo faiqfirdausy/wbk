@@ -17,8 +17,6 @@
 	
 	<!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
 	<link rel="stylesheet" href="{{ asset('css/skin-blue.min.css') }}">
-	<!-- Morris chart -->
-	<link rel="stylesheet" href="{{ asset('morris.js/morris.css') }}">
 	<!-- Date Picker -->
 	<link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.min.css') }}">
 	<!-- Google Font -->
@@ -27,10 +25,6 @@
 	<link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap.min.css') }}">
 
 <!--===============================================================================================-->
-	<link rel="stylesheet" href="{{ asset('css/button/animate.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/button/hamburgers.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/button/select2.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/button/util.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/button/main.css') }}">
 <!--===============================================================================================-->
 	
@@ -73,13 +67,6 @@
 	</script>
 	<!-- Bootstrap 3.3.7 -->
 	<script src="{{ asset('js/bootstrap.min.js')}}"></script>
-	<!-- Morris.js charts -->
-	<script src="{{ asset('js/raphael.min.js')}}"></script>
-	<script src="{{ asset('js/morris.min.js')}}"></script>
-	<!-- jQuery Knob Chart -->
-	<script src="{{ asset('js/jquery-knob/dist/jquery.knob.min.js')}}"></script>
-	<!-- Sparkline -->
-	<script src="{{ asset('js/jquery.sparkline.min.js')}}"></script>
 	<!-- datepicker -->
 	<script src="{{ asset('js/bootstrap-datepicker.min.js')}}"></script>
 	<!-- Bootstrap WYSIHTML5 -->
@@ -91,41 +78,31 @@
 	<!-- AdminLTE App -->
 	<script src="{{ asset('js/adminlte.min.js')}}"></script>
 	
-
-	
-	<!--===============================================================================================-->	
-	<script src="{{ asset('js/button/popper.js')}}"></script>
-	<script src="{{ asset('js/button/select2.min.js')}}"></script>
-	<script src="{{ asset('js/button/tilt.jquery.min.js')}}"></script>
-
-
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-	<script src="{{ asset('js/button/main.js')}}"></script>
-	
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script>
-  $(function () {
-    "use strict";
+		window.onload = function () {
+		var chart = new CanvasJS.Chart("chartContainer", {
+			animationEnabled: true,
+			title:{
+				horizontalAlign: "left"
+			},
+			data: [{
+				type: "doughnut",
+				startAngle: 60,
+				//innerRadius: 60,
+				indexLabelFontSize: 17,
+				indexLabel: "{label} - #percent%",
+				toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+				dataPoints: [
+					{ y: 67, label: "Tercapai" },
+					{ y: 33, label: "Belum Tercapai" }
+				]
+			}]
+		});
+		chart.render();
 
-
-    //DONUT CHART
-    var donut = new Morris.Donut({
-      element: 'sales-chart',
-      resize: true,
-      colors: ["#3c8dbc", "#f56954", "#00a65a"],
-      data: [
-        {label: "Download Sales", value: 12},
-        {label: "In-Store Sales", value: 30},
-        {label: "Mail-Order Sales", value: 20}
-      ],
-      hideHover: 'auto'
-    });
-
-  });
-</script>
+		}
+	</script>
 
 	<script>
 	$(document).ready( function () {

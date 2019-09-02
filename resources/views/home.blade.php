@@ -7,7 +7,7 @@
         <small>Sistem Monitoring & Evaluasi Pembangunan Zona Integritas</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Beranda</a></li>
+        <li><a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> Beranda</a></li>
         <li class="active">Dashboard</li>
       </ol>
     </section>
@@ -57,7 +57,7 @@
               </div>
             </div>
             <div class="box-body chart-responsive">
-              <div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
+             <div id="chartContainer" style="height: 300px; width: 100%;"></div>
             </div>
             <!-- /.box-body -->
           </div>

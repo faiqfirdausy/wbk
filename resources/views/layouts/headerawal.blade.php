@@ -1,5 +1,5 @@
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="{{ url('/') }}" class="logo">
 
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>SIAP</b>ZI</span>
@@ -27,7 +27,6 @@
 
                 <p>
                   @php print_r($session->upt->nama_upt) @endphp 
-                  <small>Member since Nov. 2012</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -35,7 +34,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="{{ url('/') }}" class="btn btn-default btn-flat">Beranda</a>
                 </div>
                 <div class="pull-right">
                   <a class="btn btn-default btn-flat" href="{{ route('logout') }}"

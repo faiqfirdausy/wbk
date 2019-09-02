@@ -7,7 +7,7 @@
         <small> @php print_r($session->upt->nama_upt)@endphp</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Beranda</a></li>
+        <li><a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> Beranda</a></li>
         <li class="active">Dashboard</li>
       </ol>
     </section>
@@ -385,9 +385,9 @@
                   <td> @if($abc->myTransaksi['status'] ==1 )
                     <span class="badge bg-success">Terverifikasi</span>
                     @elseif( $abc->myTransaksi['status'] ==0 )
-                    <span class="badge bg-success">Belum Terverifikasi</span>
+                    <span class="badge bg-danger">Belum Terverifikasi</span>
                      @elseif( $abc->myTransaksi['status'] ==2 )
-                    <span class="badge bg-success">Revisi</span>
+                    <span class="badge bg-warning">Revisi</span>
                     @endif
                   </td>
                   <td> 

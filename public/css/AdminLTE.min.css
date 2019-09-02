@@ -1088,7 +1088,7 @@ a:focus {
  border-bottom-left-radius:4px
 }
 .navbar-nav>.user-menu>.dropdown-menu>li.user-header {
- height:175px;
+ height:125px;
  padding:10px;
  text-align:center
 }
@@ -2462,12 +2462,12 @@ a:focus {
  border-color:transparent
 }
 .nav-tabs-custom>.nav-tabs>li.active {
- border-top-color:#3c8dbc
+ border-top-color:#4F4F4F
 }
 .nav-tabs-custom>.nav-tabs>li.active>a,
 .nav-tabs-custom>.nav-tabs>li.active:hover>a {
- background-color:#fff;
- color:#444
+ background-color:#600505;
+ color:#fff
 }
 .nav-tabs-custom>.nav-tabs>li.active>a {
  border-top-color:transparent;
