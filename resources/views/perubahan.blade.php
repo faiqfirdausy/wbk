@@ -86,12 +86,12 @@
               <table id="example" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>NO</th>
-                  <th>INDIKATOR</th>
-                  <th>JUKNIS</th>
-                  <th>DAKUNG</th>
-                  <th>STATUS</th>
-                  <th>KETERANGAN</th>
+                  <th style="  text-align: center;">NO</th>
+                  <th style="  text-align: center;">INDIKATOR</th>
+                  <th style="  text-align: center;">JUKNIS</th>
+                  <th style="  text-align: center;">DAKUNG</th>
+                  <th style="  text-align: center;">STATUS</th>
+                  <th style="  text-align: center;">CATATAN VERIFIKATOR</th>
 				          <th>CAPAIAN</th>
                 </tr>
                 </thead>

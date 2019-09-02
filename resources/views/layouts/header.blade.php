@@ -91,10 +91,19 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
+        <li>
+          <a href="{{url('home')}}">
+
+            <i class="fa fa-home"></i> <span>Beranda</span>
+
+          </a>
+        </li>
+        
+        </li>
         <li class="active treeview">
           <a href="#">
 
-            <i class="fa fa-laptop"></i> <span>Beranda</span>
+            <i class="fa fa-laptop"></i> <span>Area Perubahan</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -111,10 +120,31 @@
             @endforeach
 
           </ul>
+
+        </li>
+        <li>
+          <a href="{{url('home')}}">
+
+            <i class="fa fa-users"></i> <span>Hasil Survei IPK/ IKM</span>
+
+          </a>
         </li>
 
+         <li>
+          <a href="{{url('home')}}">
 
-        
+            <i class="fa fa-users"></i> <span>Action Plan Tindak Lanjut IPK</span>
+
+          </a>
+        </li>
+        <li>
+          <a href="{{url('home')}}">
+
+            <i class="fa fa-video-camera"></i> <span>Video Profil</span>
+
+          </a>
+        </li>
+
     </section>
     <!-- /.sidebar -->
   </aside>
