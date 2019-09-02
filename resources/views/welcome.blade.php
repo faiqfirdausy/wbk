@@ -51,7 +51,7 @@
 				<div class="row mb50">
 				
 					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-						<h2>Progres Capaian</h2>
+						<h2>Progresssssssssssssssssssssss Capaian</h2>
 						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
 					</div>
 					
