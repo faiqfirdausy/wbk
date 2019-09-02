@@ -55,7 +55,7 @@
 		</div>
 		
 		<footer class="main-footer text-center">
-			<b>Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa timur</b>
+			Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa timur
 		</footer>
 	</div>
 

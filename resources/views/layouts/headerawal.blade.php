@@ -57,6 +57,3 @@
      </nav>
 
 
-        
-    </section>
-    <!-- /.sidebar -->

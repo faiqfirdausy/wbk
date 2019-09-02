@@ -19,7 +19,7 @@
           <div class="box">
             <div class="box-header">
               <center><h2 class="box-title">  {{ $romawi->nama }}</h2></center>
-			   <justify><p>  {{$romawi->keterangan}}</p></justify>
+			   <center><p>  {{$romawi->keterangan}}</p></center>
             </div>
             <div class="box-body">
 			 <div class="col-md-12">

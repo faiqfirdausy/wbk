@@ -51,7 +51,7 @@
 				<div class="row mb50">
 				
 					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-						<h2>Progresssssssssssssssssssssss Capaian</h2>
+						<h2>Progres Capaian</h2>
 						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
 					</div>
 					
@@ -107,7 +107,7 @@
 							  </tr>
 							  <tr>
 								<td>3</td>
-								<td>Rutan Kelas IIB Blitar</td>
+								<td>Rutan Kelas IIB Nganjuk</td>
 								<td>
 									<div class="container-bar">
 									  <div class="skills-bar kuning">56%</div>
@@ -117,6 +117,64 @@
 							  </tr>
 							</tbody>
 						  </table>
+					</div>
+			
+				</div>
+			</div>
+			
+		</section>
+
+
+
+		
+        <!--================IPK / IPM==================== -->
+		<section id="ipk/ikm" class="contact">
+			<div class="container">
+				<div class="row mb50">
+				
+					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
+						<h2>Indeks Persepsi Korupsi & Indeks Kepuasan Masyarakat</h2>
+						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
+					</div>
+					
+					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+						<p>Pilih Kategori UPT dan Jangka Waktu Penilaian</p>
+					</div>
+					
+					
+					<!-- form -->
+					<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
+						<div class="contact-form">
+							<form action="#" id="contact-form">
+								<div class="input-group name-email">
+									<div class="input-field">
+										<select class="form-control" id="sel1">
+											<option>BAPAS & LAPAS</option>
+											<option>RUTAN & RUPBASAN</option>
+											<option>KANIM & RUDENIM</option>
+											<option>BHP</option>
+										</select>
+									</div>
+									<div class="input-field">
+										<div id="sla-data-range" class="mrp-container nav navbar-nav">
+											  <span class="mrp-icon"><i class="fa fa-calendar"></i></span>
+											  <div class="mrp-monthdisplay">
+												<span class="mrp-lowerMonth">Jul 2014</span>
+												<span class="mrp-to"> to </span>
+												<span class="mrp-upperMonth">Aug 2014</span>
+											  </div>
+											<input type="hidden" value="201407" id="mrp-lowerDate" />
+											<input type="hidden" value="201408" id="mrp-upperDate" />
+										  </div>
+										   <input type="submit" class="btn btn-success" value="Submit">
+									 <input class="btn btn-default" type="reset" value="Reset">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+						<canvas id="bar-chart2" width="400" height="150"></canvas>
 					</div>
 			
 				</div>
@@ -262,119 +320,5 @@
 		</div>
 	  </div>
 	</div> 
-
-		<!--
-       Capaian ZI
-        ==================================== -->		
-		
-		<section id="capaian" class="contact">
-			<div class="container">
-				<div class="row mb50">
-				
-					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-						<h2>CAPAIAN Zona Integritas</h2>
-						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
-					</div>
-					
-					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
-						<p>Pilih Kategori UPT dan Jangka Waktu Penilaian</p>
-					</div>
-					
-					
-					<!-- form -->
-					<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
-						<div class="contact-form">
-							<form action="#" id="contact-form">
-								<div class="input-group name-email">
-									<div class="input-field">
-										<select class="form-control" id="sel1">
-											<option>BAPAS & LAPAS</option>
-											<option>RUTAN & RUPBASAN</option>
-											<option>KANIM & RUDENIM</option>
-											<option>BHP</option>
-										</select>
-									</div>
-									<div class="input-field">
-										<div id="sla-data-range" class="mrp-container nav navbar-nav">
-											  <span class="mrp-icon"><i class="fa fa-calendar"></i></span>
-											  <div class="mrp-monthdisplay">
-												<span class="mrp-lowerMonth">Jul 2014</span>
-												<span class="mrp-to"> to </span>
-												<span class="mrp-upperMonth">Aug 2014</span>
-											  </div>
-											<input type="hidden" value="" id="mrp-lowerDate" />
-											<input type="hidden" value="" id="mrp-upperDate" />
-										  </div>
-										   <input type="submit" class="btn btn-success" value="Submit">
-									 <input class="btn btn-default" type="reset" value="Reset">
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
-						<canvas id="bar-chart" width="400" height="150"></canvas>
-					</div>
-			
-				</div>
-			</div>
-			
-		</section>
-		
-        <!--================IPK / IPM==================== -->
-		<section id="ipk/ikm" class="contact">
-			<div class="container">
-				<div class="row mb50">
-				
-					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-						<h2>Indeks Persepsi Korupsi & Indeks Kepuasan Masyarakat</h2>
-						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
-					</div>
-					
-					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
-						<p>Pilih Kategori UPT dan Jangka Waktu Penilaian</p>
-					</div>
-					
-					
-					<!-- form -->
-					<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
-						<div class="contact-form">
-							<form action="#" id="contact-form">
-								<div class="input-group name-email">
-									<div class="input-field">
-										<select class="form-control" id="sel1">
-											<option>BAPAS & LAPAS</option>
-											<option>RUTAN & RUPBASAN</option>
-											<option>KANIM & RUDENIM</option>
-											<option>BHP</option>
-										</select>
-									</div>
-									<div class="input-field">
-										<div id="sla-data-range" class="mrp-container nav navbar-nav">
-											  <span class="mrp-icon"><i class="fa fa-calendar"></i></span>
-											  <div class="mrp-monthdisplay">
-												<span class="mrp-lowerMonth">Jul 2014</span>
-												<span class="mrp-to"> to </span>
-												<span class="mrp-upperMonth">Aug 2014</span>
-											  </div>
-											<input type="hidden" value="201407" id="mrp-lowerDate" />
-											<input type="hidden" value="201408" id="mrp-upperDate" />
-										  </div>
-										   <input type="submit" class="btn btn-success" value="Submit">
-									 <input class="btn btn-default" type="reset" value="Reset">
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
-						<canvas id="bar-chart2" width="400" height="150"></canvas>
-					</div>
-			
-				</div>
-			</div>
-			
-		</section>
-
 
 @endsection
