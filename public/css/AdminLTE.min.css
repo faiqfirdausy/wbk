@@ -1725,7 +1725,7 @@ a:focus {
 .box-header>.ion,
 .box-header .box-title {
  display:inline-block;
- margin:0;
+ margin:20px;
  line-height:1
 }
 .box-header>.fa,
@@ -1773,7 +1773,7 @@ a:focus {
  border-top-left-radius:3px
 }
 .box-body>.table {
- margin-bottom:0
+ margin-top:20px
 }
 .box-body .fc {
  margin-top:5px
@@ -2450,8 +2450,8 @@ a:focus {
 }
 .nav-tabs-custom>.nav-tabs>li>a,
 .nav-tabs-custom>.nav-tabs>li>a:hover {
- background:transparent;
- margin:0
+ background-color:#600505;
+ color:#fff
 }
 .nav-tabs-custom>.nav-tabs>li>a:hover {
  color:#999
@@ -2462,17 +2462,20 @@ a:focus {
  border-color:transparent
 }
 .nav-tabs-custom>.nav-tabs>li.active {
- border-top-color:#4F4F4F
+ border-top-color:#22A68B;
+ background-color: #eee;
+ color: #000
 }
 .nav-tabs-custom>.nav-tabs>li.active>a,
 .nav-tabs-custom>.nav-tabs>li.active:hover>a {
- background-color:#600505;
- color:#fff
+ background-color:transparent;
+  color: #000
 }
 .nav-tabs-custom>.nav-tabs>li.active>a {
  border-top-color:transparent;
  border-left-color:#f4f4f4;
- border-right-color:#f4f4f4
+ border-right-color:#f4f4f4;
+  color: #000
 }
 .nav-tabs-custom>.nav-tabs>li:first-of-type {
  margin-left:0
@@ -2598,16 +2601,16 @@ a:focus {
 .table>thead>tr>td,
 .table>tbody>tr>td,
 .table>tfoot>tr>td {
- border-top:1px solid #f4f4f4
+ border-top:1px solid #e1dada
 }
 .table>thead>tr>th {
- border-bottom:2px solid #f4f4f4
+ border-bottom:2px solid #e1dada
 }
 .table tr td .progress {
  margin-top:5px
 }
 .table-bordered {
- border:1px solid #f4f4f4
+ border:1px solid #e1dada
 }
 .table-bordered>thead>tr>th,
 .table-bordered>tbody>tr>th,
@@ -2615,7 +2618,7 @@ a:focus {
 .table-bordered>thead>tr>td,
 .table-bordered>tbody>tr>td,
 .table-bordered>tfoot>tr>td {
- border:1px solid #f4f4f4
+ border:1px solid #e1dada
 }
 .table-bordered>thead>tr>th,
 .table-bordered>thead>tr>td {

@@ -74,11 +74,11 @@
                   </td>
                   <td>
                     @if($data->status== 0)
-                    <span class="badge bg-success">Belum Terverifikasi</span>
+                    <span class="badge bg-danger">Belum Terverifikasi</span>
                     @elseif($data->status==1)
                     <span class="badge bg-success">Terverifikasi</span>
                     @else
-                    <span class="badge bg-success">Revisi</span>
+                    <span class="badge bg-warning">Revisi</span>
                     @endif
                   </td>
                   <td>
@@ -138,11 +138,11 @@
                   </td>
                   <td>
                      @if($data->status== 0)
-                    <span class="badge bg-success">Belum Terverifikasi</span>
+                    <span class="badge bg-danger">Belum Terverifikasi</span>
                     @elseif($data->status==1)
                     <span class="badge bg-success">Terverifikasi</span>
                     @else
-                    <span class="badge bg-success">Revisi</span>
+                    <span class="badge bg-warning">Revisi</span>
                     @endif
 
                   </td>
@@ -204,11 +204,11 @@
                   </td>
                   <td>
                     @if($data->status== 0)
-                    <span class="badge bg-success">Belum Terverifikasi</span>
+                    <span class="badge bg-danger">Belum Terverifikasi</span>
                     @elseif($data->status==1)
                     <span class="badge bg-success">Terverifikasi</span>
                     @else
-                    <span class="badge bg-success">Revisi</span>
+                    <span class="badge bg-warning">Revisi</span>
                     @endif
 
                   </td>

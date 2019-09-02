@@ -33,7 +33,6 @@
 
                 <p>
                   @php print_r($session->upt->nama_upt) @endphp 
-                  <small>Member since Nov. 2012</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -75,7 +74,7 @@
          <img src="{{ asset('img/user.png') }}" class="user-image" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>@php print_r($session->upt->nama_upt) @endphp </p>
+          @php print_r($session->upt->nama_upt) @endphp 
         </div>
       </div>
       <!-- search form -->

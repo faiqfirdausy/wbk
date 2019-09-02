@@ -48,14 +48,14 @@
 			@include('layouts.headerawalverif')
 		</header>
 
-		<div class="content-wrapper">
+		<div class="content">
 		
 				@yield('content')
 			
 		</div>
 		
-		<footer class="main-footer text-center">
-			<b>Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa timur</b>
+		<footer class="footer-depan text-center">
+			Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa timur
 		</footer>
 	</div>
 
