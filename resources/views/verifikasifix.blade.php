@@ -88,7 +88,12 @@
                      Belum ada Keterangan
                     @endif
                   </td>
-                  <td>0</td>
+                  <td>
+                     @if(!empty($data->capaian))
+                    @php $capaian = $data->capaian* 100;@endphp
+                    {{$capaian}}%
+                    @endif
+                  </td>
                   <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
                 </tr>
                 @endforeach
@@ -153,7 +158,10 @@
                      Belum ada Keterangan
                     @endif
                   </td>
-                  <td>0</td>
+                  <td> @if(!empty($data->capaian))
+                    @php $capaian = $data->capaian* 100;@endphp
+                    {{$capaian}}%
+                    @endif</td>
                   <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
                 </tr>
                 @endforeach
@@ -219,7 +227,10 @@
                      Belum ada Keterangan
                     @endif
                   </td>
-                  <td>0</td>
+                  <td> @if(!empty($data->capaian))
+                    @php $capaian = $data->capaian* 100;@endphp
+                    {{$capaian}}%
+                    @endif</td>
                   <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
                 </tr>
                 @endforeach
