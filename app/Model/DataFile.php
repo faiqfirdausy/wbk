@@ -13,4 +13,8 @@ class DataFile extends Model
     {
         return $this->belongsTo('App\Model\Transaksi', 'id_transaksi', 'id');
     }
+    public function Dakung()
+    {
+        return $this->belongsTo('App\Model\DataDukung', 'id_datadukung', 'id');
+    }
 }

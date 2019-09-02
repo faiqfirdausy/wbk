@@ -14,7 +14,9 @@
 	<link rel="stylesheet" href="{{ asset('css/ionicons.min.css') }}">
 	<!-- Theme style -->
 	<link rel="stylesheet" href="{{ asset('css/AdminLTE.min.css') }}">
-	
+	<link rel="stylesheet" href="{{ asset('sweet/sweetalert2.min.css') }}">
+
+
 	<!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
 	<link rel="stylesheet" href="{{ asset('css/skin-blue.min.css') }}">
 	<!-- Morris chart -->
@@ -68,6 +70,8 @@
 	<!-- jQuery 3 -->
 	<!-- jQuery UI 1.11.4 -->
 	<script src="{{ asset('js/jquery-ui.min.js')}}"></script>
+		<script src="{{ asset('sweet/sweetalert2.min.js')}}"></script>
+
 	<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 	<script>
 	  $.widget.bridge('uibutton', $.ui.button);

@@ -152,12 +152,77 @@ class HomeController extends Controller
     {
         $file = DataFile::find($id_file);
         $path = public_path().'/'.$file->path;
+        if(File::exists($path)){
+    //echo "n exist"; die();
+
         $filename = $file->namafile;
         $tempImage = tempnam(sys_get_temp_dir(), $filename);
         copy($path, $tempImage);
 
         return response()->download($tempImage, $filename);
+        }
+        else {
+        $kategori = $file->Dakung->AbcSoal->NomorSoal->RomawiSoal->id;
+        $id_romawi = $file->Dakung->AbcSoal->NomorSoal->id;
+         return redirect('pertanyaan2/kategori/'.$kategori)->with('id_romawi', $id_romawi)->with('pesan', 'erorkosong');
+
+           }
+
     }
+    public function downloadFileVerif($id_file)
+    {
+        $file = DataFile::find($id_file);
+        $path = public_path().'/'.$file->path;
+        if(File::exists($path)){
+    //echo "n exist"; die();
+
+        $filename = $file->namafile;
+        $tempImage = tempnam(sys_get_temp_dir(), $filename);
+        copy($path, $tempImage);
+
+        return response()->download($tempImage, $filename);
+        }
+        else {
+        $id_transaksi = $file->id_transaksi;
+        return redirect('verifikasi/'.$id_transaksi)->with('pesan', 'erorkosong');
+
+           }
+
+    }
+    public function downloadDakung($id_dakung)
+    {
+        $file = DataDukung::find($id_dakung);
+        $path = public_path().'/'.$file->path;
+        if(!empty($file->path))
+        {
+
+
+        if(File::exists($path)){
+    //echo "n exist"; die();
+
+        $filename = $file->namafiledakung;
+        $tempImage = tempnam(sys_get_temp_dir(), $filename);
+        copy($path, $tempImage);
+
+        return response()->download($tempImage, $filename);
+        }
+        else {
+        $kategori = $file->AbcSoal->NomorSoal->RomawiSoal->id;
+        $id_romawi = $file->AbcSoal->NomorSoal->id;
+         return redirect('pertanyaan2/kategori/'.$kategori)->with('id_romawi', $id_romawi)->with('pesan', 'erorkosong');
+
+           }
+        }
+        else
+        {
+        $kategori = $file->AbcSoal->NomorSoal->RomawiSoal->id;
+        $id_romawi = $file->AbcSoal->NomorSoal->id;
+         return redirect('pertanyaan2/kategori/'.$kategori)->with('id_romawi', $id_romawi)->with('pesan', 'erorbelum');
+
+        }
+
+    }
+
     public function hapus(Request $request)
     {
          DB::beginTransaction();

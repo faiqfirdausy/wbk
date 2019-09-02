@@ -14,7 +14,7 @@ class AbcSoal extends Model
     
     public function NomorSoal()
     {
-        return $this->belongsTo('App\Model\NomorSoal', 'id', 'id_nomorsoal');
+        return $this->belongsTo('App\Model\NomorSoal', 'id_nomorsoal', 'id');
     }
     
     public function Jawaban()

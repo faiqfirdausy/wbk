@@ -56,13 +56,13 @@
                   <th>Data Dukung</th>
                   <td>
                     @foreach($transaksi->AbcSoal->DataDukung as $dakung)
-                    <p>{{$dakung->nama}}</p>
+                    <p>{!! $dakung->nama !!}</p>
                      @php
                       $j = 0;
                       @endphp
                     @foreach($transaksi->filesx as $varfile)
                     @if($dakung->id == $varfile->id_datadukung)
-                    <p><a href="{{url('pertanyaan2/download-file/'.$varfile->id)}}" class="btn btn-warning " role="button" >Download</a></p>
+                    <p><a href="{{url('pertanyaan2/download-fileverif/'.$varfile->id)}}" class="btn btn-warning " role="button" >Download</a></p>
                     <hr>
                     @php
                     $j = 1;
@@ -179,4 +179,59 @@
         </section>
 
     <!-- /.content -->
+@endsection
+@section('scripts')
+<script type="text/javascript">
+  @if(!empty(session('pesan')))
+    @if(session('pesan') == 'upload')
+      $( document ).ready(function() {
+
+        Swal.fire(
+        'Sukses!',
+        'Anda Berhasil Mengupload File',
+        'success',
+        )
+        });
+    @elseif(session('pesan') == 'hapus')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Sukses!',
+        'Anda Berhasil Menghapus File',
+        'success',
+        )
+        });
+    @elseif(session('pesan') == 'erorvalid')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Kosong atau Terlalu Besar',
+        'error',
+        )
+        });
+    @elseif(session('pesan') == 'erorkosong')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Tidak Ditemukan',
+        'error',
+        )
+        });
+    @elseif(session('pesan') == 'erorbelum')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Belum Ada',
+        'error',
+        )
+        });
+
+    @endif
+
+
+  @endif
+</script>
 @endsection

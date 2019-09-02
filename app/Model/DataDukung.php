@@ -17,7 +17,7 @@ class DataDukung extends Model
     
     public function AbcSoal()
     {
-        return $this->belongsTo('App\Model\AbcSoal', 'id', 'id_abcsoal');
+        return $this->belongsTo('App\Model\AbcSoal', 'id_abcsoal', 'id');
     }
 
     public function File2()

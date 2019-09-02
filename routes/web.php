@@ -37,6 +37,8 @@ Route::get('/pertanyaan2', 'HomeController@pertanyaan2')->name('home');
 Route::group(['prefix' => 'pertanyaan2', 'middleware' => 'auth'], function(){
 	Route::get('kategori/{id_kategori}', 'HomeController@subindikator');
 	Route::get('download-file/{id_file}', 'HomeController@downloadFile');
+	Route::get('download-dakung/{id_dakung}', 'HomeController@downloadDakung');
+	Route::get('download-fileverif/{id_file}', 'HomeController@downloadFileVerif');
 
 
 });

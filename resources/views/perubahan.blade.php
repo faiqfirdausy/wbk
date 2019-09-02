@@ -120,7 +120,7 @@
 
 
                     </li>
-                    <a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#">Contoh File</a>
+                    <a href="{{url('pertanyaan2/download-dakung/'.$dakung->id)}}" class="btn btn-success " role="button" data-toggle="modal" data-target="#">Contoh File</a>
 
                     <hr>
                     @if(!empty($dakung->filesxuser))
@@ -253,8 +253,7 @@
 
 
                     </li>
-                    <a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#">Contoh File</a>
-
+                    <a href="{{url('pertanyaan2/download-dakung/'.$dakung->id)}}" class="btn btn-success " role="button" data-toggle="modal" data-target="#">Contoh File</a>
                     <hr>
                     @if(!empty($dakung->filesxuser))
 
@@ -466,6 +465,24 @@
         Swal.fire(
         'Gagal!',
         'File Kosong atau Terlalu Besar',
+        'error',
+        )
+        });
+    @elseif(session('pesan') == 'erorkosong')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Tidak Ditemukan',
+        'error',
+        )
+        });
+    @elseif(session('pesan') == 'erorbelum')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Belum Ada',
         'error',
         )
         });
