@@ -1,4 +1,4 @@
-@extends('layouts.appsikm', ['title' => 'Home'])
+@extends('layouts.appsactionplan', ['title' => 'Home'])
 
 @section('content')
     <section class="content-header">
@@ -11,13 +11,13 @@
       </ol>
     </section>
 	    <!-- Main content -->
-    <section class="content">
+      <section class="content">
 
       <!-- /.row -->
 	   <!-- Application buttons -->
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Input Nilai IPK & IKM</h3>
+              <h3 class="box-title">Action Plan</h3>
 			   <center><p></p></center>
             </div>
             <div class="box-body">
@@ -52,11 +52,7 @@
                 </div>
                 <!-- /.input group -->
               </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Nilai</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nilai">
-                </div>
-				 <div class="form-group">
+				<div class="form-group">
                   <label for="exampleInputFile">Unggah berkas</label>
                   <input type="file" id="exampleInputFile">
                 </div>

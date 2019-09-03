@@ -70,6 +70,18 @@ class HomeController extends Controller
 
         return view('video',$data);
     }
+		public function ipkikm()
+    {
+		$data['session'] = Auth::user();
+		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        return view('ipkikm',$data);
+    }
+		public function acplan()
+    {
+		$data['session'] = Auth::user();
+		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        return view('acplan', $data);
+    }
      public function updateverif(Request $request)
     {
         DB::beginTransaction();

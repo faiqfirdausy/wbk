@@ -113,8 +113,8 @@
 
         </li>
         <li ><a href="{{url('video')}}"><i class="fa fa-laptop"></i>Video</a></li>
-      <li ><a href=""><i class="fa fa-laptop"></i>IPK/IKM</a></li>
-      <li ><a href=""><i class="fa fa-laptop"></i>Action Plan</a></li>
+		<li ><a href="{{url('ipkikm')}}"><i class="fa fa-laptop"></i>IPK/IKM</a></li>
+		<li ><a href="{{url('acplan')}}"><i class="fa fa-laptop"></i>Action Plan</a></li>
 
         
     </section>
