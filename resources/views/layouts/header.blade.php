@@ -112,8 +112,9 @@
 			
           </ul>
 		   <ul class="treeview-menu">
-            <li ><a href=""><i class="fa fa-circle-o"></i>Video</a></li>
+            <li ><a href="{{url('video')}}"><i class="fa fa-circle-o"></i>Video</a></li>
 			<li ><a href=""><i class="fa fa-circle-o"></i>IPK/IKM</a></li>
+			<li ><a href=""><i class="fa fa-circle-o"></i>Action Plan</a></li>
           </ul>
         </li>
 
