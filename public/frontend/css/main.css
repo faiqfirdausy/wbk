@@ -616,10 +616,9 @@ background-color: rgba(108, 192, 145, 0.15);
 }
 
 .contact-form .input-field {
-  width: 42%;
+  width: 23%;
   float: left;
-  margin-right: 2%;
-  margin-left: 6%;
+  margin-left: 2%;
 }
 
 .contact-form .input-field:last-child {
@@ -817,3 +816,7 @@ label.error {
   /* Add a grey background color to the table header and on hover */
   background-color: #f1f1f1;
 }
+
+.ui-datepicker-calendar {
+    display: none;
+    }

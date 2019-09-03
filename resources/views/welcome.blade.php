@@ -107,7 +107,7 @@
 							  </tr>
 							  <tr>
 								<td>3</td>
-								<td>Rutan Kelas IIB Nganjuk</td>
+								<td>Kanim Kelas II Blitar</td>
 								<td>
 									<div class="container-bar">
 									  <div class="skills-bar kuning">56%</div>
@@ -156,18 +156,20 @@
 										</select>
 									</div>
 									<div class="input-field">
-										<div id="sla-data-range" class="mrp-container nav navbar-nav">
-											  <span class="mrp-icon"><i class="fa fa-calendar"></i></span>
-											  <div class="mrp-monthdisplay">
-												<span class="mrp-lowerMonth">Jul 2014</span>
-												<span class="mrp-to"> to </span>
-												<span class="mrp-upperMonth">Aug 2014</span>
-											  </div>
-											<input type="hidden" value="201407" id="mrp-lowerDate" />
-											<input type="hidden" value="201408" id="mrp-upperDate" />
-										  </div>
-										   <input type="submit" class="btn btn-success" value="Submit">
-									 <input class="btn btn-default" type="reset" value="Reset">
+										<select class="form-control" id="sel1">
+											<option>TRIWULAN I</option>
+											<option>TRIWULAN II</option>
+											<option>TRIWULAN III</option>
+											<option>TRIWULAN IV</option>
+										</select>
+										
+									</div>
+									<div class="input-field">
+										<input class="date-own form-control" type="text" placeholder="Pilih Tahun">
+									</div>
+									<div class="input-field">
+										<input type="submit" class="btn btn-success" value="Submit">
+										<input class="btn btn-default" type="reset" value="Reset">
 									</div>
 								</div>
 							</form>
@@ -287,9 +289,9 @@
 				<figure class="mix work-item web">
 					<img src="{{ asset('frontend/img/works/item-2.jpg') }}" alt="">
 					<figcaption class="overlay">
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-						<p></p>
+						<h4>Seru! Begini aksi pegawai Kemenkumham Jatim peringati HUT RI</h4>
+						<p>Kanwil Kemenkumham Jatim</p>
+						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
 						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/2elm7nKN4L8" data-target="#myModal">
 						  Putar Video
 						</button>

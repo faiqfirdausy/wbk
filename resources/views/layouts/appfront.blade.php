@@ -30,9 +30,9 @@
 		<link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
 		<!-- media-queries -->
 		<link rel="stylesheet" href="{{ asset('frontend/css/media-queries.css') }}">
-		<!--month picker-->
-		<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
-		<link rel="stylesheet" href="{{ asset('css/monthpicker.css') }}">
+		<!--year picker-->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+
 
 		<!-- Modernizer Script for old Browsers -->
 		<script src="{{ asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
@@ -207,11 +207,17 @@
 				}
 			});
 		</script>
-		<!--month picker-->
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<script src="{{ asset('js/monthpicker.js')}}"></script>
+		<!--year picker-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script>
+				 $('.date-own').datepicker({
+					 minViewMode: 2,
+					 format: 'yyyy'
+				   });
+		</script>
+		
 		<!--Video-->
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 		<script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
