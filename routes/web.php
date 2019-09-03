@@ -15,14 +15,17 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'HomeController2@indexfront');
 Route::get('/capaian', 'HomeController2@capaian')->name('home');
-Route::get('/ipkikm', 'HomeController@ipkikm')->name('home');
-Route::get('/video', 'HomeController@video')->name('home');
-Route::get('/acplan', 'HomeController@acplan')->name('home');
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/ipkikm', 'HomeController@ipkikm')->name('home');
+Route::post('/ipkikm/update', 'HomeController@ipkikmupdate')->name('home');
+Route::get('/video', 'HomeController@video')->name('home');
+Route::get('/acplan', 'HomeController@acplan')->name('home');
+Route::get('/video', 'HomeController@video')->name('home');
+Route::get('/acplan', 'HomeController@acplan')->name('home');
 
 Route::get('/pimti', 'HomeController@pimti')->name('home');
 Route::get('/verifikasi2', 'HomeController@verifikasi2')->name('home');

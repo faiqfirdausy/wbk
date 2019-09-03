@@ -126,7 +126,7 @@
                                     <div class="modal-body">
                                       <label>Capaian</label>
                                       <select name="capaian" class="form-control">
-                                        <option>--</option>
+                                        <option value="">--</option>
                                         <option value="2">20%</option>
                                         <option value="4">40%</option>
                                         <option value="6">60%</option>
@@ -134,14 +134,7 @@
                                         <option value="10">100%</option>
                                      </select>
                                       <br>
-                                      <label>Status</label>
-                                      <select name="statustransaksi" class="form-control">
-                                        <option>--</option>
-                                        <option value="1">Terverifikasi</option>
-                                        <option value="2">Perlu Revisi</option>
-
-                                     </select>
-                                      <br>
+                                      
                                       <label>Keterangan</label>
 
                                       <textarea name="keterangan" class="form-control" rows="3" placeholder="Keterangan"></textarea>
@@ -216,6 +209,15 @@
         Swal.fire(
         'Gagal!',
         'File Tidak Ditemukan',
+        'error',
+        )
+        });
+  @elseif(session('pesan') == 'capaiankosong')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'Capaian Tidak Boleh Kosong',
         'error',
         )
         });

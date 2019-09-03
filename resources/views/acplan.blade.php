@@ -34,6 +34,7 @@
                 <div class="form-group">
                   <label>Periode</label>
                   <select class="form-control">
+                    <option>-</option>
                     <option>Triwulan I</option>
                     <option>Triwulan II</option>
                     <option>Triwulan III</option>

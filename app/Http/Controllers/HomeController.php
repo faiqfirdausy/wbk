@@ -76,6 +76,15 @@ class HomeController extends Controller
 		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         return view('ipkikm',$data);
     }
+        public function ipkikmupdate(Request $request)
+    {
+        dd($request->triwulan);
+
+        $data['session'] = Auth::user();
+
+        $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        return view('ipkikm',$data);
+    }
 		public function acplan()
     {
 		$data['session'] = Auth::user();
@@ -84,20 +93,37 @@ class HomeController extends Controller
     }
      public function updateverif(Request $request)
     {
+        $rules = array(
+                    'capaian'  => 'required'
+                );
+        $error = Validator::make($request->all(), $rules);
+        if($error->fails())
+        {
+        $id_transaksi = $request->idtransaksi;
+        return redirect('verifikasi/'.$id_transaksi)->with('pesan', 'capaiankosong');
+
+        }
         DB::beginTransaction();
 
             try {
                 $capaian = $request->capaian;
+
                 $capaian = $capaian / 10;
                 $abc = AbcSoal::findorFail($request->id_abcsoal);
                 $Transaksi = Transaksi::findorFail($request->idtransaksi);
                 $time = Carbon\Carbon::now()->format('Y-m-d H:i:s');
-
+                if($capaian == 1)
+                {
+                $Transaksi->status = 1;
+                }
+                else
+                {
+                $Transaksi->status = 2;
+                }
 
                 $totalnilai = $abc->nilai * $capaian;
                 $Transaksi->nilai = $totalnilai;
                 $Transaksi->keterangan = $request->keterangan;
-                $Transaksi->status = $request->statustransaksi;
                 $Transaksi->capaian = $capaian;
                 $Transaksi->updated_by =  Auth::user()->id;
                 $Transaksi->updated_at = $time;
@@ -288,7 +314,7 @@ class HomeController extends Controller
       public function store(Request $request)
     {
         $rules = array(
-                    'upload_files'  => 'required|max:548'
+                    'upload_files'  => 'required|max:2048'
                 );
         $error = Validator::make($request->all(), $rules);
         if($error->fails())

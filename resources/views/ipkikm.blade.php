@@ -28,16 +28,19 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form"  method="POST" action="{{ url('ipkikm/update') }}" enctype="multipart/form-data">
+            {!! csrf_field() !!}
+
               <div class="box-body">
                 <!-- select -->
                 <div class="form-group">
                   <label>Periode</label>
-                  <select class="form-control">
-                    <option>Triwulan I</option>
-                    <option>Triwulan II</option>
-                    <option>Triwulan III</option>
-                    <option>Triwulan IV</option>
+                  <select name="triwulan" class="form-control">
+                    <option value="">-</option>
+                    <option value="Triwulan I">Triwulan I</option>
+                    <option value="Triwulan II">Triwulan II</option>
+                    <option value="Triwulan III">Triwulan III</option>
+                    <option value="Triwulan IV">Triwulan IV</option>
                   </select>
                 </div>
 				<!-- Date -->
@@ -48,17 +51,17 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-				  <input class="date-own form-control" type="text" placeholder="Pilih Tahun">
+				  <input name="tahun" class="date-own form-control" type="text" placeholder="Pilih Tahun">
                 </div>
                 <!-- /.input group -->
               </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Nilai</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nilai">
+                  <input type="text" name="nilai" class="form-control" id="exampleInputPassword1" placeholder="Nilai">
                 </div>
 				 <div class="form-group">
                   <label for="exampleInputFile">Unggah berkas</label>
-                  <input type="file" id="exampleInputFile">
+                  <input type="file" name="upload_files" id="exampleInputFile">
                 </div>
 				
               </div>
