@@ -1,11 +1,17 @@
     <!-- Logo -->
-    <a href="{{ url('/') }}" class="logo">
+    <link  rel="icon" href="{{ asset('img/logo2.png') }}" >
+	<a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>SIAP</b>ZI</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
-
+		      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
 
@@ -46,12 +52,64 @@
                         @csrf
                     </form>
                   <!-- <a href="#" class="btn btn-default btn-flat">Sign out</a> -->
-                </div>
+</div>
               </li>
             </ul>
           </li>
-		</ul>
           <!-- Control Sidebar Toggle Button -->
-     </div>
-	</nav>
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+ <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+         <img src="{{ asset('img/user.png') }}" class="user-image" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          @php print_r($session->nama) @endphp 
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active treeview">
+          <a href="#">
 
+            <i class="fa fa-laptop"></i> <span>Beranda</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+
+            <li class="active"><a href="{{url('pertanyaan2/kategori/'.$data->id)}}"><i class="fa fa-circle-o"></i></a></li>
+
+            <li ><a href="{{url('pertanyaan2/kategori/'.$data->id)}}"><i class="fa fa-circle-o"></i></a></li>
+
+
+          </ul>
+        </li>
+
+
+        
+    </section>
+    <!-- /.sidebar -->
+  </aside>
