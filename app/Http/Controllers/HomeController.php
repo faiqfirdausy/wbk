@@ -62,6 +62,10 @@ class HomeController extends Controller
     {
         return view('perubahan');
     }
+		public function video()
+    {
+        return view('video');
+    }
      public function updateverif(Request $request)
     {
         DB::beginTransaction();

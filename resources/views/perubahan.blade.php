@@ -204,6 +204,7 @@
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         <h4 class="modal-title">{!! $dakung->nama !!}</h4>
+										
                                     </div>
                                     <div class="modal-body">
                                       <label>File</label>
@@ -228,8 +229,7 @@
                                       @endif
 
                                         <input type="hidden" name="kategori" value="{{ $romawi->id }}">
-
-
+										
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -361,7 +361,10 @@
                                       @endif
 
                                         <input type="hidden" name="kategori" value="{{ $romawi->id }}">
-
+										</br>
+										<small>*berkas maksimal berukuran 50MB</small>
+										</br>
+										<small>*unggah berkas .zip atau .rar jika berkas lebih dari 1</small>
 
                                     </div>
                                     <div class="modal-footer">
