@@ -117,11 +117,11 @@
 					</div>
 					
 				</div>
-				<ul class="social-links text-center ">
-					<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+				<ul class="social-links text-center">
+					<li><a href="https://twitter.com/Kemenkumham_Jtm"><i class="fa fa-twitter fa-lg"></i></a></li>
 					<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
 					<li><a href=""><i class="fa fa-instagram fa-lg"></i></a></li>
-					<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
+					<li><a href="https://jatim.kemenkumham.go.id/"><i class="fa fa-dribbble fa-lg"></i></a></li>
 				</ul>
 			</div>
 		</footer>
@@ -155,46 +155,21 @@
 		<!--chart.js-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 		
-		<script>
-			// Bar chart capaian
-			new Chart(document.getElementById("bar-chart"), {
-				type: 'bar',
-				data: {
-				  labels: ["Lapas Kelas I Surabaya", "Lapas Kelas IIB Blitar", "Lapas Perempuan Malang", "Lapas Kelas I Malang", "Lapas Kelas IIA Kediri"
-				  , "Lapas Kelas I Madiun", "Lapas Kelas IIB Ngawi", "Bapas Kelas II Pamekasan", "Bapas Kelas II Madiun", "Bapas Kelas II Kediri", "Bapas Kelas II Jember", "Bapas Kelas II Malang"
-				  , "Bapas Kelas I Surabaya", "Bapas Kelas II Bojonegoro", "LPKA Kelas I Blitar"],
-				 datasets: [
-					{
-					  label: "Nilai Capaian",
-					  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"
-					  ,"#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-					  data: [27,57,34,74,33,78,67,73,74,43,78,57,74,78,93]
-					}
-				  ]
-				},
-				options: {
-				  legend: { display: false },
-				  title: {
-					display: true,
-					text: 'Nilai Capaian Pada Tahun 2020'
-				  }
-				}
-			});
-		</script>
+
 		<script>
 			// Bar chart ipk/ikm
 			new Chart(document.getElementById("bar-chart2"), {
 				type: 'bar',
 				data: {
-				  labels: ["Lapas Kelas I Surabaya", "Lapas Kelas IIB Blitar", "Lapas Perempuan Malang", "Lapas Kelas I Malang", "Lapas Kelas IIA Kediri"
-				  , "Lapas Kelas I Madiun", "Lapas Kelas IIB Ngawi", "Bapas Kelas II Pamekasan", "Bapas Kelas II Madiun", "Bapas Kelas II Kediri", "Bapas Kelas II Jember", "Bapas Kelas II Malang"
-				  , "Bapas Kelas I Surabaya", "Bapas Kelas II Bojonegoro", "LPKA Kelas I Blitar"],
+				  labels: ["Lapas Kelas I Surabaya - 78%", "Lapas Kelas IIB Blitar - 67%", "Lapas Perempuan Malang - 74%", "Lapas Kelas I Malang - 84%", "Lapas Kelas IIA Kediri - 93%"
+				  , "Lapas Kelas I Madiun - 88%", "Lapas Kelas IIB Ngawi - 22%", "Bapas Kelas II Pamekasan - 40%", "Bapas Kelas II Madiun - 84%", "Bapas Kelas II Kediri - 33%", "Bapas Kelas II Jember - 78%", "Bapas Kelas II Malang - 57%"
+				  , "Bapas Kelas I Surabaya - 74%", "Bapas Kelas II Bojonegoro - 84%", "LPKA Kelas I Blitar - 49%"],
 				  datasets: [
 					{
 					  label: "Nilai Capaian",
 					  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"
 					  ,"#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-					  data: [78,67,74,84,93,88,22,40,84,33,78,57,74,84,49]
+					  data: [78,67,74,84,93,88,22,40,84,33,78,57,74,84,49],
 					}
 				  ]
 				},
