@@ -1,6 +1,6 @@
     <!-- Logo -->
     <a href="{{ url('/') }}" class="logo">
-
+	<link  rel="icon" href="{{ asset('img/logo2.png') }}" >	
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>SIAP</b>ZI</span>
     </a>

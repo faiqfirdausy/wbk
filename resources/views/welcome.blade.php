@@ -4,7 +4,7 @@
 			        <!--
         content section
         ==================================== -->
-		
+		<link  rel="icon" href="{{ asset('img/logo2.png') }}" >
 		<section id="slider">
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">			
 				<!-- Wrapper banner -->
