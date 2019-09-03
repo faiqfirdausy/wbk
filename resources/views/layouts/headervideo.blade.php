@@ -88,7 +88,7 @@
       <!-- /.Jika sedang membuka Indikator Perubahan-->
 
 
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
 
             <i class="fa fa-laptop"></i> <span>Indikator Perubahan</span>
@@ -98,13 +98,9 @@
           </a>
           <ul class="treeview-menu">
             @foreach($kategori as $data)
-              @if($id_kategori == $data->id)
-
-                <li class="active"><a href="{{url('pertanyaan2/kategori/'.$data->id)}}"><i class="fa fa-circle-o"></i>{{$data->nama}}</a></li>
-              @else
+           
                 <li ><a href="{{url('pertanyaan2/kategori/'.$data->id)}}"><i class="fa fa-circle-o"></i>{{$data->nama}}</a></li>
 
-              @endif
           
 
             @endforeach
@@ -112,7 +108,7 @@
           </ul>
 
         </li>
-        <li ><a href="{{url('video')}}"><i class="fa fa-laptop"></i>Video</a></li>
+        <li  class="active" ><a href="{{url('video')}}"><i class="fa fa-laptop"></i>Video</a></li>
       <li ><a href=""><i class="fa fa-laptop"></i>IPK/IKM</a></li>
       <li ><a href=""><i class="fa fa-laptop"></i>Action Plan</a></li>
 

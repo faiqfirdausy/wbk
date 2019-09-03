@@ -64,7 +64,11 @@ class HomeController extends Controller
     }
 		public function video()
     {
-        return view('video');
+        $data['session'] = Auth::user();
+        $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+
+
+        return view('video',$data);
     }
      public function updateverif(Request $request)
     {
