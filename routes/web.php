@@ -26,6 +26,7 @@ Route::get('/video', 'HomeController@video')->name('home');
 Route::get('/acplan', 'HomeController@acplan')->name('home');
 Route::get('/video', 'HomeController@video')->name('home');
 Route::get('/acplan', 'HomeController@acplan')->name('home');
+Route::get('/verifipkikm', 'HomeController@verifipkikm')->name('home');
 
 Route::get('/pimti', 'HomeController@pimti')->name('home');
 Route::get('/verifikasi2', 'HomeController@verifikasi2')->name('home');

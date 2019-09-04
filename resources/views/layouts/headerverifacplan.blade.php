@@ -82,9 +82,9 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-          <li class="active"><a href="{{url('home')}}"><i class="fa fa-laptop"></i>Indikator Perubahan</a></li>
+          <li ><a href="{{url('home')}}"><i class="fa fa-laptop"></i>Indikator Perubahan</a></li>
           <li ><a href="{{url('ipkikm')}}"><i class="fa fa-laptop"></i>IPK/ IKM</a></li>
-          <li ><a href="{{url('ipkikm')}}"><i class="fa fa-laptop"></i>Action Plan</a></li>
+          <li class="active"><a href="{{url('ipkikm')}}"><i class="fa fa-laptop"></i>Action Plan</a></li>
 
         </li>
 
