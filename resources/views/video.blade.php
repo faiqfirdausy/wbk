@@ -61,7 +61,61 @@
           </div>
 		  </div>
 
-
+					<!--table-->
+		<div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Data Table Video</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+				  <th>NO</th>
+                  <th>JUDUL VIDEO</th>
+                  <th>LINK VIDEO</th>
+                  <th>COVER VIDEO</th>
+                  
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Triwulan I</td>
+                  <td>2019</td>
+                  <td>acplan2019.pdf</td>
+                </tr>
+				<tr>
+                  <td>1</td>
+                  <td>Triwulan I</td>
+                  <td>2019</td>
+                  <td>acplan2019.pdf</td>
+                </tr>  
+				<tr>
+                  <td>1</td>
+                  <td>Triwulan I</td>
+                  <td>2019</td>
+                  <td>acplan2019.pdf</td>
+                </tr>  
+				<tr>
+                  <td>1</td>
+                  <td>Triwulan I</td>
+                  <td>2019</td>
+                  <td>acplan2019.pdf</td>
+                </tr>  				
+                </tbody>
+                <tfoot>
+                <tr>
+				 <th>NO</th>
+                  <th>JUDUL VIDEO</th>
+                  <th>LINK VIDEO</th>
+                  <th>COVER VIDEO</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
    
 
         </section>

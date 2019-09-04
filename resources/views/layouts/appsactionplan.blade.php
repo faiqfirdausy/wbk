@@ -29,6 +29,8 @@
 	<link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap.min.css') }}">
 	<!--year picker-->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+	<!--font awesome-->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
 <!--===============================================================================================-->
@@ -57,7 +59,7 @@
 		</div>
 		
 		<footer class="main-footer text-center">
-			Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa Timur
+			<small>Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa Timur</small>
 		</footer>
 	</div>
 
