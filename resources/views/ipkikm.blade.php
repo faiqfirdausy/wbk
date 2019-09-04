@@ -150,3 +150,39 @@
 
     <!-- /.content -->
 @endsection
+@section('scripts')
+<script type="text/javascript">
+  @if(!empty(session('pesan')))
+    @if(session('pesan') == 'sukses')
+      $( document ).ready(function() {
+
+        Swal.fire(
+        'Sukses!',
+        'Anda Berhasil Mengupload File',
+        'success',
+        )
+        });
+    @elseif(session('pesan') == 'kosong')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'Field Tidak Boleh Kosong',
+        'error',
+        )
+        });
+    @elseif(session('pesan') == 'besar')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Tidak Boleh Lebih Besar dari 50 MB',
+        'error',
+        )
+        });
+    @endif
+
+
+  @endif
+</script>
+@endsection

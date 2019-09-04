@@ -19,6 +19,9 @@ use App\Model\DataFile;
 use App\Model\DataDukung;
 use App\Model\File2;
 use App\Model\Divisi;
+use App\Model\TransaksiIpk;
+use App\Model\TransaksiVideo;
+use App\Model\TransaksiAcplan;
 
 
 
@@ -76,14 +79,68 @@ class HomeController extends Controller
 		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         return view('ipkikm',$data);
     }
-        public function ipkikmupdate(Request $request)
+        public function ipkikminsert(Request $request)
     {
-        dd($request->triwulan);
+        $userId = Auth::user()->id;
+        $upt = User::with('Upt')->find($userId);
+        $nama_upt = $upt->Upt->nama_upt;
+        $ruleskosong = array(
+                    'nilai'  => 'required',
+                    'upload_files'  => 'required',
+                    'tahun'         => 'required',
+                    'triwulan'         => 'required'
+                );
+        $rulesbesar = array(
+                    'upload_files'  => 'max:2048'
+                );
+        $error = Validator::make($request->all(), $ruleskosong);
+        $errorbesar = Validator::make($request->all(), $rulesbesar);
+        if($error->fails())
+        {
+        $id_transaksi = $request->idtransaksi;
+        return redirect('ipkikm/')->with('pesan', 'kosong');
 
-        $data['session'] = Auth::user();
+        }
+        else if($errorbesar->fails())
+        {
+        return redirect('ipkikm/')->with('pesan', 'besar');
 
-        $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
-        return view('ipkikm',$data);
+        }
+
+
+         DB::beginTransaction();
+
+            try {
+                $TransaksiIpk = new TransaksiIpk;
+                $TransaksiIpk->nilai = $request->nilai;
+                $TransaksiIpk->triwulan = $request->triwulan;
+                $TransaksiIpk->tahun = $request->tahun;
+                $TransaksiIpk->created_by = $userId;
+
+                $uploaded = $request->file('upload_files');
+                $ext = $uploaded->getClientOriginalExtension();
+                $oriname = $uploaded->getClientOriginalName();
+                $filename = $oriname;
+                Storage::disk('local')->putFileAs('file_upload/'.$nama_upt.'/IpkIkm/', $uploaded, $filename);
+                $fileUpload = 'file_upload/'.$nama_upt.'/IpkIkm/'.$filename;
+                $TransaksiIpk->path = $fileUpload;
+                $TransaksiIpk->namafile = $filename;
+
+
+
+                $TransaksiIpk->save();
+                
+
+                
+                DB::commit();
+                // \Session::flash('success_flash_message','Data Mahasiswa Berhasil Ditambah.');
+
+            return redirect('ipkikm/')->with('pesan', 'sukses');
+
+            } catch (Exception $e) {
+                return response()->json(['error' => 'silahkan coba lagi']);
+                DB::rollback();
+            }
     }
 		public function acplan()
     {
