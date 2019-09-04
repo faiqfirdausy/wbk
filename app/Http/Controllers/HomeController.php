@@ -166,6 +166,12 @@ class HomeController extends Controller
 		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         return view('verifipkikm',$data);
     }
+		public function verifacplan()
+    {
+		$data['session'] = Auth::user();
+		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        return view('verifacplan',$data);
+    }
 	
 		public function verifikasi2()
     {

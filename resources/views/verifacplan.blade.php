@@ -1,4 +1,4 @@
-@extends('layouts.appsverifipkikm', ['title' => 'Home'])
+@extends('layouts.appsverifacplan', ['title' => 'Home'])
 
 @section('content')
     <section class="content-header">
@@ -44,10 +44,8 @@
                 
 				 <!-- /.box-header -->
 					<div class="box-body table-responsive no-padding">
-					  <!--table-->
-
-            <div class="box-header">
-              <h3 class="box-title">Data Table IPK & IKM</h3>
+					  <div class="box-header">
+              <h3 class="box-title">Data Table Action Plan</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -57,7 +55,6 @@
 				  <th>NO</th>
                   <th>PERIODE</th>
                   <th>TAHUN</th>
-				  <th>NILAI</th>
                   <th>BERKAS</th>
                   
                 </tr>
@@ -67,44 +64,38 @@
                   <td>1</td>
                   <td>Triwulan I</td>
                   <td>2019</td>
-				  <td>2019</td>
                   <td>acplan2019.pdf</td>
                 </tr>
 				<tr>
                   <td>1</td>
                   <td>Triwulan I</td>
                   <td>2019</td>
-				  <td>2019</td>
                   <td>acplan2019.pdf</td>
                 </tr>  
 				<tr>
                   <td>1</td>
                   <td>Triwulan I</td>
                   <td>2019</td>
-				  <td>2019</td>
                   <td>acplan2019.pdf</td>
                 </tr>  
 				<tr>
                   <td>1</td>
                   <td>Triwulan I</td>
                   <td>2019</td>
-				  <td>2019</td>
                   <td>acplan2019.pdf</td>
                 </tr>  				
                 </tbody>
                 <tfoot>
                 <tr>
-				   <th>NO</th>
+				  <th>NO</th>
                   <th>PERIODE</th>
                   <th>TAHUN</th>
-				  <th>NILAI</th>
                   <th>BERKAS</th>
                 </tr>
                 </tfoot>
               </table>
             </div>
             <!-- /.box-body -->
-
 
 					</div>
               <!-- /.tab-pane -->
