@@ -216,6 +216,20 @@ class HomeController extends Controller
 
         return view('verifikasifix2',$data);
     }
+	
+		public function verifipkikm()
+    {
+		$data['session'] = Auth::user();
+		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        return view('verifipkikm',$data);
+    }
+		public function verifacplan()
+    {
+		$data['session'] = Auth::user();
+		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        return view('verifacplan',$data);
+    }
+	
 		public function verifikasi2()
     {
 
