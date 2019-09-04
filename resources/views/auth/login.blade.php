@@ -34,7 +34,7 @@
 						</button>
 					</div>
 					
-					<div class="text-center p-t-90">
+					<div class="text-center p-t-30">
 						<a class="txt1" href="{{ route('register') }}">
 							Register?
 						</a>
