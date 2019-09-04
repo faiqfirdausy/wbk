@@ -1,5 +1,5 @@
     <!-- Logo -->
-    <link  rel="icon" href="{{ asset('img/logo2.png') }}" >
+    <link  rel="icon" href="{{ asset('public/img/logo2.png') }}" >
 	<a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
