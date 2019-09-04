@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-				<link  rel="icon" href="{{ asset('img/logo2.png') }}" >
+				<link  rel="icon" href="{{ asset('public/img/logo2.png') }}" >
                 <img src="{{ asset('img/logo pengayoman 2.png') }}" alt="IMG"/>
 				<div class="card-header">{{ __('Login') }}</div>
                 <div class="card-body">

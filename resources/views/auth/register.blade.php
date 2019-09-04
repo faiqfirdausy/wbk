@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<link  rel="icon" href="{{ asset('img/logo2.png') }}" >
+<link  rel="icon" href="{{ asset('public/img/logo2.png') }}" >
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
