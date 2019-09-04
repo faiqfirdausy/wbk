@@ -1,75 +1,46 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-				<link  rel="icon" href="{{ asset('public/img/logo2.png') }}" >
-                <img src="{{ asset('img/logo pengayoman 2.png') }}" alt="IMG"/>
-				<div class="card-header">{{ __('Login') }}</div>
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+<div class="limiter">
+		<div class="container-login100" style="background-image: url({{ asset('login/images/bg-01.gif') }});">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
+				@csrf
+					<a href="{{ url('/') }}"><span class="login100-form-logo">
+						<img src="{{ asset('public/login/images/siap.png') }}" width="70%">
+					</span></a>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+					<span class="login100-form-title p-b-34 p-t-27">
+						Log in
+					</span>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
-                                 
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input id="name" type="text" class="input100{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" placeholder="Username" value="{{ old('username') }}" required autofocus>       
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
 
-                                @if ($errors->has('username'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input id="password" type="password" class="input100{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" required>
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+					<div class="contact100-form-checkbox">
+					
+					</div>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+					
+					<div class="text-center p-t-90">
+						<a class="txt1" href="{{ route('register') }}">
+							Register?
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 @endsection
