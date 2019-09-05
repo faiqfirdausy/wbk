@@ -14,7 +14,7 @@
 					<div class="item active" style="background-image: url({{ asset('frontend/img/banner2.gif') }});">
 						<div class="carousel-caption">
 							<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
-								<img src="{{ asset('frontend/img/logo2.png') }}" width="60%">
+								<img src="{{ asset('frontend/img/logo2.png') }}" width="65%">
 							</div>
 									<div class="work-filter fadeInRight animated" data-wow-duration="500ms">
 										<ul>
@@ -48,6 +48,7 @@
 		
 		<section id="pimti" class="contact">
 			<div class="container">
+				
 				<div class="row mb50">
 				
 					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
@@ -56,7 +57,7 @@
 					</div>
 					
 					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
-						<p>Progres Pembangunan Zona Integritas di UPT</p>
+						<p>Progres Pembangunan Zona Integritas</p>
 					</div>
 					
 					<style>
@@ -74,8 +75,14 @@
 						}
 					</style>
 					<div class="sec-sub-title wow rubberBand animated" data-wow-duration="1000ms">
-						<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari UPT ...">
-						 <table id="myTable" class="table table-bordered">
+						<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
+							<div class="contact-form">
+								<form action="#" id="contact-form">
+									
+								</form>
+							</div>
+						</div>
+						  <table id="example1" class="table table-bordered table-striped">
 							<thead>
 							 <tr class="header">
 								<th>NO</th>
@@ -117,6 +124,7 @@
 							  </tr>
 							</tbody>
 						  </table>
+						  
 					</div>
 			
 				</div>

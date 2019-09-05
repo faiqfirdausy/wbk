@@ -27,8 +27,6 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 	<!-- DataTables -->
 	<link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap.min.css') }}">
-	<!--year picker-->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
 
 
 <!--===============================================================================================-->
@@ -64,16 +62,6 @@
 	
 
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script> -->
-	<!--year picker-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<script>
-				 $('.date-own').datepicker({
-					 minViewMode: 2,
-					 format: 'yyyy'
-				   });
-		</script>
 	<!-- DataTables -->
 	<script src="{{ asset('js/button/jquery-3.2.1.min.js')}}"></script>
 	<!-- jQuery UI 1.11.4 -->
@@ -119,7 +107,7 @@
 		})
 	</script>
 	<script src="{{ asset('js/button/main.js')}}"></script>
-
+	
 
 	<script>
 	$(document).ready( function () {

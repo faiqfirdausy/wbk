@@ -29,7 +29,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('login/vendor/animate/animate.css') }}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('login/css/util.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('login/css/main.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('public/login/css/main.css') }}">
 <!--===============================================================================================-->
 </head>
 <body>
