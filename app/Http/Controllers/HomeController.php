@@ -49,7 +49,7 @@ class HomeController extends Controller
     {        
         $data['datadivisi'] = Divisi::with('Upt')->get();
         $data['tnonverif'] = Transaksi::where('status',0)->get();
-        $data['tverif'] = Transaksi::all();
+        $data['tverif'] = Transaksi::where('status',1)->get();
         $data['trevisi'] = Transaksi::where('status',2)->get();
 
         $datatok = Divisi::all();
@@ -75,8 +75,10 @@ class HomeController extends Controller
     }
 		public function ipkikm()
     {
+        $userId = Auth::user()->id;
 		$data['session'] = Auth::user();
 		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        $data['ipkikm'] = TransaksiIpk::where('created_by',$userId)->get();
         return view('ipkikm',$data);
     }
         public function ipkikminsert(Request $request)
@@ -125,6 +127,7 @@ class HomeController extends Controller
                 $fileUpload = 'file_upload/'.$nama_upt.'/IpkIkm/'.$filename;
                 $TransaksiIpk->path = $fileUpload;
                 $TransaksiIpk->namafile = $filename;
+                $TransaksiIpk->status =0;
 
 
 
@@ -219,6 +222,8 @@ class HomeController extends Controller
 	
 		public function verifipkikm()
     {
+        $data['ipkikm'] = TransaksiIpk::all();
+
 		$data['session'] = Auth::user();
 		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         return view('verifipkikm',$data);
@@ -306,6 +311,36 @@ class HomeController extends Controller
            }
 
     }
+     public function downloadIpk($id_file)
+    {
+        $file = TransaksiIpk::find($id_file);
+        $path = public_path().'/'.$file->path;
+        if(!empty($file->path))
+        {
+
+
+        if(File::exists($path)){
+    //echo "n exist"; die();
+
+        $filename = $file->namafile;
+        $tempImage = tempnam(sys_get_temp_dir(), $filename);
+        copy($path, $tempImage);
+
+        return response()->download($tempImage, $filename);
+        }
+        else {
+              return redirect('ipkikm/')->with('pesan', 'filekosong');
+
+           }
+        }
+        else
+        {
+              return redirect('ipkikm/')->with('pesan', 'filekosong');
+
+        }
+
+    }
+
     public function downloadDakung($id_dakung)
     {
         $file = DataDukung::find($id_dakung);

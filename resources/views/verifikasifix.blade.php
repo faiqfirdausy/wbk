@@ -28,7 +28,7 @@
 
               <li class="active"><a href="#tab_1" data-toggle="tab">Belum Terverifikasi</a></li>
               <li><a href="#tab_2" data-toggle="tab">Revisi</a></li>
-              <li><a href="#tab_3" data-toggle="tab">Seluruh</a></li>
+              <li><a href="#tab_3" data-toggle="tab">Terverifikasi</a></li>
 
  
   
@@ -44,7 +44,7 @@
                 
 				 <!-- /.box-header -->
 					<div class="box-body table-responsive no-padding">
-					  <table class="table table-hover">
+					  <table id="example1" class="table table-hover">
 
              
             <thead>
@@ -113,7 +113,7 @@
                 
          <!-- /.box-header -->
           <div class="box-body table-responsive no-padding">
-            <table class="table table-hover">
+            <table id="example2" class="table table-hover">
 
              
             <thead>
@@ -182,7 +182,7 @@
                 
          <!-- /.box-header -->
           <div class="box-body table-responsive no-padding">
-            <table class="table table-hover">
+            <table id="example3" class="table table-hover">
 
              
             <thead>
