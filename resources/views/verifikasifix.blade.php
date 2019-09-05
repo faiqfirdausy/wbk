@@ -28,6 +28,7 @@
 
               <li class="active"><a href="#tab_1" data-toggle="tab">Belum Terverifikasi</a></li>
               <li><a href="#tab_2" data-toggle="tab">Revisi</a></li>
+			  <li><a href="#tab_4" data-toggle="tab">Terverifikasi</a></li>
               <li><a href="#tab_3" data-toggle="tab">Seluruh</a></li>
 
  
@@ -243,7 +244,73 @@
              
             </div>
   
-                     
+             <div class="tab-pane " id="tab_4">
+
+
+              <!-- /.tab-pane -->
+                
+         <!-- /.box-header -->
+          <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+
+             
+            <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>UPT</th>
+                  <th>Indikator</th>
+                  <th>Status</th>
+                  <th>Keterangan</th>
+                  <th>Capaian</th>
+                  <th>Aksi</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                @php
+                $j = 0;
+                @endphp
+                @foreach($trevisi as $data)
+                @php
+                $j++;
+                @endphp
+                  <tr>
+                  <td>{{$j}}</td>
+                  <td>{{$data->CreatedUser->Upt->nama_upt}}</td>
+                  <td>{{$data->AbcSoal->nama}}
+                  </td>
+                  <td>
+                     @if($data->status== 0)
+                    <span class="badge bg-danger">Belum Terverifikasi</span>
+                    @elseif($data->status==1)
+                    <span class="badge bg-success">Terverifikasi</span>
+                    @else
+                    <span class="badge bg-warning">Revisi</span>
+                    @endif
+
+                  </td>
+                  <td>
+                    @if(!empty($data->keterangan))
+                    {{$data->keterangan}}
+                    @else
+                     Belum ada Keterangan
+                    @endif
+                  </td>
+                  <td> @if(!empty($data->capaian))
+                    @php $capaian = $data->capaian* 100;@endphp
+                    {{$capaian}}%
+                    @endif</td>
+                  <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
+                </tr>
+                @endforeach
+                </tbody>
+            
+            </table>
+
+          </div>
+              <!-- /.tab-pane -->
+             
+            </div>
 
             <!-- /.tab-content -->
             <!-- /.tab-content -->
