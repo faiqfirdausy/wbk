@@ -33,7 +33,7 @@
 		<!--year picker-->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
 
-
+		
 		<!-- Modernizer Script for old Browsers -->
 		<script src="{{ asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
 		
@@ -202,7 +202,7 @@
 					 format: 'yyyy'
 				   });
 		</script>
-		
+
 		<!--Video-->
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 		<script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>

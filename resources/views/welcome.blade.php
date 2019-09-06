@@ -74,6 +74,38 @@
 							background-color: #EBAF24;
 						}
 					</style>
+						<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
+						<div class="contact-form">
+							<form action="#" id="contact-form">
+								<div class="input-group name-email">
+									<div class="input-field">
+										<select class="form-control" id="sel1">
+											<option>Unit Pusat</option>
+											<option>Eselon I</option>
+											<option>Kantor Wilayah</option>
+										</select>
+									</div>
+									<div class="input-field">
+										<select class="form-control" id="sel1">
+											<option>--Pilih Jenis Satker--</option>
+											<option>BAPAS & LAPAS</option>
+											<option>RUTAN & RUPBASAN</option>
+											<option>KANIM & RUDENIM</option>
+											<option>BHP</option>
+										</select>
+										
+									</div>
+									<div class="input-field">
+										<input class="date-own form-control" type="text" placeholder="Pilih Tahun">
+									</div>
+									<div class="input-field">
+										<input type="submit" class="btn btn-success" value="Submit">
+										<input class="btn btn-default" type="reset" value="Reset">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
 					<div class="sec-sub-title wow rubberBand animated" data-wow-duration="1000ms">
 						<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 							<div class="contact-form">
