@@ -80,7 +80,11 @@
 					  <!--table-->
 
             <div class="box-header">
+<<<<<<< HEAD
               <h3 class="box-title">Data Table IPK </h3>
+=======
+              <h3 class="box-title">Data IPK & IKM</h3>
+>>>>>>> 2be4b93485d1564178a6d1332e103fdea5397314
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -92,10 +96,12 @@
                   <th>TAHUN</th>
 				  <th>NILAI</th>
                   <th>BERKAS</th>
+                  <th>STATUS</th>
                   
                 </tr>
                 </thead>
                 <tbody>
+<<<<<<< HEAD
                 <tr>
                   <td>1</td>
                   <td>Triwulan I</td>
@@ -191,6 +197,39 @@
 				  				
                 </tbody>
                
+=======
+                @if(!empty($ipkikm))
+                @php
+                $i = 0;
+                @endphp
+                @foreach($ipkikm as $data)
+                 @php
+                $i++
+                @endphp
+                <tr>                
+
+                  <td>{{$i}}</td>
+                  <td>{{$data->triwulan}}</td>
+                  <td>{{$data->tahun}}</td>
+				          <td>{{$data->nilai}}</td>
+                  <td>
+                  <a href="{{url('download-ipkikm/'.$data->id)}}">{{$data->namafile}}</a>
+
+                  </td>
+                  <td>
+                     @if($data->status ==1 )
+                    <span class="badge bg-success">Terverifikasi</span>
+                    @elseif($data->status ==0 )
+                    <span class="badge bg-danger">Belum Terverifikasi</span>
+                     @elseif($data->status ==2 )
+                    <span class="badge bg-warning">Revisi</span>
+                    @endif
+                  </td>
+                </tr>
+                @endforeach
+                @endif
+                </tfoot>
+>>>>>>> 2be4b93485d1564178a6d1332e103fdea5397314
               </table>
             </div>
             <!-- /.box-body -->
@@ -238,6 +277,15 @@
         Swal.fire(
         'Gagal!',
         'Field Tidak Boleh Kosong',
+        'error',
+        )
+        });
+     @elseif(session('pesan') == 'filekosong')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Tidak Ditemukan',
         'error',
         )
         });
