@@ -18,7 +18,7 @@
 	   <!-- Application buttons -->
           <div class="box">
             <div class="box-header">
-              <center><h2 class="box-title">HALAMAN VERIFIKASI</h2></center>
+              <center><h2 class="box-title">HALAMAN VERIFIKASI ACTION PLAN</h2></center>
             </div>
             <div class="box-body">
 			 <div class="col-md-12">
@@ -28,7 +28,8 @@
 
               <li class="active"><a href="#tab_1" data-toggle="tab">Belum Terverifikasi</a></li>
               <li><a href="#tab_2" data-toggle="tab">Revisi</a></li>
-              <li><a href="#tab_3" data-toggle="tab">Seluruh</a></li>
+			  <li><a href="#tab_3" data-toggle="tab">Terverifikasi</a></li>
+              <li><a href="#tab_4" data-toggle="tab">Seluruh</a></li>
 
  
   
@@ -130,12 +131,19 @@
               <!-- /.tab-pane -->
              
             </div>
-  
-                     
+		<div class="tab-pane" id="tab_4">
 
-            <!-- /.tab-content -->
-            <!-- /.tab-content -->
-            <!-- /.tab-content -->
+
+              <!-- /.tab-pane -->
+                
+         <!-- /.box-header -->
+          <div class="box-body table-responsive no-padding">
+            
+
+          </div>
+              <!-- /.tab-pane -->
+             
+            </div>
           </div>
 
           <!-- nav-tabs-custom -->

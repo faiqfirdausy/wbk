@@ -142,6 +142,32 @@
 
 		<script>
 			// Bar chart ipk/ikm
+			new Chart(document.getElementById("bar-chart"), {
+				type: 'bar',
+				data: {
+				  labels: ["Lapas Kelas I Surabaya - 78%", "Lapas Kelas IIB Blitar - 67%", "Lapas Perempuan Malang - 74%", "Lapas Kelas I Malang - 84%", "Lapas Kelas IIA Kediri - 93%"
+				  , "Lapas Kelas I Madiun - 88%", "Lapas Kelas IIB Ngawi - 22%", "Bapas Kelas II Pamekasan - 40%", "Bapas Kelas II Madiun - 84%", "Bapas Kelas II Kediri - 33%", "Bapas Kelas II Jember - 78%", "Bapas Kelas II Malang - 57%"
+				  , "Bapas Kelas I Surabaya - 74%", "Bapas Kelas II Bojonegoro - 84%", "LPKA Kelas I Blitar - 49%"],
+				  datasets: [
+					{
+					  label: "Nilai Capaian IPK",
+					  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"
+					  ,"#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+					  data: [78,67,74,84,93,88,22,40,84,33,78,57,74,84,49],
+					}
+				  ]
+				},
+				options: {
+				  legend: { display: false },
+				  title: {
+					display: true,
+					text: 'Nilai Capaian Pada Tahun 2020'
+				  }
+				}
+			});
+		</script>
+		<script>
+			// Bar chart ipk/ikm
 			new Chart(document.getElementById("bar-chart2"), {
 				type: 'bar',
 				data: {
@@ -150,7 +176,7 @@
 				  , "Bapas Kelas I Surabaya - 74%", "Bapas Kelas II Bojonegoro - 84%", "LPKA Kelas I Blitar - 49%"],
 				  datasets: [
 					{
-					  label: "Nilai Capaian",
+					  label: "Nilai Capaian IKM",
 					  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"
 					  ,"#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
 					  data: [78,67,74,84,93,88,22,40,84,33,78,57,74,84,49],

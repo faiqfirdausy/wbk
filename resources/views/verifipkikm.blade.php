@@ -18,7 +18,7 @@
 	   <!-- Application buttons -->
           <div class="box">
             <div class="box-header">
-              <center><h2 class="box-title">HALAMAN VERIFIKASI</h2></center>
+              <center><h2 class="box-title">Indeks Persepsi Korupsi</h2></center>
             </div>
             <div class="box-body">
 			 <div class="col-md-12">
@@ -28,7 +28,8 @@
 
               <li class="active"><a href="#tab_1" data-toggle="tab">Belum Terverifikasi</a></li>
               <li><a href="#tab_2" data-toggle="tab">Revisi</a></li>
-              <li><a href="#tab_3" data-toggle="tab">Seluruh</a></li>
+			  <li><a href="#tab_3" data-toggle="tab">Terverifikasi</a></li>
+              <li><a href="#tab_4" data-toggle="tab">Seluruh</a></li>
 
  
   
@@ -47,7 +48,7 @@
 					  <!--table-->
 
             <div class="box-header">
-              <h3 class="box-title">Data Table IPK & IKM</h3>
+              <h3 class="box-title">Data Table IPK</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -159,7 +160,161 @@
             
           </div>
 		  
+</div>
 
+          <div class="box">
+            <div class="box-header">
+              <center><h2 class="box-title">Indeks Kepuasan Masyarakat</h2></center>
+            </div>
+            <div class="box-body">
+			 <div class="col-md-12">
+          <!-- Custom Tabs -->
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+
+              <li class="active"><a href="#tab1" data-toggle="tab">Belum Terverifikasi</a></li>
+              <li><a href="#tab2" data-toggle="tab">Revisi</a></li>
+			  <li><a href="#tab3" data-toggle="tab">Terverifikasi</a></li>
+              <li><a href="#tab4" data-toggle="tab">Seluruh</a></li>
+
+ 
+  
+            </ul>
+
+
+            <div class="tab-content">
+
+              <div class="tab-pane active" id="tab1">
+
+
+              <!-- /.tab-pane -->
+                
+				 <!-- /.box-header -->
+					<div class="box-body table-responsive no-padding">
+					  <!--table-->
+
+            <div class="box-header">
+              <h3 class="box-title">Data Table IKM</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example2" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+				  <th>NO</th>
+                  <th>PERIODE</th>
+                  <th>TAHUN</th>
+				  <th>NILAI</th>
+                  <th>BERKAS</th>
+                  
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Triwulan I</td>
+                  <td>2019</td>
+				  <td>2019</td>
+                  <td>acplan2019.pdf</td>
+                </tr>
+				<tr>
+                  <td>1</td>
+                  <td>Triwulan I</td>
+                  <td>2019</td>
+				  <td>2019</td>
+                  <td>acplan2019.pdf</td>
+                </tr>  
+				<tr>
+                  <td>1</td>
+                  <td>Triwulan I</td>
+                  <td>2019</td>
+				  <td>2019</td>
+                  <td>acplan2019.pdf</td>
+                </tr>  
+				<tr>
+                  <td>1</td>
+                  <td>Triwulan I</td>
+                  <td>2019</td>
+				  <td>2019</td>
+                  <td>acplan2019.pdf</td>
+                </tr>  				
+                </tbody>
+                <tfoot>
+                <tr>
+				   <th>NO</th>
+                  <th>PERIODE</th>
+                  <th>TAHUN</th>
+				  <th>NILAI</th>
+                  <th>BERKAS</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+
+
+					</div>
+              <!-- /.tab-pane -->
+             
+            </div>
+                     
+<div class="tab-pane " id="tab2">
+
+
+              <!-- /.tab-pane -->
+                
+         <!-- /.box-header -->
+          <div class="box-body table-responsive no-padding">
+            
+
+          </div>
+              <!-- /.tab-pane -->
+             
+            </div>
+
+
+            <div class="tab-pane" id="tab3">
+
+
+              <!-- /.tab-pane -->
+                
+         <!-- /.box-header -->
+          <div class="box-body table-responsive no-padding">
+            
+
+          </div>
+              <!-- /.tab-pane -->
+             
+            </div>
+  
+            <div class="tab-pane" id="tab4">
+
+
+              <!-- /.tab-pane -->
+                
+         <!-- /.box-header -->
+          <div class="box-body table-responsive no-padding">
+            
+
+          </div>
+              <!-- /.tab-pane -->
+             
+            </div>
+          </div>
+
+          <!-- nav-tabs-custom -->
+        </div>
+        <!-- /.col -->
+			
+
+            <!-- /.box-body -->
+
+			
+            </div>
+            
+          </div>
+		  
+</div>
 
    
 
