@@ -441,14 +441,14 @@ background-color: rgba(108, 192, 145, 0.15);
 }
 
 .work-item .overlay h4 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 18px;
   margin: 25px 0 8px;
 }
 
 .work-item .overlay p {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
 }
 

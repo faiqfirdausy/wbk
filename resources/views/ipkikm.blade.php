@@ -80,12 +80,11 @@
 					  <!--table-->
 
             <div class="box-header">
-<<<<<<< HEAD
+
               <h3 class="box-title">Data Table IPK </h3>
-=======
+
               <h3 class="box-title">Data IPK & IKM</h3>
->>>>>>> 2be4b93485d1564178a6d1332e103fdea5397314
-            </div>
+			  </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
@@ -101,7 +100,7 @@
                 </tr>
                 </thead>
                 <tbody>
-<<<<<<< HEAD
+
                 <tr>
                   <td>1</td>
                   <td>Triwulan I</td>
@@ -196,8 +195,7 @@
                 </tr>
 				  				
                 </tbody>
-               
-=======
+   
                 @if(!empty($ipkikm))
                 @php
                 $i = 0;
@@ -229,7 +227,6 @@
                 @endforeach
                 @endif
                 </tfoot>
->>>>>>> 2be4b93485d1564178a6d1332e103fdea5397314
               </table>
             </div>
             <!-- /.box-body -->
