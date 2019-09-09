@@ -65,6 +65,18 @@
 							width: 90%; 
 							background-color: #4CAF50;
 						}
+						div.hijau1{
+							width: 95%; 
+							background-color: #4CAF50;
+						}
+						div.hijau2{
+							width: 82%; 
+							background-color: #4CAF50;
+						}
+						div.hijau3{
+							width: 98%; 
+							background-color: #4CAF50;
+						}
 						div.merah{
 							width: 20%; 
 							background-color: #f44336;
@@ -73,6 +85,23 @@
 							width: 56%; 
 							background-color: #EBAF24;
 						}
+						div.kuning1{
+							width: 40%; 
+							background-color: #EBAF24;
+						}
+						div.merah1{
+							width: 20%; 
+							background-color: #f44336;
+						}
+						div.merah2{
+							width: 10%; 
+							background-color: #f44336;
+						}
+						div.merah3{
+							width: 15%; 
+							background-color: #f44336;
+						}
+
 					</style>
 						<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<div class="contact-form">
@@ -121,6 +150,7 @@
 								<th>NAMA UPT</th>
 								<th>PROGRES PEMBANGUNAN</th>
 								<th>REKOMENDASI</th>
+								<th>Aksi</th>
 							  </tr>
 							</thead>
 							<tbody>
@@ -133,16 +163,20 @@
 									</div>
 								</td>
 								<td>Harus meningkatkan pengawasan terhadap UPT</td>
+								<td><a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal1" >Detail</a></td>
+
 							  </tr>
 							  <tr>
 								<td>2</td>
-								<td>Kanim Khusus Kelas I Surabaya</td>
+								<td>Kanim Kelas I Khusus TPI Surabaya</td>
 								<td>
 									<div class="container-bar">
 									  <div class="skills-bar hijau">90%</div>
 									</div>
 								</td>
 								<td>Maju kontestasi tahun depan</td>
+								<td><a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal2" >Detail</a></td>
+
 							  </tr>
 							  <tr>
 								<td>3</td>
@@ -153,6 +187,8 @@
 									</div>
 								</td>
 								<td>Terus tingkatkan pengawasan</td>
+								<td><a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal3" >Detail</a></td>
+
 							  </tr>
 							</tbody>
 						  </table>
@@ -162,6 +198,174 @@
 				</div>
 			</div>
 			
+
+
+                          <div class="modal fade" id="myModal1" role="dialog">
+                            <div class="modal-dialog">
+        
+          <!-- Modal content-->
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Detail Capaian Lapas Kelas 1 Surabaya</h4>
+										
+                                    </div>
+                                    <div class="modal-body">
+                                     
+									<table class="table table-bordered table-striped">
+
+										<th>No</th>
+										<th>Indikator Perubahan</th>
+										<th>Progress Pembangunan</th>
+										<tr>
+										<td>1</td>
+										<td>Manajemen Perubahan</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar merah1">20%</div>
+										</div>
+										</td>
+										<tr>
+										<td>2</td>
+										<td>Penataan Tata Laksana</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar merah2">10%</div>
+										</div>
+										</td>
+										<tr>
+										<td>3</td>
+										<td>Penataan Sistem Manajemen SDM</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar merah3">15%</div>
+										</div>
+										</td>
+										<tr>
+										<td>4</td>
+										<td>Penguatan Akuntabilitas</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar merah1">20%</div>
+										</div>
+										</td>
+										<tr>
+										<td>5</td>
+										<td>Penguatan Pengawasan</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar kuning1">40%</div>
+										</div>
+										</td>
+										<tr>
+										<td>6</td>
+										<td>Peningkatan Kualitas Pelayanan Publik</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar merah3">15%</div>
+										</div>
+										</td>
+										<tr>
+
+
+									</table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                      </form>
+
+                                    </div>
+                                   </div>
+          
+                              </div>
+                          </div>
+
+
+
+
+
+
+						<div class="modal fade" id="myModal2" role="dialog">
+                            <div class="modal-dialog">
+        
+          <!-- Modal content-->
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Detail Capaian Kanim Khusus Kelas 1 TPI Surabaya</h4>
+										
+                                    </div>
+                                    <div class="modal-body">
+                                     
+									<table class="table table-bordered table-striped">
+
+										<th>No</th>
+										<th>Indikator Perubahan</th>
+										<th>Progress Pembangunan</th>
+										<tr>
+										<td>1</td>
+										<td>Manajemen Perubahan</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar hijau">90%</div>
+										</div>
+										</td>
+										<tr>
+										<td>2</td>
+										<td>Penataan Tata Laksana</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar hijau1">95%</div>
+										</div>
+										</td>
+										<tr>
+										<td>3</td>
+										<td>Penataan Sistem Manajemen SDM</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar hijau3">98%</div>
+										</div>
+										</td>
+										<tr>
+										<td>4</td>
+										<td>Penguatan Akuntabilitas</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar hijau">90%</div>
+										</div>
+										</td>
+										<tr>
+										<td>5</td>
+										<td>Penguatan Pengawasan</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar hijau1">95%</div>
+										</div>
+										</td>
+										<tr>
+										<td>6</td>
+										<td>Peningkatan Kualitas Pelayanan Publik</td>
+										<td>
+										<div class="container-bar">
+									 	<div class="skills-bar hijau2">82%</div>
+										</div>
+										</td>
+										<tr>
+
+
+									</table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                      </form>
+
+                                    </div>
+                                   </div>
+          
+                              </div>
+                          </div>
 		</section>
 
 
