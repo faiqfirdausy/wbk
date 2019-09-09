@@ -109,8 +109,12 @@
 
         </li>
 
+<<<<<<< HEAD
+		<li class="active" ><a href="{{url('ipkikm')}}"><i class="fa fa-bar-chart"></i>IPK & IKM</a></li>
+=======
 
 		<li class="active" ><a href="{{url('ipkikm')}}"><i class="fa fa-bar-chart"></i>IPK/IKM</a></li>
+>>>>>>> 2be4b93485d1564178a6d1332e103fdea5397314
 		<li ><a href="{{url('acplan')}}"><i class="fa fa-pencil-square-o"></i>Action Plan</a></li>
         <li ><a href="{{url('video')}}"><i class="fa fa-camera"></i>Video</a></li>
         

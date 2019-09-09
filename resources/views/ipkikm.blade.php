@@ -22,13 +22,18 @@
             </div>
             <div class="box-body">
 			 <div class="col-md-12">
-				 <div class="box box-primary">
-            <div class="box-header with-border">
-             
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form"  method="POST" action="{{ url('ipkikm/update') }}" enctype="multipart/form-data">
+					  <!-- Custom Tabs -->
+		<div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+
+              <li class="active"><a href="#tab_1" data-toggle="tab">IPK</a></li>
+              <li><a href="#tab_2" data-toggle="tab">IKM</a></li>
+            </ul>
+			<div class="tab-content">
+
+              <div class="tab-pane active" id="tab_1">
+
+		 <form role="form"  method="POST" action="{{ url('ipkikm/update') }}" enctype="multipart/form-data">
             {!! csrf_field() !!}
 
               <div class="box-body">
@@ -64,28 +69,22 @@
                   <input type="file" name="upload_files" id="exampleInputFile">
 				  <p class="help-block">*berkas maksimal berukuran 50MB</p>
                 </div>
-				
+				<button type="submit" class="btn btn-primary">Submit</button>
               </div>
               <!-- /.box-body -->
-
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
             </form>
-          </div>
+                
+				 <!-- /.box-header -->
+	<div class="box">
+	<div class="box-body table-responsive no-padding">
+					  <!--table-->
 
-            <!-- /.box-body -->
-
-			
-            </div>
-            
-          </div>
-		  </div>
-
-				<!--table-->
-		<div class="box">
             <div class="box-header">
+<<<<<<< HEAD
+              <h3 class="box-title">Data Table IPK </h3>
+=======
               <h3 class="box-title">Data IPK & IKM</h3>
+>>>>>>> 2be4b93485d1564178a6d1332e103fdea5397314
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -102,6 +101,103 @@
                 </tr>
                 </thead>
                 <tbody>
+<<<<<<< HEAD
+                <tr>
+                  <td>1</td>
+                  <td>Triwulan I</td>
+                  <td>2019</td>
+				  <td>2019</td>
+                  <td>acplan2019.pdf</td>
+                </tr>
+				  				
+                </tbody>
+               
+              </table>
+            </div>
+            <!-- /.box-body -->
+
+
+	</div>
+</div>
+              <!-- /.tab-pane -->
+             
+            </div>
+                     
+			<div class="tab-pane " id="tab_2">
+ <form role="form"  method="POST" action="{{ url('ipkikm/update') }}" enctype="multipart/form-data">
+            {!! csrf_field() !!}
+
+              <div class="box-body">
+                <!-- select -->
+                <div class="form-group">
+                  <label>Periode</label>
+                  <select name="triwulan" class="form-control">
+                    <option value="">-</option>
+                    <option value="Triwulan I">Triwulan I</option>
+                    <option value="Triwulan II">Triwulan II</option>
+                    <option value="Triwulan III">Triwulan III</option>
+                    <option value="Triwulan IV">Triwulan IV</option>
+                  </select>
+                </div>
+				<!-- Date -->
+              <div class="form-group">
+                <label>Tahun:</label>
+
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+				  <input name="tahun" class="date-own form-control" type="text" placeholder="Pilih Tahun">
+                </div>
+                <!-- /.input group -->
+              </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Nilai</label>
+                  <input type="text" name="nilai" class="form-control" id="exampleInputPassword1" placeholder="Nilai">
+                </div>
+				 <div class="form-group">
+                  <label for="exampleInputFile">Unggah berkas</label>
+                  <input type="file" name="upload_files" id="exampleInputFile">
+				  <p class="help-block">*berkas maksimal berukuran 50MB</p>
+                </div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+              <!-- /.box-body -->
+            </form>
+                
+				 <!-- /.box-header -->
+	<div class="box">
+	<div class="box-body table-responsive no-padding">
+					  <!--table-->
+
+            <div class="box-header">
+              <h3 class="box-title">Data Table IKM</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example2" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+				  <th>NO</th>
+                  <th>PERIODE</th>
+                  <th>TAHUN</th>
+				  <th>NILAI</th>
+                  <th>BERKAS</th>
+                  
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Triwulan I</td>
+                  <td>2019</td>
+				  <td>2019</td>
+                  <td>acplan2019.pdf</td>
+                </tr>
+				  				
+                </tbody>
+               
+=======
                 @if(!empty($ipkikm))
                 @php
                 $i = 0;
@@ -133,10 +229,29 @@
                 @endforeach
                 @endif
                 </tfoot>
+>>>>>>> 2be4b93485d1564178a6d1332e103fdea5397314
               </table>
             </div>
             <!-- /.box-body -->
+
+
+	</div>
+</div>
+              <!-- /.tab-pane -->
+             
+            </div>
+
+
           </div>
+		</div>
+	
+
+			
+            </div>
+            
+          </div>
+		  </div>
+
    
 
         </section>

@@ -20,7 +20,7 @@
 										<ul>
 											<li><a href="#features" data-wow-duration="1000ms" class="wow slideInLeft animated">VIDEO</a></li>
 											<li><a href="#pimti" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
-											<li><a href="#ipk/ikm" data-wow-duration="1000ms" class="wow slideInRight animated">IPK/IKM</a></li>
+											<li><a href="#ipk/ikm" data-wow-duration="1000ms" class="wow slideInRight animated">IPK & IKM</a></li>
 										</ul>
 									</div>
 							<ul class="social-links text-center">
@@ -103,6 +103,38 @@
 						}
 
 					</style>
+						<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
+						<div class="contact-form">
+							<form action="#" id="contact-form">
+								<div class="input-group name-email">
+									<div class="input-field">
+										<select class="form-control" id="sel1">
+											<option>Unit Pusat</option>
+											<option>Eselon I</option>
+											<option>Kantor Wilayah</option>
+										</select>
+									</div>
+									<div class="input-field">
+										<select class="form-control" id="sel1">
+											<option>--Pilih Jenis Satker--</option>
+											<option>BAPAS & LAPAS</option>
+											<option>RUTAN & RUPBASAN</option>
+											<option>KANIM & RUDENIM</option>
+											<option>BHP</option>
+										</select>
+										
+									</div>
+									<div class="input-field">
+										<input class="date-own form-control" type="text" placeholder="Pilih Tahun">
+									</div>
+									<div class="input-field">
+										<input type="submit" class="btn btn-success" value="Submit">
+										<input class="btn btn-default" type="reset" value="Reset">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
 					<div class="sec-sub-title wow rubberBand animated" data-wow-duration="1000ms">
 						<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 							<div class="contact-form">
@@ -345,7 +377,59 @@
 				<div class="row mb50">
 				
 					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-						<h2>Indeks Persepsi Korupsi & Indeks Kepuasan Masyarakat</h2>
+						<h2>Indeks Persepsi Korupsi</h2>
+						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
+					</div>
+					
+					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+						<p>Pilih Kategori UPT dan Jangka Waktu Penilaian</p>
+					</div>
+					
+					
+					<!-- form -->
+					<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
+						<div class="contact-form">
+							<form action="#" id="contact-form">
+								<div class="input-group name-email">
+									<div class="input-field">
+										<select class="form-control" id="sel1">
+											<option>BAPAS & LAPAS</option>
+											<option>RUTAN & RUPBASAN</option>
+											<option>KANIM & RUDENIM</option>
+											<option>BHP</option>
+										</select>
+									</div>
+									<div class="input-field">
+										<select class="form-control" id="sel1">
+											<option>TRIWULAN I</option>
+											<option>TRIWULAN II</option>
+											<option>TRIWULAN III</option>
+											<option>TRIWULAN IV</option>
+										</select>
+										
+									</div>
+									<div class="input-field">
+										<input class="date-own form-control" type="text" placeholder="Pilih Tahun">
+									</div>
+									<div class="input-field">
+										<input type="submit" class="btn btn-success" value="Submit">
+										<input class="btn btn-default" type="reset" value="Reset">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+						<canvas id="bar-chart" width="400" height="150"></canvas>
+					</div>
+			
+				</div>
+			</div>
+			<div class="container">
+				<div class="row mb50">
+				
+					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
+						<h2>Indeks Kepuasan Masyarakat</h2>
 						<div class="devider"><i class="fa fa-bar-chart fa-lg"></i></div>
 					</div>
 					
@@ -393,7 +477,6 @@
 			
 				</div>
 			</div>
-			
 		</section>
 		 <!--
         Video
